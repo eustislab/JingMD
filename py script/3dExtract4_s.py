@@ -128,9 +128,6 @@ for line in f1:
             else:
                 #there's a reason why this is remove - not del - since we are iterating if we delete using index we are gonna be screwed
                 molList.remove(line)
-        #this is for if we have an incomplete file or inconsistant number of atoms we should only use the one before and break for loop without appending to grandString
-        if len(molList) != atomCount:
-            print 'error'
         #xyz file has a format that we need atomCount at the top followed by snapshot number(timeCount) on the next line before adding any coordinates
         grandString=grandString+str(atomCount)+'\n'+str(timeCount)+'\n'
         #loop tho molList to add data - molList = [['N','1','1','1'],['C'...],... ] And element = ['N','1','1','1']
@@ -153,4 +150,29 @@ for line in f1:
         previousGrandString=str(grandString)
 f.close()
 print 'Done. Extract ' + str(timeCount) + ' snapshots total.'
+
+totalLineInOneSet=numberofSoluteAtoms+numberofSoventAtoms*numberOfSolventMolecules+2
+totalLineToBeCollected=totalLineInOneSet-2
+output2=str(output[:-4])+'.csv'
+f=open(output, 'r')
+f2 = open(output2, 'w')
+lines=f.readlines()
+counter=0
+for n, line in enumerate(lines):
+    if n%totalLineInOneSet==0:
+        f2.write(str(counter)+', ')
+    elif (n%totalLineInOneSet!=1):
+        lineSplit=line.split()
+        lineSplit.pop(0)
+        for element in lineSplit:
+            f2.write(element+', ')
+    if n%totalLineInOneSet==totalLineInOneSet-1:
+        lineSplit=line.split()
+        lineSplit.pop(0)
+        for n, element in enumerate(lineSplit):
+            if n!=int(len(lineSplit))-1:
+                f2.write(element+',')
+            else:
+                f2.write(element+'\n')
+                counter+=10
             
