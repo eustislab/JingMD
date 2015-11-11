@@ -15,10 +15,10 @@ import string
 
 try:
 	if str(sys.argv[1])=='?':
-		print '\nCall function as: prepareMD.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules ssbpRadius  \n' 
+		print '\nCall function as: prepareMD.py input.xyz numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules ssbpRadius  \n' 
 		sys.exit()
 except IndexError:
-    print '\n!!!Input command Error. Call function as: prepareMD.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules  ssbpRadius\n' 
+    print '\n!!!Input command Error. Call function as: prepareMD.py input.xyz numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules  ssbpRadius\n' 
     sys.exit()
 try:
     input=str(sys.argv[1])
@@ -27,7 +27,7 @@ try:
     numberOfSolventMolecules=int(sys.argv[4])
     ssbpRadius=float(sys.argv[5])
 except IndexError:
-    print '\n!!!Input command Error. Call function as: prepareMD.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules ssbpRadius\n' 
+    print '\n!!!Input command Error. Call function as: prepareMD.py input.xyz numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules ssbpRadius\n' 
     sys.exit()
 
 if input.endswith('.xyz'):
@@ -47,15 +47,15 @@ atomicNumber={'LV': 116.0, 'BE': 4.0, 'FR': 87.0, 'BA': 56.0, 'BH': 107.0, 'BI':
 #clear (input).energies.csv
 f = open(output, 'w');
 f.write(''' $CONTRL SCFTYP=RHF RUNTYP=MD COORD=UNIQUE
-DFTTYP=CAMB3LYP MAXIT=200 ICHARG=0 MULT=1 $END
+    DFTTYP=CAMB3LYP MAXIT=200 ICHARG=0 MULT=1 $END
  $MD KEVERY=10 PROD=.T. NVTNH=2 MBT=.T. MBR=.T. 
-BATHT=298 RSTEMP=.T. DTEMP=25 NSTEPS=50000
-SSBP=.T. SFORCE=1.0 DROFF='''+str(ssbpRadius)+''' $END
- $DFT DC=.T. $END
+    BATHT=298 RSTEMP=.T. DTEMP=25 NSTEPS=50000
+    SSBP=.T. SFORCE=1.0 DROFF='''+str(ssbpRadius)+''' $END
+ $DFT DC=.F. $END
  $SYSTEM MWORDS=1000 MEMDDI=1000 $END
  $SCF DIRSCF=.T. $END
- $BASIS GBASIS=N311 NGAUSS=6 NDFUNC=1 NPFUNC=1 
-    DIFFSP=.TRUE. DIFFS=.TRUE. POLAR=POPN311 $END
+ $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=2 NPFUNC=1 
+    DIFFS=.TRUE. POLAR=POPN311 $END
  $DATA
 MD INPUT
 C1 1\n''')
@@ -103,7 +103,7 @@ with open(input) as f1:
             grandString=' '+lineSplit[0]+lineSplit[1]+'\t'+lineSplit[2]+'\t'+lineSplit[3]+'\t'+lineSplit[4]+'\n';
             f.write(grandString)
             print grandString
-    f.write(' $END')
+    f.write(' $END\n')
             
             
         

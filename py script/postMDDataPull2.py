@@ -2,12 +2,26 @@ import os as os
 import numpy as numpy
 import matplotlib.pyplot as plt
 import sys
-decimalPointForE = 3
-decimalPointForf = 6
 
 
-input=str(sys.argv[1])
+#if not sure use ? to ask
+try:
+	if str(sys.argv[1])=='?':
+		print '\nCall function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies\n' 
+		sys.exit()
+except IndexError:
+    print '\n!!!Input command Error. Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies\n' 
+    sys.exit()
+
+#Call as fincut.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules startTime stopTime timePerFrame
+try:
+    input=str(sys.argv[1])
 numberOfExcitedStates=int(sys.argv[2])
+except IndexError:
+    print '\n!!!Input command Error. Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies\n' 
+    sys.exit()
+
+
 path = os.getcwd()
 inputPath=path+'/'+input
 
@@ -37,7 +51,7 @@ def mode(list):
             max_k.append(key),
     return max_k,max
 for fileName in fileList:
-    if ".out" in fileName:
+    if (".out" in fileName or ".log" in fileName):
         outputList.append(fileName)
 
 f1=open(input+'MD_data.csv','w')

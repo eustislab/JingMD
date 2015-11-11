@@ -1,7 +1,23 @@
 import os
 import sys
 
-input=str(sys.argv[1])
+
+#if you don't know then ask ?
+try:
+	if str(sys.argv[1])=='?':
+		print '\nCall function as: xsedeShellGenerator.py inputDirectory\n' 
+		sys.exit()
+except IndexError:
+    print '\n!!!Input command Error. Call function as: xsedeShellGenerator.py inputDirectory\n' 
+    sys.exit()
+
+#Call as xsedeShellGenerator.py inputDirectory
+try:
+    input=str(sys.argv[1])
+except IndexError:
+    print '\n!!!Input command Error. Call function as: xsedeShellGenerator.py inputDirectory\n' 
+    sys.exit()
+
 path = os.getcwd()
 inputPath=path+'/'+input
 
