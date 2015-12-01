@@ -1,0 +1,195 @@
+% ----------------------------------------------------------------
+% achemso --- Support for submissions to American Chemical
+%  Society journals
+% Maintained by Joseph Wright
+% E-mail: joseph.wright@morningstar2.co.uk
+% Originally developed by Mats Dahlgren
+%  (c) 1996-98 by Mats Dahlgren
+%  (c) 2007-2008 Joseph Wright
+% Released under the LaTeX Project Public license v1.3c or later
+% See http://www.latex-project.org/lppl.txt
+% 
+% Part of this bundle is derived from cite.sty, to which the
+% following license applies:
+%   Copyright (C) 1989-2003 by Donald Arseneau
+%   These macros may be freely transmitted, reproduced, or
+%   modified provided that this notice is left intact.
+% ----------------------------------------------------------------
+% 
+% The achemso bundle provides a LaTeX class file and BibTeX style
+% file in accordance with the requirements of the American
+% Chemical Society.  The files can be used for any documents, but
+% have been carefully designed and tested to be suitable for
+% submission to ACS journals.
+% 
+% The bundle also includes the natmove package.  This package is
+% loaded by achemso, and provides automatic moving of superscript
+% citations after punctuation.
+
+\documentclass[
+%journal=ancac3, % for ACS Nano
+%journal=acbcct, % for ACS Chem. Biol.
+journal=jacsat, % for undefined journal
+manuscript=article]{achemso}
+
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[labelfont={bf}]{caption}
+
+\newcommand*{\mycommand}[1]{\texttt{\emph{#1}}}
+
+\author{Trerayapiwat K.}
+\email{ktreraya@bowdoin.edu}
+\affiliation[Bowdoin College]
+{Department of Chemistry, Bowdoin College, Brunswick, ME}
+\author{Eustis S.}
+\email{seustis@bowdoin.edu}
+\affiliation[Bowdoin College]
+{Department of Chemistry, Bowdoin College, Brunswick, ME}
+
+
+\title[\texttt{achemso} demonstration]
+{Benchmarking Ab Initio Computational Methods for the Quantitative Prediction of Sunlight-Driven Pollutant Degradation in Aquatic Environments}
+
+\begin{document}
+
+
+\begin{abstract}
+Understanding excitation from ground state to the singlet excited state through simulating absorption spectra of a molecule is essential to predicting the rate of the photoreaction. Excitation energies and oscillator strengths were calculated using different theories and methods. Among all theories, a new approach was selected to model the photon absorption: Molecular Dynamics–Time Dependent Density Functional Theory (MD-TDDFT). An aniline molecule equilibrates in the presence of a number of water molecules at room temperature using 6-311++G** basis set. Excitation energy and oscillator strength of aniline geometries in equilibrium are then calculated using TDDFT with w-B97X-D, CAMB3LYP, or M06-2X functional. As a theoretical benchmark, OEMCCSD calculation was carried out with optimized geometry from using using 6-311++G** basis set and implicit water model implemented using Polarizable Continuum Model (PCM). The computed physical properties from MD-TDDFT and OEMCCSD were then compared with data from experimental absorption spectra to evaluate the accuracy of the two methods. Absorption spectra’s underlying modified Gaussian functions were decomposed and integrated to calculate experimental oscillator strength at a certain excitation energy using an R code written by Peter Cohen. The more accurate method would be applied to triclosan and other water contaminants to predict the rate of their photodegradations in the environment.
+\end{abstract}
+
+
+\section{Introduction}
+
+\subsection{Environmental Photochemistry and Excited State Energies calculation}
+
+Micropollutants are pollutants whose concentrations are individually low, but combined have an effect that is hard to predict. The studies of particular micropollutant specie are hard to conduct because other species interfere in analytical reactions. Triclosan, a micropollutant, has been used as an anti-bacterial agent in household soap and health care products. Under sunlight, Triclosan decomposes to Dioxins and PCBs, well-known carcinogens.\cite{Bedoux2012} Previously, computational studies of Triclosan in the excited states were carried out by Soren N. Eustis\cite{Kliegman2013} and Nathan Ricke.\cite{Ricke2014} While excited states are important to understanding photochemical reaction, excitation from ground states by photons to exited states is equally important to understand complete reaction mechanism. There are currently no prior studies on how to quantitatively calculate excited state energies of organic molecule in water allowing a systematic approach to develop computational model to be studied. After calculation of excited state energies and the oscillator strength, computational results will be compared with experimental UV-VIS spectrum to evaluate accuracy of the models used. 
+
+\subsection{Solvent Models}
+
+Despite recent advent of growth in computer speed and burgeoning interest in incorporating computational models to further understand the nature world, large systems such as solvation models remains a big challenge.\cite{Lin2007} In modeling effects of solvent molecules on solute, implicit solvation models were previously implemented because it allows for acceptable results calculation while maintaining good speed (low computational cost). Most famous of all implicit models is Potential Continuum Model (PCM).\cite{Cossi2000} Instead of explicitly handling each solvent molecules quantum mechanically, PCM expresses their bulk effects on solute molecule in means of dielectric continuum field surrounding molecule of interest. Its downfall is that, however, its accuracy falls short of static and dynamic contribution of excited states properties.\cite{Barone2007} Furthermore, implicit solvent model also neglects hydrogen-bonding as it assumes implicit implementation in dispersion forces and electrostatics.\cite{Li1999} Especially in calculating excited state energies, an accurate solvent model should be used.\cite{Tomasi2005} In explicit solvent model, one recent notable method – Effective Fragment Potentials (EFP) can be used to model explicit solvents with non-bonded van der Waals interactions, hydrogen bonding using Coulomb interactions, polarization, and exchange repulsion without high computational expense of explicit models.\cite{Day1996,Yoo2008} This model is chosen to implement explicit solvent in calculating excited states energies.
+
+In modeling organic solute in aquatic environment, the solute,  the appropriate number of water molecules to be included as EFP in the model has never been evaluated. Too many water means expensive computational cost. Too few water will not fully model solvating shells around the solute. Binary system will be used to model how many water molecule is needed to fully solvate the solute molecules: 2, 4, 8, 16... 
+
+\subsection{Computational Models: Theories, Basis Sets, and Functionals}
+
+Among all current theories, Time-Dependent Density Functional Theory (TDDFT) is the most promising with its high accuracy when used with appropriate functionals and low computational cost\cite{Magyar2007}. Implementing EFP solvent model, TDDFT can be used to accurately calculate excited state energy of acetone in water.\cite{Yoo2008} Typically in Implicit solvent model, geometry optimization of solute molecule is carried out with PCM, followed by calculation of excited state energies, also with PCM. This static ground state molecule however does not accurately represent solute in water. Instead, Molecular Dynamics (MD) of solute and solvent fragments can be used to obtain a range of equilibrated structures for excited state energies calculation. Mark Gordon averaged the calculated energies of each excited state to arrive at a final excited states energy.\cite{Defusco2011}
+
+According to previous basis set studies, average-sized basis set 6-311++(2d,p) performs better than ACCD (another average size basis set).\cite{Wiberg2004,Barnes2014} This basis set is chosen to run TDDFT after MD run. In running MD, a smaller basis set 6-31+(2d,p) will be used in order to cut computational cost. Two best-performing DFT functionals out of all examined in previous study are explored: CAMB3LYP, M06-2X.\cite{Barnes2014} PBE0 will also be used.
+
+\section{Method}
+
+Molecules - aniline - then para-methoxy m-methoxyacetophenone... Triclosan
+
+discuss \# of water
+
+
+
+\section{Preliminary Results and Discussions}
+
+\subsection{Determining the number of water}
+
+TDDFT calculation for aniline with 32, 64, 128, 256, 512 surrounding water molecules were performed with CAMB3LYP basis set. Firstly, for 32 water molecules, the equilibrium were chosen to start from 15 ps and the stopping point of calculation was 25 ps; 1000 jobs for every 10 fs. Determination of equilibrium was determined by eyeballing a plot of the solvent solute system's potential energy over time for a stable period as shown in the figure \ref{fig:MDEnergyAniline32d)}. The consistently low fluctuation indicates the start of equilibrium at 15000 fs. 1000 frames or 10000 fs of MD geometries were used to calculate the excitation energies in TDDFT run. Geometry of the system though challenge the accuracy of 32-water model. Aniline molecule surrounded in 32 water molecules is unfortunately most stable not being fully solvated. Aniline can be seen outside of the water cluster at the time of equilibrium. This is in contrast to expected 32 water as the first solvation shell for aniline. \cite{Plugatyr2009} 
+
+\begin{figure}[!tbp]
+	\centering
+		 \begin{subfigure}[b]{0.4\textwidth}
+		 	\includegraphics[width=1\textwidth]{aniline32_0fs.png}
+		 	\caption{}
+		 	\label{fig:MDEnergyAniline32a)}
+		 \end{subfigure}
+		 \hfill
+		 \begin{subfigure}[b]{0.4\textwidth}
+		 	\includegraphics[width=1\textwidth]{aniline32_15000fs.png}
+		 	\caption{}
+		 	\label{fig:MDEnergyAniline32b)}
+		 \end{subfigure}
+		 \hfill
+		 \begin{subfigure}[b]{0.4\textwidth}
+		 	\includegraphics[width=1\textwidth]{aniline32_25000fs.png}
+		 	\caption{}
+		 	\label{fig:MDEnergyAniline32c)}
+		 \end{subfigure}
+		 \hfill
+		 \begin{subfigure}[b]{0.4\textwidth}
+		 	\includegraphics[width=1\textwidth]{aniline32_EnergyPlot.png}
+		 	\caption{}
+		 	\label{fig:MDEnergyAniline32d)}
+		 \end{subfigure}
+	\caption{Molecular Dynamics run of aniline in 32 explicit solvating water molecules. Notice that at equilibrium, aniline molecule comes outside of the water sphere. Albeit hydrogen bond being clearly established, lack of total submersion in water means 32-water does not fully solvate the aniline molecule and suggests that 64-water will give more accurate results. (a) starting geometry of MD run created by packmol. (b) geometry after 15000 fs. Notice the hydrogen bond between the amino group and water cluster. (c) geometry after 25000 fs. The amino group is pointing in the water sphere, as it continues to through out the whole MD run. (d) A plot of potential Energy of the system vs time. At 15000 fs, equilibrium starts as evident by decrease in energy fluctuation.}
+	\label{fig:MDEnergyAniline32}
+\end{figure}
+
+%for refing page number
+%function grows near 0. Also, in the page \pageref{fig:mesh1}
+
+\begin{table}[ht]
+	\caption{Wavelength and Oscillator Strength from MD-TDDFT calculation of aniline in 32 water molecules.}
+	\label{table:aniline32TDDFTTable}
+	\centering
+	\begin{tabular}{c c}
+		Wavelength (nm) & Oscillator Strength\\ [1ex] % inserts table %heading
+		\hline\hline
+		\\[-0.5ex]
+		173.00&0.165685\\
+		180.20&0.364739 \\
+		184.99&0.339029\\
+		214.30&0.143915\\
+		246.26&0.0383513\\ [1ex]
+	\end{tabular}
+\end{table}
+
+The excited state energies and its oscillator strength are tabulated in table \ref{table:aniline32TDDFTTable}. When compared with aniline's UVVIS spectra, as in figure \ref{fig:UVFromR}, there are several problems. Firstly, the calculated value at 246 nm does not appropriately capture  the peak at 230 nm and there is no calculated excitation energy at 280 nm, where the experimental peak is. The problem is probably due to aniline not being fully solvated. 
+
+
+
+\begin{figure}[htb]
+	\centering		
+	\includegraphics[width=1\textwidth]{UVVISFromR.png}
+	\caption{Experimental UVVIS spectra. Gaussian plots are fitted under the curve to find oscillator strength underlying the curve. Note here that data starts from 200 nm to 400 nm. Wavelength oscillator strength of underlying gaussians are reported in table.}
+	\label{fig:UVFromR}
+\end{figure}
+
+\begin{table}[ht]
+	\caption{Wavelength and Oscillator Strength calculated from experimental UV-VIS spectrum using Bayesian probability (see appendix for R code).}
+	\label{table:anilineUVTable}
+	\centering
+	\begin{tabular}{c c}
+		Wavelength (nm) & Oscillator Strength\\ [1ex] % inserts table %heading
+		\hline\hline
+		\\[-0.5ex]
+		241.53&1808.0\\ 
+		234.52&2251.3\\
+		228.95&1939.4\\
+		223.28&2506.5\\ 
+		214.67&2795.1\\
+		206.10&2208.4\\
+		202.53&3202.8\\
+		200.39&2447.5\\[1ex]
+	\end{tabular}
+\end{table}
+
+\clearpage
+\appendix 
+\section{Appendices}
+	\subsection{Python Scripts}
+Python Scripts 
+
+	\subsection{GAMESS inputs}
+input file explanation
+
+
+\acknowledgement
+
+Sed aliquam euismod nunc nec consectetur. Fusce eget dui id tortor tristique luctus. Pellentesque elit eros, molestie et molestie vitae, laoreet in risus. Nullam ligula lectus, pulvinar eget sagittis sed, cursus ac magna. \ldots
+
+
+\suppinfo
+
+Ut volutpat, felis sit amet malesuada blandit, arcu sapien feugiat libero, vel interdum ipsum dolor et dolor. Fusce tortor sapien, pharetra sit amet posuere ac, viverra mollis est. Maecenas auctor ultrices quam a pharetra. Aenean ornare dictum libero vitae gravida. Mauris auctor sapien at purus accumsan lacinia.
+
+\bibliography{citation.bib}
+
+\end{document}

@@ -3,8 +3,7 @@
 ###The solution will be to use for line in f1 and avoid ###
 ###using readlines()                                    ###
 ###########################################################
-#importnumpy
-import numpy as numpy
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -175,4 +174,26 @@ ax1.set_ylabel('Potential Energy (KCal/mol)', color='g')
 ax1.ticklabel_format(axis='y', style='sci', scilimits=(-2,2), useOffset=False)
 ax2.set_ylabel('System Temperature (K)', color='b')
 plt.title(r'       Potential Energy vs Time for the MD File: ' + str(input))
-plt.savefig(str(input) + '_EnergyPlot.png')
+plt.savefig(str(input) + '_EnergyPlot.pdf', format='pdf')
+
+#find Equilibrium - linear regression
+print 'Finding Equilibrium'
+try:
+    minNumberOfStep=1000
+    #this is from aniline32.log - 15000 to 25000
+    maxSlope=0.00022
+    size=len(Time)
+    x=Time[0:minNumberOfStep-1]
+    y=Energy[0:minNumberOfStep-1]
+    for i in range(0,size-1):
+        print 'Analyzing at t= '+Time[i]
+        m,b = np.polyfit(x, y, 1)
+        if m<=0.00022:
+            break
+            print 'Found equilibrium starting from '+Time[i]+' to '+Time[i+minNumberOfStep]
+        #else remove the head and add next tail
+        else:
+            del x[0]
+            x.insert(-1,Energy(minNumberOfStep+i))
+except IndexError:
+        print 'There are not enough data to determine the equilibrium'

@@ -1,0 +1,134 @@
+\providecommand{\latin}[1]{#1}
+\providecommand*\mcitethebibliography{\thebibliography}
+\csname @ifundefined\endcsname{endmcitethebibliography}
+  {\let\endmcitethebibliography\endthebibliography}{}
+\begin{mcitethebibliography}{16}
+\providecommand*\natexlab[1]{#1}
+\providecommand*\mciteSetBstSublistMode[1]{}
+\providecommand*\mciteSetBstMaxWidthForm[2]{}
+\providecommand*\mciteBstWouldAddEndPuncttrue
+  {\def\EndOfBibitem{\unskip.}}
+\providecommand*\mciteBstWouldAddEndPunctfalse
+  {\let\EndOfBibitem\relax}
+\providecommand*\mciteSetBstMidEndSepPunct[3]{}
+\providecommand*\mciteSetBstSublistLabelBeginEnd[3]{}
+\providecommand*\EndOfBibitem{}
+\mciteSetBstSublistMode{f}
+\mciteSetBstMaxWidthForm{subitem}{(\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd
+  {\mcitemaxwidthsubitemform\space}
+  {\relax}
+  {\relax}
+
+\bibitem[Bedoux \latin{et~al.}(2012)Bedoux, Roig, Thomas, Dupont, and {Le
+  Bot}]{Bedoux2012}
+Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. \emph{Environmental
+  Science and Pollution Research} \textbf{2012}, \emph{19}, 1044--1065\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kliegman \latin{et~al.}(2013)Kliegman, Eustis, Arnold, and
+  McNeill]{Kliegman2013}
+Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. \emph{Environmental
+  science {\&} technology} \textbf{2013}, \emph{47}, 6756--63\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Ricke(2014)]{Ricke2014}
+Ricke,~N.~D. {Application of the Landau-Zener Model and Fermi ' s Golden Rule
+  to Estimate Triplet Quantum Yield for Organic Molecules}. Ph.D.\ thesis,
+  Bowdoin College, 2014\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lin and Truhlar(2007)Lin, and Truhlar]{Lin2007}
+Lin,~H.; Truhlar,~D.~G. \emph{Theoretical Chemistry Accounts} \textbf{2007},
+  \emph{117}, 185--199\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Cossi and Barone(2000)Cossi, and Barone]{Cossi2000}
+Cossi,~M.; Barone,~V. \emph{The Journal of Chemical Physics} \textbf{2000},
+  \emph{112}, 2427\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Barone and Polimeno(2007)Barone, and Polimeno]{Barone2007}
+Barone,~V.; Polimeno,~A. \emph{Chem. Soc. Rev.} \textbf{2007}, \emph{36},
+  1724--1731\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Li \latin{et~al.}(1999)Li, Cramer, and Truhlar]{Li1999}
+Li,~J.; Cramer,~C.~J.; Truhlar,~D.~G. \emph{International Journal of Quantum
+  Chemistry} \textbf{1999}, \emph{77}, 264--280\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Tomasi \latin{et~al.}(2005)Tomasi, Mennucci, and Cammi]{Tomasi2005}
+Tomasi,~J.; Mennucci,~B.; Cammi,~R. \emph{Chemical Reviews} \textbf{2005},
+  \emph{105}, 2999--3093\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Day \latin{et~al.}(1996)Day, Jensen, Gordon, Webb, Stevens, Krauss,
+  Garmer, Basch, and Cohen]{Day1996}
+Day,~P.~N.; Jensen,~J.~H.; Gordon,~M.~S.; Webb,~S.~P.; Stevens,~W.~J.;
+  Krauss,~M.; Garmer,~D.; Basch,~H.; Cohen,~D. \emph{The Journal of Chemical
+  Physics} \textbf{1996}, \emph{105}, 1968--1986\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Yoo \latin{et~al.}(2008)Yoo, Zahariev, Sok, and Gordon]{Yoo2008}
+Yoo,~S.; Zahariev,~F.; Sok,~S.; Gordon,~M.~S. \emph{Journal of Chemical
+  Physics} \textbf{2008}, \emph{129}, 1--8\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Magyar and Tretiak(2007)Magyar, and Tretiak]{Magyar2007}
+Magyar,~R.~J.; Tretiak,~S. \emph{Journal of Chemical Theory and Computation}
+  \textbf{2007}, \emph{3}, 976--987\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Defusco \latin{et~al.}(2011)Defusco, Minezawa, Slipchenko, Zahariev,
+  and Gordon]{Defusco2011}
+Defusco,~A.; Minezawa,~N.; Slipchenko,~L.~V.; Zahariev,~F.; Gordon,~M.~S.
+  \emph{J. Phys. Chem. Lett} \textbf{2011}, \emph{2}, 2184--2192\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Wiberg(2004)]{Wiberg2004}
+Wiberg,~K.~B. \emph{Journal of Computational Chemistry} \textbf{2004},
+  \emph{25}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Barnes \latin{et~al.}(2014)Barnes, Abdul-Al, and Allouche]{Barnes2014}
+Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. \emph{The Journal of Physical
+  Chemistry A} \textbf{2014}, \emph{118}, 11033--11046\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Plugatyr and Svishchev(2009)Plugatyr, and Svishchev]{Plugatyr2009}
+Plugatyr,~A.; Svishchev,~I.~M. \emph{The Journal of chemical physics}
+  \textbf{2009}, \emph{130}, 114509\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}
