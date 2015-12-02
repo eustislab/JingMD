@@ -190,7 +190,8 @@ The excited state energies and its oscillator strength are tabulated in table \r
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/3dExtract4.py}
 			
 		\subsubsection{Plot Potential Energy of MD run}
-			
+			This script is used to extract potential energy and temperature of each MD frame to determine the if the system has equilibrated. This and 3dExtract are very essential to the first stage of the project: they determine whether MD has failed or reached equilibrium based on the geometry and potential energy of the system. Many versions of this code has been developed and this is the most refined piece of code for its purpose. Future work can be done on plotting the plot on Matlab instead of obviously inferior python counterpart - matplotlib. 
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/plotEnergyMD6.py} 	
 		
 		\subsubsection{Find The Most Equilibrated Period}
 		
@@ -206,9 +207,9 @@ The excited state energies and its oscillator strength are tabulated in table \r
 			 MD run is core to modeling explicit solvent. The MD run is simulated every femtosecond but only record every 10 femtoseconds. The bath temperature is 25 $\pm$ 25 degree Celsius. Solvent boundary potential is also actiavetd using default Sforce value, but with estimate ssbp radius. \#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD in case the calculation abruptly ends (see next section). In this version, dispersion correction is not turned on. Basis set = 6-31+(2d,p)
 			 \inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.inp}
 			 
-		\subsubsection{MD Input File}
+		\subsubsection{MD Restart}
 		\#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD. For example, if MD stops from errors at t= 39000 fs, a restart geometry and \$MD should be obtained from t= 38960 in the run's trj file. \#\#\#\#\#\#\#\#\#1\#\#\#\#\#\#\#\#\# from trj goes to \#\#\#\#\#\#\#\#\#1\#\#\#\#\#\#\#\#\# in MD input file and so on with 2 and 3.
-		\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.inp}
+		\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.trj}
 		
 		\subsubsection{TDDFT Input File}
 			Excited state energies are calculated using TDDFT. Direct SCF calculation is turned on. Basis set = 6-311++(2d,p)
