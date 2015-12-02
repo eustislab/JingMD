@@ -1,0 +1,176 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} 3dExtract pulls out geometries from MD run and make \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} an xyz\PYGdefaultZhy{}movie file for inspection MD	progress     	\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{os} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{os}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{sys}
+
+\PYGdefault{c}{\PYGdefaultZsh{}for asking what the input in terminal should be}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+	\PYGdefault{k}{if} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}\PYGdefault{o}{==}\PYGdefault{l+s}{\PYGdefaultZsq{}?\PYGdefaultZsq{}}\PYGdefault{p}{:}
+		\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{Call function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules   }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+		\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules   }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+
+\PYGdefault{c}{\PYGdefaultZsh{}Call as 3dExtract.py inputfile \PYGdefaultZsh{}ofsoluteAtom \PYGdefaultZsh{}ofsolventAtom \PYGdefaultZsh{}ofsoluteMolecules}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+    \PYGdefault{n+nb}{input}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}
+    \PYGdefault{n}{numberofSoluteAtoms}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{])}
+    \PYGdefault{n}{numberofSoventAtoms}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{])}
+    \PYGdefault{n}{numberOfSolventMolecules}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{4}\PYGdefault{p}{])}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{k}{if} \PYGdefault{n+nb}{input}\PYGdefault{o}{.}\PYGdefault{n}{endswith}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}.log\PYGdefaultZsq{}}\PYGdefault{p}{):}
+    \PYGdefault{n}{output} \PYGdefault{o}{=} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{[:}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{4}\PYGdefault{p}{])}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}.xyz\PYGdefaultZsq{}}
+\PYGdefault{k}{else}\PYGdefault{p}{:}
+    \PYGdefault{n}{output}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)}
+
+\PYGdefault{n}{numberOfAllSolventsAtoms}\PYGdefault{o}{=}\PYGdefault{n}{numberofSoventAtoms}\PYGdefault{o}{*}\PYGdefault{n}{numberOfSolventMolecules}
+\PYGdefault{c}{\PYGdefaultZsh{}This is for comparing files to be written}
+\PYGdefault{n}{previousGrandString}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+\PYGdefault{n}{collectionStarted}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+\PYGdefault{n}{time}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+\PYGdefault{c}{\PYGdefaultZsh{}1 is for cartesian line (useless), then 1 in 3(n+1) is for fragment H2O line (also useless)}
+\PYGdefault{n}{numberOfLinesToBecollected}\PYGdefault{o}{=}\PYGdefault{n}{numberofSoluteAtoms}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{+}\PYGdefault{n}{numberOfSolventMolecules}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{numberofSoventAtoms}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+
+
+\PYGdefault{c}{\PYGdefaultZsh{}number of molecules so far}
+\PYGdefault{n}{timeCount}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}
+\PYGdefault{c}{\PYGdefaultZsh{}total number of atoms (solute + solvent) \PYGdefaultZhy{} used later in checking if file is complete}
+\PYGdefault{n}{atomCount}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}
+\PYGdefault{c}{\PYGdefaultZsh{}define functions here}
+\PYGdefault{n}{lineSinceTimeIsFound}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+\PYGdefault{c}{\PYGdefaultZsh{}do an input of solvent, solute atoms }
+\PYGdefault{n}{molList}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{c}{\PYGdefaultZsh{}for printing time}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{printTime} \PYGdefault{p}{(}\PYGdefault{n}{thisLine}\PYGdefault{p}{):}
+    \PYGdefault{n}{lineComponents}\PYGdefault{o}{=}\PYGdefault{n}{thisLine}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{();}
+    \PYGdefault{n}{timeString}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lineComponents}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{]);}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZdq{}Analyzing t = \PYGdefaultZdq{}}\PYGdefault{o}{+}\PYGdefault{n}{timeString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZdq{} fsec}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZdq{}}
+\PYGdefault{c}{\PYGdefaultZsh{}to determine if line should be collected \PYGdefaultZhy{} }
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldCollect}\PYGdefault{p}{():}
+    \PYGdefault{c}{\PYGdefaultZsh{}only check if collection is in progress \PYGdefaultZhy{} if it is, then continue to finish collecting the lines}
+    \PYGdefault{c}{\PYGdefaultZsh{}collectionStarted is determined when \PYGdefaultZsq{} QM ATOM COORDINATES (ANG)\PYGdefaultZsq{}  is found}
+    \PYGdefault{k}{if} \PYGdefault{n}{collectionStarted}\PYGdefault{p}{:}
+        \PYGdefault{c}{\PYGdefaultZsh{}from first solute atom to the last fragment atom}
+        \PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{n}{atomCount}\PYGdefault{o}{\PYGdefaultZgt{}=}\PYGdefault{l+m+mi}{0} \PYGdefault{o+ow}{and} \PYGdefault{n}{atomCount}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{numberOfLinesToBecollected}\PYGdefault{p}{):}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+\PYGdefault{c}{\PYGdefaultZsh{} only write when atomCount==numberOfLinesToBecollected}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldWrite}\PYGdefault{p}{():}
+    \PYGdefault{c}{\PYGdefaultZsh{}only check if collection is in progress}
+    \PYGdefault{k}{if} \PYGdefault{n}{collectionStarted}\PYGdefault{p}{:}
+        \PYGdefault{c}{\PYGdefaultZsh{}solute}
+        \PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{n}{atomCount}\PYGdefault{o}{==}\PYGdefault{n}{numberOfLinesToBecollected}\PYGdefault{p}{):}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+        
+\PYGdefault{c}{\PYGdefaultZsh{}Even now I still don\PYGdefaultZsq{}t understand why GAMESS duplicate system geometry for a step twice in the log file}
+\PYGdefault{c}{\PYGdefaultZsh{}This is written to prevent duplication of geometry in the xyz\PYGdefaultZhy{}movie file}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{moleculeIsNotADuplication}\PYGdefault{p}{(}\PYGdefault{n}{currentMoleculeToBeWritten}\PYGdefault{p}{):}
+	\PYGdefault{c}{\PYGdefaultZsh{} to compare previously stored geometry and a new one is tricky bc each string has different lengths}
+	\PYGdefault{c}{\PYGdefaultZsh{} there must be a better of doing this \PYGdefaultZhy{} note for possible place for improvement}
+	\PYGdefault{c}{\PYGdefaultZsh{}current the speed is quite slow probably due to this step}
+    \PYGdefault{n}{halfSize}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{previousGrandString}\PYGdefault{p}{)}\PYGdefault{o}{/}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{)}
+    \PYGdefault{n}{threeQuartersSize}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{previousGrandString}\PYGdefault{p}{)}\PYGdefault{o}{*}\PYGdefault{l+m+mi}{3}\PYGdefault{o}{/}\PYGdefault{l+m+mi}{4}\PYGdefault{p}{)}
+    \PYGdefault{k}{if} \PYGdefault{n}{previousGrandString}\PYGdefault{o}{==}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+    \PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{n}{currentMoleculeToBeWritten}\PYGdefault{p}{[}\PYGdefault{n}{halfSize}\PYGdefault{p}{:}\PYGdefault{n}{threeQuartersSize}\PYGdefault{p}{]} \PYGdefault{o+ow}{not} \PYGdefault{o+ow}{in} \PYGdefault{n}{previousGrandString}\PYGdefault{p}{[}\PYGdefault{n}{halfSize}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{:}\PYGdefault{n}{threeQuartersSize}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]):}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+        
+\PYGdefault{c}{\PYGdefaultZsh{}clear output.xyz}
+\PYGdefault{n}{f} \PYGdefault{o}{=} \PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}w\PYGdefaultZsq{}}\PYGdefault{p}{);}
+\PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{c}{\PYGdefaultZsh{}open input}
+\PYGdefault{n}{f1}\PYGdefault{o}{=}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)}
+\PYGdefault{c}{\PYGdefaultZsh{}enumerate gets data in line \PYGdefaultZhy{} line and line index \PYGdefaultZhy{} n}
+\PYGdefault{c}{\PYGdefaultZsh{}readlines() is eliminated because it creates a huge array and python cannot handle it when log file get very large}
+\PYGdefault{c}{\PYGdefaultZsh{}using for line in... alleviate the burden on memory and actually speed up the process}
+\PYGdefault{k}{for} \PYGdefault{n}{line} \PYGdefault{o+ow}{in} \PYGdefault{n}{f1}\PYGdefault{p}{:}
+    \PYGdefault{c}{\PYGdefaultZsh{}this keyword is usually before coordinate}
+    \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+    \PYGdefault{c}{\PYGdefaultZsh{}find out if checking for collectionStarted is needed            }
+    \PYGdefault{k}{if} \PYGdefault{n}{shouldCollect}\PYGdefault{p}{():}
+        \PYGdefault{c}{\PYGdefaultZsh{}split line}
+        \PYGdefault{n}{lineSplit}\PYGdefault{o}{=}\PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{()}
+        \PYGdefault{n}{atomCount}\PYGdefault{o}{+=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+        \PYGdefault{c}{\PYGdefaultZsh{}append to molList}
+        \PYGdefault{n}{molList}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{lineSplit}\PYGdefault{p}{)}
+    \PYGdefault{c}{\PYGdefaultZsh{} if this then start collecting}
+    \PYGdefault{k}{elif} \PYGdefault{l+s}{\PYGdefaultZsq{} QM ATOM COORDINATES (ANG)\PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+        \PYGdefault{n}{collectionStarted}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+    \PYGdefault{c}{\PYGdefaultZsh{}lastly, if none of the above, then find and print time}
+    \PYGdefault{k}{elif}  \PYGdefault{l+s}{\PYGdefaultZsq{} *** AT T=\PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+        \PYGdefault{n}{time}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{)}
+        \PYGdefault{n}{printTime}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{);}
+        
+    \PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{n}{shouldWrite}\PYGdefault{p}{()):}
+        \PYGdefault{n}{atomCount}\PYGdefault{o}{=}\PYGdefault{n}{atomCount}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{p}{(}\PYGdefault{n}{numberOfSolventMolecules}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{);}
+        \PYGdefault{c}{\PYGdefaultZsh{}for loop through a ***COPY*** of molList and delete some element from molList!}
+        \PYGdefault{c}{\PYGdefaultZsh{}if you don\PYGdefaultZsq{}t realize six asterisk then you should go back up \PYGdefaultZhy{} we do this so we can remove element along the way without messing up the index}
+        \PYGdefault{k}{for} \PYGdefault{n}{line} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{list}\PYGdefault{p}{(}\PYGdefault{n}{molList}\PYGdefault{p}{):}
+            \PYGdefault{c}{\PYGdefaultZsh{}if line has 4 elements then it\PYGdefaultZsq{}s a coordinate from solvent fragment \PYGdefaultZhy{} we have to drop number behind atom \PYGdefaultZhy{} O1 to O}
+            \PYGdefault{k}{if} \PYGdefault{n+nb}{len} \PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{)} \PYGdefault{o}{==} \PYGdefault{l+m+mi}{4}\PYGdefault{p}{:}
+                \PYGdefault{c}{\PYGdefaultZsh{}store string}
+                \PYGdefault{n}{oldString} \PYGdefault{o}{=}  \PYGdefault{n}{line}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}
+                \PYGdefault{c}{\PYGdefaultZsh{}replacement string}
+                \PYGdefault{n}{newString}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+                \PYGdefault{c}{\PYGdefaultZsh{}loop to check if it\PYGdefaultZsq{}s a alphabet or not}
+                \PYGdefault{k}{for} \PYGdefault{n}{character} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{range}\PYGdefault{p}{(}\PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{oldString}\PYGdefault{p}{)):}
+                    \PYGdefault{c}{\PYGdefaultZsh{}do substring of 1 character}
+                    \PYGdefault{n}{subString} \PYGdefault{o}{=} \PYGdefault{n}{oldString}\PYGdefault{p}{[}\PYGdefault{n}{character}\PYGdefault{p}{:}\PYGdefault{n}{character}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+                    \PYGdefault{c}{\PYGdefaultZsh{}check if it\PYGdefaultZsq{}s an alphabet \PYGdefaultZhy{} yes? then add to newString}
+                    \PYGdefault{k}{if} \PYGdefault{n}{subString}\PYGdefault{o}{.}\PYGdefault{n}{isalpha}\PYGdefault{p}{():}
+                        \PYGdefault{n}{newString} \PYGdefault{o}{=} \PYGdefault{n}{newString} \PYGdefault{o}{+} \PYGdefault{n}{subString}
+                \PYGdefault{c}{\PYGdefaultZsh{}replace \PYGdefaultZsq{}O1\PYGdefaultZsq{} with \PYGdefaultZsq{}O\PYGdefaultZsq{}}
+                \PYGdefault{n}{line}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{newString}
+            \PYGdefault{c}{\PYGdefaultZsh{}if it\PYGdefaultZsq{}s 5 then it\PYGdefaultZsq{}s solute coordinate \PYGdefaultZhy{} we have to get rid of atomic number behind atomic representation}
+            \PYGdefault{k}{elif} \PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{)} \PYGdefault{o}{==} \PYGdefault{l+m+mi}{5}\PYGdefault{p}{:}
+                \PYGdefault{c}{\PYGdefaultZsh{} \PYGdefaultZsq{}N 7.0 ...\PYGdefaultZsq{} will become \PYGdefaultZsq{}N ...\PYGdefaultZsq{} }
+                \PYGdefault{k}{del} \PYGdefault{n}{line}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+            \PYGdefault{c}{\PYGdefaultZsh{}the rest are crap \PYGdefaultZhy{} just remove it out of the line}
+            \PYGdefault{k}{else}\PYGdefault{p}{:}
+                \PYGdefault{c}{\PYGdefaultZsh{}there\PYGdefaultZsq{}s a reason why this is remove \PYGdefaultZhy{} not del \PYGdefaultZhy{} since we are iterating if we delete using index we are gonna be screwed}
+                \PYGdefault{n}{molList}\PYGdefault{o}{.}\PYGdefault{n}{remove}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{)}
+        \PYGdefault{c}{\PYGdefaultZsh{}this is for if we have an incomplete file or inconsistant number of atoms we should only use the one before and break for loop without appending to grandString}
+        \PYGdefault{k}{if} \PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{molList}\PYGdefault{p}{)} \PYGdefault{o}{!=} \PYGdefault{n}{atomCount}\PYGdefault{p}{:}
+            \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}error\PYGdefaultZsq{}}
+        \PYGdefault{c}{\PYGdefaultZsh{}xyz file has a format that we need atomCount at the top followed by snapshot number(timeCount) on the next line before adding any coordinates}
+        \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{atomCount}\PYGdefault{p}{)}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{timeCount}\PYGdefault{p}{)}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}
+        \PYGdefault{c}{\PYGdefaultZsh{}loop tho molList to add data \PYGdefaultZhy{} molList = [[\PYGdefaultZsq{}N\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{}],[\PYGdefaultZsq{}C\PYGdefaultZsq{}...],... ] And element = [\PYGdefaultZsq{}N\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{}]}
+        \PYGdefault{k}{for} \PYGdefault{n}{element} \PYGdefault{o+ow}{in} \PYGdefault{n}{molList}\PYGdefault{p}{:}
+            \PYGdefault{c}{\PYGdefaultZsh{}loop through element in molList data = \PYGdefaultZsq{}N\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{},\PYGdefaultZsq{}1\PYGdefaultZsq{}}
+            \PYGdefault{k}{for} \PYGdefault{n}{data} \PYGdefault{o+ow}{in} \PYGdefault{n}{element}\PYGdefault{p}{:}
+                \PYGdefault{c}{\PYGdefaultZsh{}add to grandString and don\PYGdefaultZsq{}t forget tab, return}
+                \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{n}{data}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}t}\PYGdefault{l+s}{\PYGdefaultZsq{}}
+            \PYGdefault{c}{\PYGdefaultZsh{}end one screenshot with a return}
+            \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}
+        \PYGdefault{c}{\PYGdefaultZsh{}open animate.xyz for writing}
+        \PYGdefault{k}{if} \PYGdefault{n}{moleculeIsNotADuplication}\PYGdefault{p}{(}\PYGdefault{n}{grandString}\PYGdefault{p}{):}                 
+            \PYGdefault{k}{with} \PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}a\PYGdefaultZsq{}}\PYGdefault{p}{)} \PYGdefault{k}{as} \PYGdefault{n}{f}\PYGdefault{p}{:}
+                \PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{n}{grandString}\PYGdefault{p}{)}
+                \PYGdefault{c}{\PYGdefaultZsh{}add one to timeCount because we already write grandString}
+                \PYGdefault{n}{timeCount}\PYGdefault{o}{=}\PYGdefault{n}{timeCount}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}
+        \PYGdefault{c}{\PYGdefaultZsh{}reset all values after writing}
+        \PYGdefault{n}{atomCount}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{n}{molList}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+        \PYGdefault{n}{collectionStarted}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+        \PYGdefault{n}{previousGrandString}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{grandString}\PYGdefault{p}{)}
+\PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{close}\PYGdefault{p}{()}
+\PYGdefault{c}{\PYGdefaultZsh{}sanity check}
+\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}Done. Extract \PYGdefaultZsq{}} \PYGdefault{o}{+} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{timeCount}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{} snapshots total.\PYGdefaultZsq{}}
+            
+\end{Verbatim}

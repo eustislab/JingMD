@@ -1,14 +1,5 @@
 import sys
 
-radiusInSolute=0.0
-radiusInSolvent=0.0
-avgX=0.0
-avgY=0.0
-avgZ=0.0
-X=[]
-Y=[]
-Z=[]
-
 callAs='\nCall function as: radiusDetermination.py input.log numberOfSoluteAtoms\n'
 try:
 	if str(sys.argv[1])=='?':
@@ -28,6 +19,15 @@ except IndexError:
 #open input
 f1=open(input)
 #enumerate gets data in line - line and line index - n
+radiusInSolute=0.0
+radiusInSolvent=0.0
+avgX=0.0
+avgY=0.0
+avgZ=0.0
+X=[]
+Y=[]
+Z=[]
+
 lineNumber=0
 for line in f1:
 	lineNumber+=1

@@ -1,0 +1,65 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} run type = MD, with functional = CAMB3LYP, COORD = UNIQUE is important}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}CONTRL} \PYGdefault{n}{SCFTYP}\PYGdefault{o}{=}\PYGdefault{n}{RHF} \PYGdefault{n}{RUNTYP}\PYGdefault{o}{=}\PYGdefault{n}{MD} \PYGdefault{n}{COORD}\PYGdefault{o}{=}\PYGdefault{n}{UNIQUE}
+    \PYGdefault{n}{DFTTYP}\PYGdefault{o}{=}\PYGdefault{n}{CAMB3LYP} \PYGdefault{n}{MAXIT}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{200} \PYGdefault{n}{ICHARG}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0} \PYGdefault{n}{MULT}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} MD is recording every 10 frames with default 1 frame =10 fs}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} 25 degree celcius, RSTEMP is on for keeping the temp \PYGdefaultZti{} +/\PYGdefaultZhy{}25}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} ssbp is on with default SForce value and radius estimated from prepareMD2.py }
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}MD} \PYGdefault{n}{KEVERY}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{10} \PYGdefault{n}{PROD}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} \PYGdefault{n}{NVTNH}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{2} \PYGdefault{n}{MBT}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} \PYGdefault{n}{MBR}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} 
+    \PYGdefault{n}{BATHT}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{298} \PYGdefault{n}{RSTEMP}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} \PYGdefault{n}{DTEMP}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{25} \PYGdefault{n}{NSTEPS}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{50000}
+    \PYGdefault{n}{SSBP}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} \PYGdefault{n}{SFORCE}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1.0} \PYGdefault{n}{DROFF}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{12.0632116659} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}1\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} dispersion correction is off}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}DFT} \PYGdefault{n}{DC}\PYGdefault{o}{=.}\PYGdefault{n}{F}\PYGdefault{o}{.} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} memory requested at each node =1000 million words}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} memory reserved for communication = 1000 million words }
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}SYSTEM} \PYGdefault{n}{MWORDS}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1000} \PYGdefault{n}{MEMDDI}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1000} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}SCF} \PYGdefault{n}{DIRSCF}\PYGdefault{o}{=.}\PYGdefault{n}{T}\PYGdefault{o}{.} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} Basis set = 6\PYGdefaultZhy{}31+(2d,p)}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}BASIS} \PYGdefault{n}{GBASIS}\PYGdefault{o}{=}\PYGdefault{n}{N31} \PYGdefault{n}{NGAUSS}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{6} \PYGdefault{n}{NDFUNC}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{2} \PYGdefault{n}{NPFUNC}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1} 
+    \PYGdefault{n}{DIFFS}\PYGdefault{o}{=.}\PYGdefault{n}{TRUE}\PYGdefault{o}{.} \PYGdefault{n}{POLAR}\PYGdefault{o}{=}\PYGdefault{n}{POPN31} \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} solute geometry \PYGdefaultZhy{} C1 1 = symmetry data}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}DATA}
+\PYGdefault{n}{MD} \PYGdefault{n}{INPUT} \PYGdefault{k}{for} \PYGdefault{n}{aniline32}
+\PYGdefault{n}{C1} \PYGdefault{l+m+mi}{1}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}2\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{n}{N}	\PYGdefault{l+m+mf}{7.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.3128100000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0046000000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0894530000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.9197160000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0031280000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0360090000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.2076150000}	\PYGdefault{l+m+mf}{1.2004070000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0355880000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{1.1800230000}	\PYGdefault{l+m+mf}{1.1968760000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0402490000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{1.8885400000}	\PYGdefault{l+m+mf}{0.0002120000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0451380000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{1.1826030000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.1982380000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0439250000}
+\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.2049580000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.2053990000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0404060000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.7444290000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.1464580000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0434230000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{1.7166170000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.1417620000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0464910000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{2.9715860000}	\PYGdefault{l+m+mf}{0.0014800000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0479970000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{1.7114190000}	\PYGdefault{l+m+mf}{2.1418420000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0377940000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.7497420000}	\PYGdefault{l+m+mf}{2.1399280000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0298190000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.7544730000}	\PYGdefault{l+m+mf}{0.8437050000}	\PYGdefault{l+m+mf}{0.2369240000}
+\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.7570450000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.8248640000}	\PYGdefault{l+m+mf}{0.2993670000}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ 
+ \PYGdefault{c+c1}{\PYGdefaultZsh{} solvent geometry in EFP1 (EFP2 is still not available)}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}3\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}EFRAG}
+\PYGdefault{n}{COORD}\PYGdefault{o}{=}\PYGdefault{n}{CART}  \PYGdefault{n}{POSITION}\PYGdefault{o}{=}\PYGdefault{n}{OPTIMIZE}
+\PYGdefault{n}{FRAGNAME}\PYGdefault{o}{=}\PYGdefault{n}{H2ODFT} \PYGdefault{o}{!} \PYGdefault{l+m+mi}{1}
+ \PYGdefault{n}{O1}	\PYGdefault{l+m+mf}{1.7760990000}	\PYGdefault{l+m+mf}{4.8390610000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.1049530000}
+ \PYGdefault{n}{H2}	\PYGdefault{l+m+mf}{0.9224740000}	\PYGdefault{l+m+mf}{4.4173920000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.2628490000}
+ \PYGdefault{n}{H3}	\PYGdefault{l+m+mf}{2.4128200000}	\PYGdefault{l+m+mf}{4.1148590000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.1441810000}
+\PYGdefault{n}{FRAGNAME}\PYGdefault{o}{=}\PYGdefault{n}{H2ODFT} \PYGdefault{o}{!} \PYGdefault{l+m+mi}{2}
+ \PYGdefault{n}{O1}	\PYGdefault{l+m+mf}{3.6783070000}	\PYGdefault{l+m+mf}{3.8351060000}	\PYGdefault{l+m+mf}{0.8717800000}
+ \PYGdefault{n}{H2}	\PYGdefault{l+m+mf}{3.6020030000}	\PYGdefault{l+m+mf}{4.1116030000}	\PYGdefault{l+m+mf}{1.7932670000}
+ \PYGdefault{n}{H3}	\PYGdefault{l+m+mf}{3.4138960000}	\PYGdefault{l+m+mf}{4.6126330000}	\PYGdefault{l+m+mf}{0.3648680000}
+\PYGdefault{o}{.}
+\PYGdefault{o}{.}
+\PYGdefault{o}{.}
+\PYGdefault{n}{FRAGNAME}\PYGdefault{o}{=}\PYGdefault{n}{H2ODFT} \PYGdefault{o}{!} \PYGdefault{l+m+mi}{32}
+ \PYGdefault{n}{O1}	\PYGdefault{l+m+mf}{3.7691430000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.4091250000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{4.0319510000}
+ \PYGdefault{n}{H2}	\PYGdefault{l+m+mf}{2.8756120000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.5562470000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{4.3656710000}
+ \PYGdefault{n}{H3}	\PYGdefault{l+m+mf}{3.6686840000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.3995500000}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{3.0721400000}
+ \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
+ \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\end{Verbatim}

@@ -37,6 +37,7 @@ manuscript=article]{achemso}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[labelfont={bf}]{caption}
+\usepackage{minted}
 
 \newcommand*{\mycommand}[1]{\texttt{\emph{#1}}}
 
@@ -71,13 +72,13 @@ Micropollutants are pollutants whose concentrations are individually low, but co
 
 Despite recent advent of growth in computer speed and burgeoning interest in incorporating computational models to further understand the nature world, large systems such as solvation models remains a big challenge.\cite{Lin2007} In modeling effects of solvent molecules on solute, implicit solvation models were previously implemented because it allows for acceptable results calculation while maintaining good speed (low computational cost). Most famous of all implicit models is Potential Continuum Model (PCM).\cite{Cossi2000} Instead of explicitly handling each solvent molecules quantum mechanically, PCM expresses their bulk effects on solute molecule in means of dielectric continuum field surrounding molecule of interest. Its downfall is that, however, its accuracy falls short of static and dynamic contribution of excited states properties.\cite{Barone2007} Furthermore, implicit solvent model also neglects hydrogen-bonding as it assumes implicit implementation in dispersion forces and electrostatics.\cite{Li1999} Especially in calculating excited state energies, an accurate solvent model should be used.\cite{Tomasi2005} In explicit solvent model, one recent notable method – Effective Fragment Potentials (EFP) can be used to model explicit solvents with non-bonded van der Waals interactions, hydrogen bonding using Coulomb interactions, polarization, and exchange repulsion without high computational expense of explicit models.\cite{Day1996,Yoo2008} This model is chosen to implement explicit solvent in calculating excited states energies.
 
-In modeling organic solute in aquatic environment, the solute,  the appropriate number of water molecules to be included as EFP in the model has never been evaluated. Too many water means expensive computational cost. Too few water will not fully model solvating shells around the solute. Binary system will be used to model how many water molecule is needed to fully solvate the solute molecules: 2, 4, 8, 16... 
+In modeling organic solute in aquatic environment, the solute, the appropriate number of water molecules to be included as EFP in the model has never been evaluated. Too many water means expensive computational cost. Too few water will not fully model solvating shells around the solute. Binary system will be used to model how many water molecule is needed to fully solvate the solute molecules: 2, 4, 8, 16... Once excited energies for each system is calculated, the results will be compared with experimental value to evaluate how many water is needed before determining on which functional out of three choices should be chosen to achieve the most accurate computational model. 
 
 \subsection{Computational Models: Theories, Basis Sets, and Functionals}
 
-Among all current theories, Time-Dependent Density Functional Theory (TDDFT) is the most promising with its high accuracy when used with appropriate functionals and low computational cost\cite{Magyar2007}. Implementing EFP solvent model, TDDFT can be used to accurately calculate excited state energy of acetone in water.\cite{Yoo2008} Typically in Implicit solvent model, geometry optimization of solute molecule is carried out with PCM, followed by calculation of excited state energies, also with PCM. This static ground state molecule however does not accurately represent solute in water. Instead, Molecular Dynamics (MD) of solute and solvent fragments can be used to obtain a range of equilibrated structures for excited state energies calculation. Mark Gordon averaged the calculated energies of each excited state to arrive at a final excited states energy.\cite{Defusco2011}
+Among all current theories, Time-Dependent Density Functional Theory (TDDFT) is the most promising with its high accuracy when used with appropriate functionals and low computational cost\cite{Magyar2007}. Implementing EFP solvent model, TDDFT can be used to accurately calculate excited state energy of acetone in water.\cite{Yoo2008} Typically in Implicit solvent model, geometry optimization of solute molecule is carried out with PCM, followed by calculation of excited state energies, also with PCM. This static ground state molecule however does not accurately represent solute in water.\cite{Defusco2011} Instead, Molecular Dynamics (MD) of solute and solvent fragments can be used to obtain a range of equilibrated structures for excited state energies calculation. Mark Gordon averaged the calculated energies of each excited state to arrive at a final excited states energy.\cite{Defusco2011} 
 
-According to previous basis set studies, average-sized basis set 6-311++(2d,p) performs better than ACCD (another average size basis set).\cite{Wiberg2004,Barnes2014} This basis set is chosen to run TDDFT after MD run. In running MD, a smaller basis set 6-31+(2d,p) will be used in order to cut computational cost. Two best-performing DFT functionals out of all examined in previous study are explored: CAMB3LYP, M06-2X.\cite{Barnes2014} PBE0 will also be used.
+According to previous basis set studies, wile having roughly the same computational cost, an average-sized basis set 6-311++(2d,p) performs better than aug-cc-pVDZ (ACCD).\cite{Wiberg2004,Barnes2014} For example, transition energies calculated of CN molecule as calculated by ACCD deviates 1117-1669 cm\textsuperscript{-1} from experimental value while those by 6-311++(2d,p) only deviate 220-470 cm\textsuperscript{-1}. Hoping to most accurately calculate the excited energies, 6-311++(2d,p) basis set is chosen to run TDDFT after MD run. In running MD, a smaller basis set 6-31+(2d,p) will be used in order to cut computational cost. The decision comes after weeks of waiting for computational results when determining the number of water molecule in the model. Two best-performing DFT functionals out of all examined in previous study are explored: CAMB3LYP, M06-2X.\cite{Barnes2014} PBE0 will also be used.
 
 \section{Method}
 
@@ -96,25 +97,25 @@ TDDFT calculation for aniline with 32, 64, 128, 256, 512 surrounding water molec
 \begin{figure}[!tbp]
 	\centering
 		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{aniline32_0fs.png}
+		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_0fs.png}
 		 	\caption{}
 		 	\label{fig:MDEnergyAniline32a)}
 		 \end{subfigure}
 		 \hfill
 		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{aniline32_15000fs.png}
+		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_15000fs.png}
 		 	\caption{}
 		 	\label{fig:MDEnergyAniline32b)}
 		 \end{subfigure}
 		 \hfill
 		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{aniline32_25000fs.png}
+		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_25000fs.png}
 		 	\caption{}
 		 	\label{fig:MDEnergyAniline32c)}
 		 \end{subfigure}
 		 \hfill
 		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{aniline32_EnergyPlot.png}
+		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_EnergyPlot.png}
 		 	\caption{}
 		 	\label{fig:MDEnergyAniline32d)}
 		 \end{subfigure}
@@ -173,12 +174,45 @@ The excited state energies and its oscillator strength are tabulated in table \r
 
 \clearpage
 \appendix 
-\section{Appendices}
+\label{appendix}
+\section*{Appendix}
+\renewcommand{\thesubsection}{\Alph{sub}}
 	\subsection{Python Scripts}
-Python Scripts 
+	In order to automatically generate input files and cultivate output data from output files, many python scripts are written from scratch. Since scripts are specific to each GAMESS run, there is a limited number of scripts available on the internet (virtually none for this project). Log files obtained from GAMESS contains both valuable experimental data and useless text strings. Python scripts play an important role in both data collection and smoothing up the process between each computational steps.  For example, even though WEBMO can generate sets of latest geometry in MD run, but retrieving geometry from each MD step requires one to manually open the log file and copy-paste the geometry into input files of the next step one by one. The python script postMDDataPull2.py is designed to pull thousands of geometries and generate GAMESS input files for TDDFT energy calculation within seconds. Generating these python scripts will also allow unified program to be developed in order to automate the whole project without any manual input.
 
+		\subsubsection{Preparing MD Input Files}
+			This script does two things. First (line 35-84), it calculates appropriate radius for solvent boundary potential. Some time and effort were spent on figuring out what the radius should be without emperically guess it. A simple model is proposed: At most solute will rotate around its outmost solute atom. This radius, in the code, is called solute radius. The other radius is solvent radius, its the distance between the outmost solvent atom to the solute's CG. These two radius plus an extra 2-3 Angstrom gives ssbp radius for MD input file. Second (line 87-155), the script parses xyz file's geometry data into MD input file. Slight format change is required for GAMESS input files, so this python code automate that change. The output file is MD file which can be run on GAMESS. Output of this script can be seen below in MD Input File section.
+			\vfill
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/prepareMD2.py}
+		
+		\subsubsection{MD Geometries extraction}
+			One of the reasons, an MD run might fail is if solute molecule is pushed out of the water sphere. This script allows geometries to be extracted into a xyz-movie file. xyz files, capable of containing more than one frame of geometries, allows one to follow MD through a combination of screenshot (each frame is 10 femtosecond - in the current MD input file - see MD Input File section). 
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/3dExtract4.py}
+			
+		\subsubsection{Plot Potential Energy of MD run}
+			
+		
+		\subsubsection{Find The Most Equilibrated Period}
+		
+		
+		\subsubsection{Prepare TDDFT input}
+		
+		
+		\subsubsection{Pull Excited State Energies from TDDFT Log Files}
+		
+		
 	\subsection{GAMESS inputs}
-input file explanation
+		\subsubsection{MD Input File}
+			 MD run is core to modeling explicit solvent. The MD run is simulated every femtosecond but only record every 10 femtoseconds. The bath temperature is 25 $\pm$ 25 degree Celsius. Solvent boundary potential is also actiavetd using default Sforce value, but with estimate ssbp radius. \#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD in case the calculation abruptly ends (see next section). In this version, dispersion correction is not turned on. Basis set = 6-31+(2d,p)
+			 \inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.inp}
+			 
+		\subsubsection{MD Input File}
+		\#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD. For example, if MD stops from errors at t= 39000 fs, a restart geometry and \$MD should be obtained from t= 38960 in the run's trj file. \#\#\#\#\#\#\#\#\#1\#\#\#\#\#\#\#\#\# from trj goes to \#\#\#\#\#\#\#\#\#1\#\#\#\#\#\#\#\#\# in MD input file and so on with 2 and 3.
+		\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.inp}
+		
+		\subsubsection{TDDFT Input File}
+			Excited state energies are calculated using TDDFT. Direct SCF calculation is turned on. Basis set = 6-311++(2d,p)
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/TDDFT_aniline32_15010.inp}
 
 
 \acknowledgement

@@ -1,13 +1,12 @@
 ###########################################################
-###This version is created to solve memory error when   ###
-###used with large log file (5Gb up). The slow speed is ###
-### undesirable but it's what it is now. The problem is ###
-###avoided by looping in open instead of readlines()    ###
+### 3dExtract pulls out geometries from MD run and make ###
+### an xyz-movie file for inspection MD	progress     	###
 ###########################################################
+
 import os as os
 import sys
 
-#Call as 3dExtract.py inputfile #ofsoluteAtom #ofsolventAtom #ofsoluteMolecules
+#for asking what the input in terminal should be
 try:
 	if str(sys.argv[1])=='?':
 		print '\nCall function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules   \n' 
@@ -16,6 +15,7 @@ except IndexError:
     print '\n!!!Input command Error. Call function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules   \n' 
     sys.exit()
 
+#Call as 3dExtract.py inputfile #ofsoluteAtom #ofsolventAtom #ofsoluteMolecules
 try:
     input=str(sys.argv[1])
     numberofSoluteAtoms=int(sys.argv[2])
@@ -24,19 +24,20 @@ try:
 except IndexError:
     print '\n!!!Input command Error. Call function as: 3dExtract.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules \n' 
     sys.exit()
-    
-
-numberOfAllSolventsAtoms=numberofSoventAtoms*numberOfSolventMolecules
-previousGrandString=''
-collectionStarted=False
-time=''
-#1 is for cartesian line, then 1 in 3(n+1) is for fragment H2O line 
-numberOfLinesToBecollected=numberofSoluteAtoms+1+numberOfSolventMolecules*(numberofSoventAtoms+1)
-
 if input.endswith('.log'):
     output = str(input[:-4])+'.xyz'
 else:
     output=str(input)
+
+numberOfAllSolventsAtoms=numberofSoventAtoms*numberOfSolventMolecules
+#This is for comparing files to be written
+previousGrandString=''
+collectionStarted=False
+time=''
+#1 is for cartesian line (useless), then 1 in 3(n+1) is for fragment H2O line (also useless)
+numberOfLinesToBecollected=numberofSoluteAtoms+1+numberOfSolventMolecules*(numberofSoventAtoms+1)
+
+
 #number of molecules so far
 timeCount=0
 #total number of atoms (solute + solvent) - used later in checking if file is complete
@@ -45,12 +46,15 @@ atomCount=0
 lineSinceTimeIsFound=0;
 #do an input of solvent, solute atoms 
 molList=[]
+#for printing time
 def printTime (thisLine):
     lineComponents=thisLine.split();
     timeString=str(lineComponents[3]);
     print "Analyzing t = "+timeString+" fsec\n"
+#to determine if line should be collected - 
 def shouldCollect():
-    #only check if collection is in progress
+    #only check if collection is in progress - if it is, then continue to finish collecting the lines
+    #collectionStarted is determined when ' QM ATOM COORDINATES (ANG)'  is found
     if collectionStarted:
         #from first solute atom to the last fragment atom
         if (atomCount>=0 and atomCount<numberOfLinesToBecollected):
@@ -59,6 +63,7 @@ def shouldCollect():
             return False;
     else:
         return False;
+# only write when atomCount==numberOfLinesToBecollected
 def shouldWrite():
     #only check if collection is in progress
     if collectionStarted:
@@ -69,7 +74,13 @@ def shouldWrite():
             return False;
     else:
         return False;
+        
+#Even now I still don't understand why GAMESS duplicate system geometry for a step twice in the log file
+#This is written to prevent duplication of geometry in the xyz-movie file
 def moleculeIsNotADuplication(currentMoleculeToBeWritten):
+	# to compare previously stored geometry and a new one is tricky bc each string has different lengths
+	# there must be a better of doing this - note for possible place for improvement
+	#current the speed is quite slow probably due to this step
     halfSize=int(len(previousGrandString)/2)
     threeQuartersSize=int(len(previousGrandString)*3/4)
     if previousGrandString=='':
@@ -78,24 +89,29 @@ def moleculeIsNotADuplication(currentMoleculeToBeWritten):
         return True;
     else:
         return False;
+        
 #clear output.xyz
 f = open(output, 'w');
 f.write('')
 #open input
 f1=open(input)
 #enumerate gets data in line - line and line index - n
+#readlines() is eliminated because it creates a huge array and python cannot handle it when log file get very large
+#using for line in... alleviate the burden on memory and actually speed up the process
 for line in f1:
     #this keyword is usually before coordinate
     grandString=''
-    #find out if collection is needed            
+    #find out if checking for collectionStarted is needed            
     if shouldCollect():
         #split line
         lineSplit=line.split()
         atomCount+=1;
         #append to molList
         molList.append(lineSplit)
+    # if this then start collecting
     elif ' QM ATOM COORDINATES (ANG)' in line:
         collectionStarted=True
+    #lastly, if none of the above, then find and print time
     elif  ' *** AT T=' in line:
         time=str(line)
         printTime(line);
@@ -147,10 +163,12 @@ for line in f1:
                 f.write(grandString)
                 #add one to timeCount because we already write grandString
                 timeCount=timeCount+1
+        #reset all values after writing
         atomCount=0;
         molList=[]
         collectionStarted=False;
         previousGrandString=str(grandString)
 f.close()
+#sanity check
 print 'Done. Extract ' + str(timeCount) + ' snapshots total.'
             
