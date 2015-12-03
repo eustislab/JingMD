@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{16}
+\begin{mcitethebibliography}{18}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -20,18 +20,40 @@
   {\relax}
   {\relax}
 
+\bibitem[Schwarzenbach \latin{et~al.}(2006)Schwarzenbach, Escher, Fenner,
+  Hofstetter, Johnson, von Gunten, and Wehrli]{Schwarzenbach2006}
+Schwarzenbach,~R. Ì.~P.; Escher,~B.~I.; Fenner,~K.; Hofstetter,~T.~B.;
+  Johnson,~C.~A.; von Gunten,~U.; Wehrli,~B. {The Challenge of Micropollutants
+  in Aquatic Systems}. \emph{Science} \textbf{2006}, \emph{313},
+  1072--1077\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Monteiro and Boxall(2010)Monteiro, and Boxall]{Monteiro2010}
+Monteiro,~S.; Boxall,~A. \emph{Reviews of Environmental Contamination and
+  Toxicology SE - 2}; Reviews of Environmental Contamination and Toxicology;
+  Springer New York, 2010; Vol. 202; pp 53--154\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Bedoux \latin{et~al.}(2012)Bedoux, Roig, Thomas, Dupont, and {Le
   Bot}]{Bedoux2012}
-Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. \emph{Environmental
-  Science and Pollution Research} \textbf{2012}, \emph{19}, 1044--1065\relax
+Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. {Occurrence and
+  toxicity of antimicrobial triclosan and by-products in the environment}.
+  \emph{Environmental Science and Pollution Research} \textbf{2012}, \emph{19},
+  1044--1065\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Kliegman \latin{et~al.}(2013)Kliegman, Eustis, Arnold, and
   McNeill]{Kliegman2013}
-Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. \emph{Environmental
-  science {\&} technology} \textbf{2013}, \emph{47}, 6756--63\relax
+Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. {Experimental and
+  theoretical insights into the involvement of radicals in triclosan
+  phototransformation.} \emph{Environmental science {\&} technology}
+  \textbf{2013}, \emph{47}, 6756--63\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -45,36 +67,42 @@ Ricke,~N.~D. {Application of the Landau-Zener Model and Fermi ' s Golden Rule
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Lin and Truhlar(2007)Lin, and Truhlar]{Lin2007}
-Lin,~H.; Truhlar,~D.~G. \emph{Theoretical Chemistry Accounts} \textbf{2007},
+Lin,~H.; Truhlar,~D.~G. {QM/MM: what have we learned, where are we, and where
+  do we go from here?} \emph{Theoretical Chemistry Accounts} \textbf{2007},
   \emph{117}, 185--199\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Cossi and Barone(2000)Cossi, and Barone]{Cossi2000}
-Cossi,~M.; Barone,~V. \emph{The Journal of Chemical Physics} \textbf{2000},
-  \emph{112}, 2427\relax
+Cossi,~M.; Barone,~V. {Solvent effect on vertical electronic transitions by the
+  polarizable continuum model}. \emph{The Journal of Chemical Physics}
+  \textbf{2000}, \emph{112}, 2427\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Barone and Polimeno(2007)Barone, and Polimeno]{Barone2007}
-Barone,~V.; Polimeno,~A. \emph{Chem. Soc. Rev.} \textbf{2007}, \emph{36},
-  1724--1731\relax
+Barone,~V.; Polimeno,~A. {Integrated computational strategies for UV/vis
+  spectra of large molecules in solution}. \emph{Chem. Soc. Rev.}
+  \textbf{2007}, \emph{36}, 1724--1731\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Li \latin{et~al.}(1999)Li, Cramer, and Truhlar]{Li1999}
-Li,~J.; Cramer,~C.~J.; Truhlar,~D.~G. \emph{International Journal of Quantum
-  Chemistry} \textbf{1999}, \emph{77}, 264--280\relax
+Li,~J.; Cramer,~C.~J.; Truhlar,~D.~G. {Two-Response-Time Model Based on
+  CM2/INDO/S2 Electrostatic Potentials for the Dielectric Polarization
+  Component of Solvatochromic Shifts on Vertical Excitation Energies}.
+  \emph{International Journal of Quantum Chemistry} \textbf{1999}, \emph{77},
+  264--280\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Tomasi \latin{et~al.}(2005)Tomasi, Mennucci, and Cammi]{Tomasi2005}
-Tomasi,~J.; Mennucci,~B.; Cammi,~R. \emph{Chemical Reviews} \textbf{2005},
-  \emph{105}, 2999--3093\relax
+Tomasi,~J.; Mennucci,~B.; Cammi,~R. {Quantum mechanical continuum solvation
+  models}. \emph{Chemical Reviews} \textbf{2005}, \emph{105}, 2999--3093\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -82,22 +110,27 @@ Tomasi,~J.; Mennucci,~B.; Cammi,~R. \emph{Chemical Reviews} \textbf{2005},
 \bibitem[Day \latin{et~al.}(1996)Day, Jensen, Gordon, Webb, Stevens, Krauss,
   Garmer, Basch, and Cohen]{Day1996}
 Day,~P.~N.; Jensen,~J.~H.; Gordon,~M.~S.; Webb,~S.~P.; Stevens,~W.~J.;
-  Krauss,~M.; Garmer,~D.; Basch,~H.; Cohen,~D. \emph{The Journal of Chemical
-  Physics} \textbf{1996}, \emph{105}, 1968--1986\relax
+  Krauss,~M.; Garmer,~D.; Basch,~H.; Cohen,~D. {An effective fragment method
+  for modeling solvent effects in quantum mechanical calculations}. \emph{The
+  Journal of Chemical Physics} \textbf{1996}, \emph{105}, 1968--1986\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Yoo \latin{et~al.}(2008)Yoo, Zahariev, Sok, and Gordon]{Yoo2008}
-Yoo,~S.; Zahariev,~F.; Sok,~S.; Gordon,~M.~S. \emph{Journal of Chemical
+Yoo,~S.; Zahariev,~F.; Sok,~S.; Gordon,~M.~S. {Solvent effects on optical
+  properties of molecules: A combined time-dependent density functional
+  theory/effective fragment potential approach}. \emph{Journal of Chemical
   Physics} \textbf{2008}, \emph{129}, 1--8\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Magyar and Tretiak(2007)Magyar, and Tretiak]{Magyar2007}
-Magyar,~R.~J.; Tretiak,~S. \emph{Journal of Chemical Theory and Computation}
-  \textbf{2007}, \emph{3}, 976--987\relax
+Magyar,~R.~J.; Tretiak,~S. {Dependence of spurious charge-transfer excited
+  states on orbital exchange in TDDFT: Large molecules and clusters}.
+  \emph{Journal of Chemical Theory and Computation} \textbf{2007}, \emph{3},
+  976--987\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -105,27 +138,31 @@ Magyar,~R.~J.; Tretiak,~S. \emph{Journal of Chemical Theory and Computation}
 \bibitem[Defusco \latin{et~al.}(2011)Defusco, Minezawa, Slipchenko, Zahariev,
   and Gordon]{Defusco2011}
 Defusco,~A.; Minezawa,~N.; Slipchenko,~L.~V.; Zahariev,~F.; Gordon,~M.~S.
-  \emph{J. Phys. Chem. Lett} \textbf{2011}, \emph{2}, 2184--2192\relax
+  {Modeling Solvent Effects on Electronic Excited States}. \emph{J. Phys. Chem.
+  Lett} \textbf{2011}, \emph{2}, 2184--2192\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Wiberg(2004)]{Wiberg2004}
-Wiberg,~K.~B. \emph{Journal of Computational Chemistry} \textbf{2004},
+Wiberg,~K.~B. {Basis set effects on calculated geometries: 6-311++G** vs.
+  aug-cc-pVDZ}. \emph{Journal of Computational Chemistry} \textbf{2004},
   \emph{25}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Barnes \latin{et~al.}(2014)Barnes, Abdul-Al, and Allouche]{Barnes2014}
-Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. \emph{The Journal of Physical
+Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. {TDDFT Assessment of Functionals for
+  Optical 0â€“0 Transitions in Small Radicals}. \emph{The Journal of Physical
   Chemistry A} \textbf{2014}, \emph{118}, 11033--11046\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Plugatyr and Svishchev(2009)Plugatyr, and Svishchev]{Plugatyr2009}
-Plugatyr,~A.; Svishchev,~I.~M. \emph{The Journal of chemical physics}
+Plugatyr,~A.; Svishchev,~I.~M. {The hydration of aniline: Analysis of spatial
+  distribution functions.} \emph{The Journal of chemical physics}
   \textbf{2009}, \emph{130}, 114509\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}

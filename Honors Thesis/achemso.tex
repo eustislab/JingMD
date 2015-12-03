@@ -29,7 +29,7 @@
 \documentclass[
 %journal=ancac3, % for ACS Nano
 %journal=acbcct, % for ACS Chem. Biol.
-journal=jacsat, % for undefined journal
+journal=jpcbfk, % for undefined journal
 manuscript=article]{achemso}
 
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
@@ -64,9 +64,15 @@ Understanding excitation from ground state to the singlet excited state through 
 
 \section{Introduction}
 
-\subsection{Environmental Photochemistry and Excited State Energies calculation}
+\subsection{Environmental Photochemistry And Micropollutants}
 
-Micropollutants are pollutants whose concentrations are individually low, but combined have an effect that is hard to predict. The studies of particular micropollutant specie are hard to conduct because other species interfere in analytical reactions. Triclosan, a micropollutant, has been used as an anti-bacterial agent in household soap and health care products. Under sunlight, Triclosan decomposes to Dioxins and PCBs, well-known carcinogens.\cite{Bedoux2012} Previously, computational studies of Triclosan in the excited states were carried out by Soren N. Eustis\cite{Kliegman2013} and Nathan Ricke.\cite{Ricke2014} While excited states are important to understanding photochemical reaction, excitation from ground states by photons to exited states is equally important to understand complete reaction mechanism. There are currently no prior studies on how to quantitatively calculate excited state energies of organic molecule in water allowing a systematic approach to develop computational model to be studied. After calculation of excited state energies and the oscillator strength, computational results will be compared with experimental UV-VIS spectrum to evaluate accuracy of the models used. 
+During the past century, more and more synthetic chemicals has been created for commercial pharmaceuticals and personal care products. Many have found their way back into the environment predominantly into water. Each year, about 300 million tons of organic chemicals are being added into water systems.\cite{Schwarzenbach2006} These chemicals has been detected in ng/L to μg/L in the aquatic systems worldwide.\cite{Monteiro2010} The scale of chemicals being introduced into the water reaffirms the need for close studies in order to understand the consequences of these compounds on the environmental system, and eventually to living beings. While major toxic chemicals, such as \ce{CCl4}, DDT etc., has been constantly regulated or banned by governments for its effects on agriculture and the environment, many more compounds have not received the attention they deserve. Even though some are approved as safe for daily usage in household products, their impacts after being disposed into water  remains largely unknown. These low-concentration chemicals are collectively called mictopollutants. Study of a particular micropollutant is hard to conduct because other species often interfere in analytical reactions. Triclosan, a micropollutant, has been used as an anti-bacterial agent in household soap and health care products. Under sunlight, Triclosan decomposes to Dioxins and PCBs, well-known carcinogens.\cite{Bedoux2012} Previously, computational studies of Triclosan in the excited states were carried out by Soren N. Eustis.\cite{Kliegman2013}  
+
+\subsection{Environmental Photochemistry And Micropollutants}
+
+While excited states are important to understanding photochemical reaction, excitation from ground states by photons to exited states is equally important to understand complete reaction mechanism. There are currently no studies on quantitative calculation of excited state energies of organic molecule in water. This allows room for a systematic approach to develop a computational model and . After calculation of excited state energies and the oscillator strength, computational results will be compared with experimental UV-VIS spectrum to evaluate accuracy of the models used. 
+
+Nathan Ricke.\cite{Ricke2014}
 
 \subsection{Solvent Models}
 
@@ -74,13 +80,14 @@ Despite recent advent of growth in computer speed and burgeoning interest in inc
 
 In modeling organic solute in aquatic environment, the solute, the appropriate number of water molecules to be included as EFP in the model has never been evaluated. Too many water means expensive computational cost. Too few water will not fully model solvating shells around the solute. Binary system will be used to model how many water molecule is needed to fully solvate the solute molecules: 2, 4, 8, 16... Once excited energies for each system is calculated, the results will be compared with experimental value to evaluate how many water is needed before determining on which functional out of three choices should be chosen to achieve the most accurate computational model. 
 
+
+\section{Method}
+
 \subsection{Computational Models: Theories, Basis Sets, and Functionals}
 
 Among all current theories, Time-Dependent Density Functional Theory (TDDFT) is the most promising with its high accuracy when used with appropriate functionals and low computational cost\cite{Magyar2007}. Implementing EFP solvent model, TDDFT can be used to accurately calculate excited state energy of acetone in water.\cite{Yoo2008} Typically in Implicit solvent model, geometry optimization of solute molecule is carried out with PCM, followed by calculation of excited state energies, also with PCM. This static ground state molecule however does not accurately represent solute in water.\cite{Defusco2011} Instead, Molecular Dynamics (MD) of solute and solvent fragments can be used to obtain a range of equilibrated structures for excited state energies calculation. Mark Gordon averaged the calculated energies of each excited state to arrive at a final excited states energy.\cite{Defusco2011} 
 
 According to previous basis set studies, wile having roughly the same computational cost, an average-sized basis set 6-311++(2d,p) performs better than aug-cc-pVDZ (ACCD).\cite{Wiberg2004,Barnes2014} For example, transition energies calculated of CN molecule as calculated by ACCD deviates 1117-1669 cm\textsuperscript{-1} from experimental value while those by 6-311++(2d,p) only deviate 220-470 cm\textsuperscript{-1}. Hoping to most accurately calculate the excited energies, 6-311++(2d,p) basis set is chosen to run TDDFT after MD run. In running MD, a smaller basis set 6-31+(2d,p) will be used in order to cut computational cost. The decision comes after weeks of waiting for computational results when determining the number of water molecule in the model. Two best-performing DFT functionals out of all examined in previous study are explored: CAMB3LYP, M06-2X.\cite{Barnes2014} PBE0 will also be used.
-
-\section{Method}
 
 Molecules - aniline - then para-methoxy m-methoxyacetophenone... Triclosan
 
