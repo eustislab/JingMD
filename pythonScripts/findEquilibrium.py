@@ -1,12 +1,16 @@
+###########################################################
+### This is used to determined the equilibrium using    ###
+### linear regression and an upper limit for the slope	###
+###########################################################
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import csv
 import sys
-import string
 import numpy as np
-#if this is called from plotEnergyMD then there is no need to ask for output name and redefine the variables again
 
+#for asking what the input in terminal should be
 try:
     if str(sys.argv[1])=='?':
         print '\nCall function as: findEquilibrium.py input.log   \n' 
@@ -17,6 +21,7 @@ except IndexError:
     print '\n!!!Input command Error. Call function as: findEquilibrium.py input.log \n' 
     sys.exit()
 output=str(input) + '_energies.csv'
+#This portion is the same as in plotEnergyMD6
 #pull out CSV
 f = csv.reader(open(output))
 #convert column to array using zip (a built in function)
@@ -26,39 +31,57 @@ Time = map(float, Time)
 Energy = map(float, Energy) 
 Temp = map(float, Temp) 
 
-#find Equilibrium - linear regression
+#find Equilibrium using linear regression
+#this number control the range of time to be used in energy fluctuation calculation
 minNumberOfStep=1000
+#This is the limit above which the script will report no equilibrium is found 
 #this is from aniline32.log - 15000 to 25000
 maxSlope=1e-4
 #for plotting
 slope=[]
-print 'Finding equilibrium using minimum number of steps = '+str(minNumberOfStep) +' and maximum slope = '+str(maxSlope)
+print 'Finding equilibrium using minimum number of steps = '+str(minNumberOfStep) +' and top limit of acceptable slope = '+str(maxSlope)
 try:
+	#for looping
     size=len(Time)
     x=Time[0:minNumberOfStep]
     y=Energy[0:minNumberOfStep]
     #for using in loop
+    #set thio a high value - it can be any number bc we will replace it with the lowest slope value found in loop
     lowestSlopeValue=1e5
+    #Same - this will be replaced
     indexOfLowestSlope=-1
     for i in range(0,size-1-minNumberOfStep):
         print 'Finding equilibrium from t= '+str(Time[i])+' to '+str(Time[i+minNumberOfStep-1])
+        #poly fit is basically a linear fit - m=slope, b=y_intersect
         m,b = np.polyfit(x, y, 1)
+        #for plotting - append to array of existing slope values
         slope.append(m)
         print 'slope = ' +str(m)
+        #take absolute value and see which interval does not fluctuate the least
         if abs(m)<=abs(lowestSlopeValue):
             lowestSlopeValue=float(m)
             indexOfLowestSlope=int(i)
+        #this is similar to queue structure - room for improvement is to make x and y arrays into actual queues
         #else remove the head and add next tail
         del x[0]
         x.append(Time[minNumberOfStep+i])
         del y[0]
         y.append(Energy[minNumberOfStep+i])
+#if x or y does not have enough element (minNumberOfStep) then report error
+#room for improvement - move this up top instead of having a long try
 except IndexError:
         print 'There is not enough data to determine the equilibrium'
+#if lowestSlopeValue pass the top limit then report
 if abs(lowestSlopeValue)<=abs(maxSlope):
-        print 'Found best equilibrium starting from '+str(Time[indexOfLowestSlope])+' to '+str(Time[indexOfLowestSlope+minNumberOfStep-1])+' with slope = '+str(lowestSlopeValue)
-
+    print 'Found best equilibrium starting from '+str(Time[indexOfLowestSlope])+' to '+str(Time[indexOfLowestSlope+minNumberOfStep-1])+' with slope = '+str(lowestSlopeValue)
+#if not then say so
+else:
+	print 'Equilibrium is not yet reach.' '
+	print 'The current limit is at '+str(maxSlope) +' kcal/mol/fs and the lowest value of slope = '+str(lowestSlopeValue)
+	
+#plot slope vs time
 x=slope
+#align time with slope
 y=Time[0:size-1-minNumberOfStep]
 plt.plot(y,x)
 plt.xlabel('Starting Time (fs)')

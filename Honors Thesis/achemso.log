@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 DEC 2015 03:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 DEC 2015 18:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -68,10 +68,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks16
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen111
 \captionmargin@=\dimen112
@@ -442,59 +442,59 @@ Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
 \l__xparse_processor_int=\count194
 \l__xparse_v_nesting_int=\count195
 )
-Package: chemgreek 2015/04/09 v1.0 interface for upright greek letters for use 
-in chemistry (CN)
+Package: chemgreek 2015/11/10 v1.0b interfaceforuprightgreeklettersforuseinchem
+istry (CN)
 \l__chemgreek_tmpa_int=\count196
 \g__chemgreek_tmpa_int=\count197
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newchemgreekmapping with sig. 'O{}mm' on line 326.
+. Defining command \newchemgreekmapping with sig. 'O{}mm' on line 330.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \renewchemgreekmapping with sig. 'O{}mm' on line 329.
+. Defining command \renewchemgreekmapping with sig. 'O{}mm' on line 333.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \declarechemgreekmapping with sig. 'O{}mm' on line 332.
+. Defining command \declarechemgreekmapping with sig. 'O{}mm' on line 336.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newchemgreekmappingalias with sig. 'mm' on line 337.
+. Defining command \newchemgreekmappingalias with sig. 'mm' on line 341.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \renewchemgreekmappingalias with sig. 'mm' on line 340.
+. Defining command \renewchemgreekmappingalias with sig. 'mm' on line 344.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \declarechemgreekmappingalias with sig. 'mm' on line 343.
+. Defining command \declarechemgreekmappingalias with sig. 'mm' on line 347.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \changechemgreeksymbol with sig. 'mmmm' on line 373.
+. Defining command \changechemgreeksymbol with sig. 'mmmm' on line 377.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \chemgreekmappingsymbol with sig. 'mm' on line 467.
+. Defining command \chemgreekmappingsymbol with sig. 'mm' on line 471.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \activatechemgreekmapping with sig. 'sm' on line 476.
+. Defining command \activatechemgreekmapping with sig. 'sm' on line 480.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \selectchemgreekmapping with sig. 'm' on line 481.
+. Defining command \selectchemgreekmapping with sig. 'm' on line 485.
 .................................................
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
@@ -520,7 +520,7 @@ Variant \str_if_eq:VnTF already defined; not changing it on line 57
 \mhchem@option@minustextsidebearingright=\dimen167
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
 \c@subfigure=\count200
 \c@subtable=\count201
 )
@@ -579,7 +579,7 @@ runsystem(rm -- "achemso.w18")...executed.
 
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count205
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.sty
@@ -808,54 +808,102 @@ Overfull \hbox (87.86732pt too wide) in paragraph at lines 39--39
  []
 
 [14] [15] [16])
-runsystem(pygmentize -l python -f latex -F tokenmerge -P style=default -P comma
-ndprefix=PYGdefault -o "_minted-achemso/C9F71CE95582E1151BCAE5F1DD6B4B8435D21CE
-4FB789DCD978901D7A0BF953A.pygtex" "../pythonScripts/plotEnergyMD6.py" )...execu
+(./_minted-achemso/C9F71CE95582E1151BCAE5F1DD6B4B8435D21CE4FB789DCD978901D7A0BF
+953A.pygtex [17] [18] [19] [20] [21])
+(./_minted-achemso/2DB22778E3F0A5504F05C3AEEB26435E680A945E1C8BF32135767D20AEED
+AB09.pygtex [22] [23])
+(./_minted-achemso/412F26E0CCD822D18AFA04A5CA053F38B79710DC9E09D266534F47AEE716
+F3F4.pygtex [24] [25]
+Overfull \hbox (158.55684pt too wide) in paragraph at lines 73--73
+\OT1/cmtt/m/n/10.95 lineSplit[[]0[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]1[]][
+]+[][]'[][]\t[][]'[][]+[]lineSplit[[]2[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]
+3[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]4[]][]+[][]'[][]\n[][]'[]|  
+ []
+
+[26]
+Overfull \hbox (55.08046pt too wide) in paragraph at lines 78--78
+\OT1/cmtt/m/n/10.95 lineSplit[[]0[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]1[]][
+]+[][]'[][]\t[][]'[][]+[]lineSplit[[]2[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]
+3[]][]+[][]'[][]\n[][]'[]|  
+ []
+
+[27]
+Overfull \hbox (43.58308pt too wide) in paragraph at lines 158--158
+\OT1/cmtt/m/n/10.95 fragmentsNumber[]=[]numberOfLineWithInSolvents[]/[]numberOf
+SolventAtoms[]+[][]1[]|  
+ []
+
+[28])
+(./_minted-achemso/B61F06ADB3DF3981A50BAFB9E5F7705E1B9AA28CA10DB9821BFB3768FE22
+DFDD.pygtex [29] [30])
+runsystem(pygmentize -l Perl -f latex -F tokenmerge -P style=default -P command
+prefix=PYGdefault -o "_minted-achemso/A4178E2F833B3D0A33FE40221C18AFC885EC47986
+F12B7534A8E247F57EF4768.pygtex" "../GAMESSinpSample/MD_aniline32.inp" )...execu
 ted.
 
 
-(./_minted-achemso/C9F71CE95582E1151BCAE5F1DD6B4B8435D21CE4FB789DCD978901D7A0BF
-953A.pygtex [17] [18] [19] [20] [21])
-(./_minted-achemso/F929FD99B3F8A9771FBA9149C788648885EC47986F12B7534A8E247F57EF
-4768.pygtex [22])
-(./_minted-achemso/805A8AB7B345B2928B98097EEBF07DCC513EF848B1AF6CECE14F72F516C0
+(./_minted-achemso/A4178E2F833B3D0A33FE40221C18AFC885EC47986F12B7534A8E247F57EF
+4768.pygtex [31] [32])
+runsystem(pygmentize -l Perl -f latex -F tokenmerge -P style=default -P command
+prefix=PYGdefault -o "_minted-achemso/8F3533C46DCD66157CE1549F03F25CAA513EF848B
+1AF6CECE14F72F516C09776.pygtex" "../GAMESSinpSample/MD_aniline32.trj" )...execu
+ted.
+
+
+(./_minted-achemso/8F3533C46DCD66157CE1549F03F25CAA513EF848B1AF6CECE14F72F516C0
 9776.pygtex
-Overfull \hbox (43.01799pt too wide) in paragraph at lines 211--1
+Overfull \hbox (43.01799pt too wide) in paragraph at lines 214--1
 \OT1/cmr/m/n/12 run's trj file. #########1######### from trj goes to #########1
 #########
  []
 
-[23] [24] [25])
-(./_minted-achemso/D15B48E4285E0A776E2BEF4EEE5164DC4BA784FE600F2CF3BAE6020A5DB3
-687F.pygtex [26]) [27] (./achemso.bbl [28]) [29] (./achemso.aux) ) 
+[33] [34])
+runsystem(pygmentize -l Perl -f latex -F tokenmerge -P style=default -P command
+prefix=PYGdefault -o "_minted-achemso/F63DDEF75A2EF959D336C029E0CAFD1E4BA784FE6
+00F2CF3BAE6020A5DB3687F.pygtex" "../GAMESSinpSample/TDDFT_aniline32_15010.inp" 
+)...executed.
+
+
+(./_minted-achemso/F63DDEF75A2EF959D336C029E0CAFD1E4BA784FE600F2CF3BAE6020A5DB3
+687F.pygtex [35]) [36] (./achemso.bbl [37])
+runsystem(rm "_minted-achemso/F929FD99B3F8A9771FBA9149C788648885EC47986F12B7534
+A8E247F57EF4768.pygtex")...executed.
+
+runsystem(rm "_minted-achemso/805A8AB7B345B2928B98097EEBF07DCC513EF848B1AF6CECE
+14F72F516C09776.pygtex")...executed.
+
+runsystem(rm "_minted-achemso/D15B48E4285E0A776E2BEF4EEE5164DC4BA784FE600F2CF3B
+AE6020A5DB3687F.pygtex")...executed.
+
+ [38] (./achemso.aux) ) 
 Here is how much of TeX's memory you used:
- 15610 strings out of 493089
- 291816 string characters out of 6134842
- 428559 words of memory out of 5000000
- 18889 multiletter control sequences out of 15000+600000
+ 15642 strings out of 493089
+ 293365 string characters out of 6134842
+ 430067 words of memory out of 5000000
+ 18909 multiletter control sequences out of 15000+600000
  12996 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,94p,13591b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on achemso.pdf (29 pages, 485835 bytes).
+ 60i,9n,94p,13591b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmitt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+s12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+bx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb>
+Output written on achemso.pdf (38 pages, 503718 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

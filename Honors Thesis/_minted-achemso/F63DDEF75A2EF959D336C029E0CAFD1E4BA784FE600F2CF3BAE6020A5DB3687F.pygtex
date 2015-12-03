@@ -21,15 +21,8 @@
 \PYGdefault{n}{N}	\PYGdefault{l+m+mf}{7.0}	\PYGdefault{l+m+mf}{2.4008547653}	\PYGdefault{l+m+mf}{5.9114221893}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.1412310058}
 \PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{1.9371475177}	\PYGdefault{l+m+mf}{5.9223533811}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.4157851823}
 \PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{0.6209366009}	\PYGdefault{l+m+mf}{6.2361805033}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.7812041720}
-\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{0.1647443916}	\PYGdefault{l+m+mf}{6.2506143410}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{4.1120467466}
-\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{1.0257966066}	\PYGdefault{l+m+mf}{6.0302470214}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{5.1619968306}
-\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{2.3206871944}	\PYGdefault{l+m+mf}{5.6013436130}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{4.8191336787}
-\PYGdefault{n}{C}	\PYGdefault{l+m+mf}{6.0}	\PYGdefault{l+m+mf}{2.7816701943}	\PYGdefault{l+m+mf}{5.6319869564}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{3.5109071785}
-\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{3.7174658997}	\PYGdefault{l+m+mf}{5.1792167910}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{3.3730537148}
-\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{3.0442819748}	\PYGdefault{l+m+mf}{5.3626012085}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{5.5970784678}
-\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{0.6964441939}	\PYGdefault{l+m+mf}{6.0626184504}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{6.2108207757}
-\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.8806713295}	\PYGdefault{l+m+mf}{6.5494661522}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{4.2694627361}
-\PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.0805914586}	\PYGdefault{l+m+mf}{6.4688905479}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{2.0333995184}
+\PYGdefault{o}{.}
+\PYGdefault{o}{.}
 \PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{1.7323956480}	\PYGdefault{l+m+mf}{5.6459040114}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{0.4329519914}
 \PYGdefault{n}{H}	\PYGdefault{l+m+mf}{1.0}	\PYGdefault{l+m+mf}{3.3564486514}	\PYGdefault{l+m+mf}{5.6102990678}	\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mf}{1.0242941608}
  \PYGdefault{n+nv}{\PYGdefaultZdl{}END}
@@ -45,7 +38,6 @@
 \PYGdefault{n}{O1}	\PYGdefault{l+m+mf}{3.266753260182}	\PYGdefault{l+m+mf}{2.613267395174}	\PYGdefault{l+m+mf}{3.808546039622}
 \PYGdefault{n}{H2}	\PYGdefault{l+m+mf}{3.514552920456}	\PYGdefault{l+m+mf}{1.768271678250}	\PYGdefault{l+m+mf}{3.468757839439}
 \PYGdefault{n}{H3}	\PYGdefault{l+m+mf}{3.822697636667}	\PYGdefault{l+m+mf}{2.780022240614}	\PYGdefault{l+m+mf}{4.552855871622}
-\PYGdefault{o}{.}
 \PYGdefault{o}{.}
 \PYGdefault{o}{.}
 \PYGdefault{n}{FRAGNAME}\PYGdefault{o}{=}\PYGdefault{n}{H2ODFT} \PYGdefault{o}{!} \PYGdefault{l+m+mi}{32}

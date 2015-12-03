@@ -186,21 +186,24 @@ The excited state energies and its oscillator strength are tabulated in table \r
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/prepareMD2.py}
 		
 		\subsubsection{MD Geometries extraction}
-			One of the reasons, an MD run might fail is if solute molecule is pushed out of the water sphere. This script allows geometries to be extracted into a xyz-movie file. xyz files, capable of containing more than one frame of geometries, allows one to follow MD through a combination of screenshot (each frame is 10 femtosecond - in the current MD input file - see MD Input File section). 
+			One of the reasons, an MD run might fail is if solute molecule is pushed out of the water sphere. 3dExtract4.py allows geometries to be extracted into a xyz-movie file. xyz files, capable of containing more than one frame of geometries, allows one to follow MD through a combination of screenshot (each frame is 10 femtosecond - in the current MD input file - see MD Input File section). 
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/3dExtract4.py}
 			
 		\subsubsection{Plot Potential Energy of MD run}
-			This script is used to extract potential energy and temperature of each MD frame to determine the if the system has equilibrated. This and 3dExtract are very essential to the first stage of the project: they determine whether MD has failed or reached equilibrium based on the geometry and potential energy of the system. Many versions of this code has been developed and this is the most refined piece of code for its purpose. Future work can be done on plotting the plot on Matlab instead of obviously inferior python counterpart - matplotlib. 
+			plotEnergyMD6.py script is used to extract potential energy and temperature of each MD frame to determine the if the system has equilibrated. This and 3dExtract are very essential to the first stage of the project: they determine whether MD has failed or reached equilibrium based on the geometry and potential energy of the system. Many versions of this code has been developed and this is the most refined piece of code for its purpose. Future work can be done on plotting the plot on Matlab instead of obviously inferior python counterpart - matplotlib. 
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/plotEnergyMD6.py} 	
 		
 		\subsubsection{Find The Most Equilibrated Period}
-		
+			There are currently no consensus as to when MD has reached the equilibrium. In the past, plotEnergyMD (previous script) was used to indicate whether the potential energy of the system(solute and solvent) has stabilized. Arbitrariness in deciding whether the equilibrium is reached falls in the hands of users. findEquilibrium.py is designed to solve this subjectivity. With a list of potential energies at different time from plotEnergyMD, linear fit can be done in a fix interval to evaluate the rise or fall in energy. Currently, the limit value is taken, still empirically, from 15000 to 25000 fs interval in CAMB3LYP aniline32.log. Further improvement can be done to find the bottom slope limit as a variable with molecule input.
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/findEquilibrium.py} 
 		
 		\subsubsection{Prepare TDDFT input}
-		
+			After equilibrium is determined, fincut2.py can be used to create TDDFT input files from xyz-movie file. a Text file containing gmssub commands especially for Bowdoin hpc grid is created. The script was created by Nathan Ricke for this work, but many improvement has been made. The new script works faster and more efficient, even though it still has outdated syntax and methods.
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/fincut2.py} 
 		
 		\subsubsection{Pull Excited State Energies from TDDFT Log Files}
-		
+			postMDDataPull2.py pulls out excited state energies and dipole moments. Energy output is in the format of time, S1, S2... Dipole output is in the format of time, X1, Y1, Z1, X2...
+			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/postMDDataPull2.py} 
 		
 	\subsection{GAMESS inputs}
 		\subsubsection{MD Input File}

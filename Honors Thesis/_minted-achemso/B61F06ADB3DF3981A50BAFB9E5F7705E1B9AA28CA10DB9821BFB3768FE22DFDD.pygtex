@@ -1,0 +1,102 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} Use this pull out excited state energies and dipole \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} moments from all the files in specified folder      \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} Output is time, S1, S2... or time, X1, Y1, Z1, X2...\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{os} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{os}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{numpy} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{numpy}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib.pyplot} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{plt}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{sys}
+
+\PYGdefault{c}{\PYGdefaultZsh{}if not sure use ? to ask}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+	\PYGdefault{k}{if} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}\PYGdefault{o}{==}\PYGdefault{l+s}{\PYGdefaultZsq{}?\PYGdefaultZsq{}}\PYGdefault{p}{:}
+		\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+		\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+
+\PYGdefault{c}{\PYGdefaultZsh{}Call as fincut.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules startTime stopTime timePerFrame}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+    \PYGdefault{n+nb}{input}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}
+	\PYGdefault{n}{numberOfExcitedStates}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{])}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{c}{\PYGdefaultZsh{} to prevent / at the end of the input file if used terminal autofill}
+\PYGdefault{k}{if} \PYGdefault{n+nb}{input}\PYGdefault{o}{.}\PYGdefault{n}{endswith}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}/\PYGdefaultZsq{}}\PYGdefault{p}{):}
+    \PYGdefault{n+nb}{input} \PYGdefault{o}{=} \PYGdefault{n+nb}{input}\PYGdefault{p}{[:}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+
+\PYGdefault{c}{\PYGdefaultZsh{}make input path \PYGdefaultZhy{} folder containing the log files or out files}
+\PYGdefault{n}{path} \PYGdefault{o}{=} \PYGdefault{n}{os}\PYGdefault{o}{.}\PYGdefault{n}{getcwd}\PYGdefault{p}{()}
+\PYGdefault{n}{inputPath}\PYGdefault{o}{=}\PYGdefault{n}{path}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}/\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{input}
+
+\PYGdefault{c}{\PYGdefaultZsh{}arrays for storing and manipulating the data extracted}
+\PYGdefault{n}{outputList}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{n}{fileList}\PYGdefault{o}{=}\PYGdefault{n}{os}\PYGdefault{o}{.}\PYGdefault{n}{listdir}\PYGdefault{p}{(}\PYGdefault{n}{inputPath}\PYGdefault{p}{)}
+\PYGdefault{n}{listAllEAndf}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{n}{energies}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{n}{oscillatorStrengths}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{n}{timeList}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{n}{energyFinal}\PYGdefault{o}{=}\PYGdefault{n}{numpy}\PYGdefault{o}{.}\PYGdefault{n}{array}\PYGdefault{p}{([}\PYGdefault{l+s}{\PYGdefaultZsq{}Energy(eV)\PYGdefaultZsq{}}\PYGdefault{p}{])}
+\PYGdefault{n}{oscillatorStrengthFinal}\PYGdefault{o}{=}\PYGdefault{n}{numpy}\PYGdefault{o}{.}\PYGdefault{n}{array}\PYGdefault{p}{([}\PYGdefault{l+s}{\PYGdefaultZsq{}Oscillator Strength\PYGdefaultZsq{}}\PYGdefault{p}{])}
+    
+\PYGdefault{c}{\PYGdefaultZsh{}get all the file names}
+\PYGdefault{k}{for} \PYGdefault{n}{fileName} \PYGdefault{o+ow}{in} \PYGdefault{n}{fileList}\PYGdefault{p}{:}
+    \PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZdq{}.out\PYGdefaultZdq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{fileName} \PYGdefault{o+ow}{or} \PYGdefault{l+s}{\PYGdefaultZdq{}.log\PYGdefaultZdq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{fileName}\PYGdefault{p}{):}
+        \PYGdefault{n}{outputList}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{fileName}\PYGdefault{p}{)}
+
+\PYGdefault{c}{\PYGdefaultZsh{}open 2 output files}
+\PYGdefault{n}{f1}\PYGdefault{o}{=}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}MD\PYGdefaultZus{}data.csv\PYGdefaultZsq{}}\PYGdefault{p}{,}\PYGdefault{l+s}{\PYGdefaultZsq{}w\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{f2}\PYGdefault{o}{=}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}MD\PYGdefaultZus{}dipole.csv\PYGdefaultZsq{}}\PYGdefault{p}{,}\PYGdefault{l+s}{\PYGdefaultZsq{}w\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{c}{\PYGdefaultZsh{}now read each file and collect data}
+\PYGdefault{k}{for} \PYGdefault{n}{fileName} \PYGdefault{o+ow}{in} \PYGdefault{n}{outputList}\PYGdefault{p}{:}
+	\PYGdefault{n}{eachFile}\PYGdefault{o}{=}\PYGdefault{n}{inputPath}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}/\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{fileName}
+	\PYGdefault{n}{f}\PYGdefault{o}{=}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{eachFile}\PYGdefault{p}{,}\PYGdefault{l+s}{\PYGdefaultZsq{}r\PYGdefaultZsq{}}\PYGdefault{p}{)}
+	\PYGdefault{n}{lines}\PYGdefault{o}{=}\PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{readlines}\PYGdefault{p}{()}
+	\PYGdefault{n}{startingLine}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}
+	\PYGdefault{n}{fileIsComplete}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+	\PYGdefault{c}{\PYGdefaultZsh{}find if the file is complete}
+	\PYGdefault{c}{\PYGdefaultZsh{} use enumerate and reverse}
+	\PYGdefault{k}{for} \PYGdefault{n}{i}\PYGdefault{p}{,} \PYGdefault{n}{line} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{reversed}\PYGdefault{p}{(}\PYGdefault{n+nb}{list}\PYGdefault{p}{(}\PYGdefault{n+nb}{enumerate}\PYGdefault{p}{(}\PYGdefault{n}{lines}\PYGdefault{p}{))):}
+		\PYGdefault{k}{if} \PYGdefault{l+s}{\PYGdefaultZsq{} STATE \PYGdefaultZsh{}   1  ENERGY =    \PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+			\PYGdefault{n}{startingLine}\PYGdefault{o}{=}\PYGdefault{n}{i}
+			\PYGdefault{n}{fileIsComplete}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+			\PYGdefault{k}{break}
+	\PYGdefault{c}{\PYGdefaultZsh{} now start collecting data}
+	\PYGdefault{k}{if} \PYGdefault{n}{fileIsComplete}\PYGdefault{p}{:}
+		\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}Harvesting data from file named: \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{fileName}
+		\PYGdefault{n}{counter}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}
+		\PYGdefault{c}{\PYGdefaultZsh{}loop}
+		\PYGdefault{k}{for} \PYGdefault{n}{n}\PYGdefault{p}{,} \PYGdefault{n}{line} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{enumerate}\PYGdefault{p}{(}\PYGdefault{n}{lines}\PYGdefault{p}{):}
+			\PYGdefault{c}{\PYGdefaultZsh{}time}
+			\PYGdefault{k}{if} \PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{startswith}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}     RUN TITLE\PYGdefaultZsq{}}\PYGdefault{p}{):}
+				\PYGdefault{n}{nextLine}\PYGdefault{o}{=}\PYGdefault{n}{lines}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{]}
+				\PYGdefault{n}{time}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{nextLine}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{()[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{])}
+				\PYGdefault{n}{f1}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{n}{time}\PYGdefault{p}{)}
+				\PYGdefault{n}{f2}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{n}{time}\PYGdefault{p}{)}
+			\PYGdefault{c}{\PYGdefaultZsh{}energy}
+			\PYGdefault{k}{if} \PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{startswith}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{} STATE \PYGdefaultZsh{} \PYGdefaultZsq{}}\PYGdefault{p}{):}
+				\PYGdefault{n}{E}\PYGdefault{o}{=}\PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{()[}\PYGdefault{l+m+mi}{5}\PYGdefault{p}{]}
+				\PYGdefault{n}{nextLine}\PYGdefault{o}{=}\PYGdefault{n}{lines}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+				\PYGdefault{n}{f}\PYGdefault{o}{=}\PYGdefault{n}{nextLine}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{()[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{]}
+				\PYGdefault{n}{f1}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{E}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{f}\PYGdefault{p}{)}
+				\PYGdefault{n}{counter}\PYGdefault{o}{+=}\PYGdefault{l+m+mi}{1}
+			\PYGdefault{c}{\PYGdefaultZsh{}stop collecting}
+			\PYGdefault{k}{if} \PYGdefault{p}{(}\PYGdefault{n}{counter}\PYGdefault{o}{==}\PYGdefault{n}{numberOfExcitedStates}\PYGdefault{p}{):}
+				\PYGdefault{n}{f1}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{p}{)}
+				\PYGdefault{n}{counter}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}
+			\PYGdefault{c}{\PYGdefaultZsh{}dipole}
+			\PYGdefault{k}{if} \PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{startswith}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}                          SUMMARY OF TDDFT RESULTS\PYGdefaultZsq{}}\PYGdefault{p}{):}
+				\PYGdefault{c}{\PYGdefaultZsh{}5 lines are from \PYGdefaultZsq{}SUMMARY...\PYGdefaultZsq{} to \PYGdefaultZsq{} 1  A ...\PYGdefaultZsq{} which starts to contain dipole moments}
+				\PYGdefault{k}{for} \PYGdefault{n}{linesAhead} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{range}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{5}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{5}\PYGdefault{o}{+}\PYGdefault{n}{numberOfExcitedStates}\PYGdefault{p}{):}
+					\PYGdefault{n}{lineContainingDipoles}\PYGdefault{o}{=}\PYGdefault{n}{lines}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{o}{+}\PYGdefault{n}{linesAhead}\PYGdefault{p}{]}
+					\PYGdefault{n}{lineSplit}\PYGdefault{o}{=}\PYGdefault{n}{lineContainingDipoles}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{()}
+					\PYGdefault{c}{\PYGdefaultZsh{}locations of dipole in line }
+					\PYGdefault{p}{[}\PYGdefault{n}{X}\PYGdefault{p}{,}\PYGdefault{n}{Y}\PYGdefault{p}{,}\PYGdefault{n}{Z}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{p}{[}\PYGdefault{n}{lineSplit}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{4}\PYGdefault{p}{],} \PYGdefault{n}{lineSplit}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{5}\PYGdefault{p}{],} \PYGdefault{n}{lineSplit}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{6}\PYGdefault{p}{]]}
+					\PYGdefault{n}{f2}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{X}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{Y}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{Z}\PYGdefault{p}{)}
+				\PYGdefault{n}{f2}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{p}{)}	
+\end{Verbatim}
