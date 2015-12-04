@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{24}
+\begin{mcitethebibliography}{26}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -119,6 +119,13 @@ Hirayama,~S.; Steer,~R.~P. {Understanding the Theory and Practice of Molecular
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Kl{\'{a}}n and Wirz(2009)Kl{\'{a}}n, and Wirz]{Klan2009}
+Kl{\'{a}}n,~P.; Wirz,~J. \emph{{Photochemistry of organic compounds: From
+  concepts to practice}}; John Wiley {\&} Sons, 2009\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Lin and Truhlar(2007)Lin, and Truhlar]{Lin2007}
 Lin,~H.; Truhlar,~D.~G. {QM/MM: what have we learned, where are we, and where
   do we go from here?} \emph{Theoretical Chemistry Accounts} \textbf{2007},
@@ -209,6 +216,14 @@ Wiberg,~K.~B. {Basis set effects on calculated geometries: 6-311++G** vs.
 Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. {TDDFT Assessment of Functionals for
   Optical 0–0 Transitions in Small Radicals}. \emph{The Journal of Physical
   Chemistry A} \textbf{2014}, \emph{118}, 11033--11046\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Beglov and Roux(1994)Beglov, and Roux]{Beglov1994}
+Beglov,~D.; Roux,~B. {Finite representation of an infinite bulk system: Solvent
+  boundary potential for computer simulations}. \emph{The Journal of Chemical
+  Physics} \textbf{1994}, \emph{100}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

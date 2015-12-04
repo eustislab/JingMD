@@ -5,50 +5,45 @@ The style file: achemso.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-achemso.bib
 Database file #2: citation.bib.bib
-Repeated entry---line 254 of file citation.bib.bib
- : @article{Lin2007
- :                 ,
-I'm skipping whatever remains of this entry
 achemso 2015/04/07 v3.10
-You've used 24 entries,
+You've used 26 entries,
             2514 wiz_defined-function locations,
-            947 strings with 12240 characters,
-and the built_in function-call counts, 8578 in all, are:
-= -- 718
-> -- 469
-< -- 15
-+ -- 185
-- -- 161
-* -- 922
-:= -- 1151
-add.period$ -- 44
-call.type$ -- 24
+            960 strings with 12591 characters,
+and the built_in function-call counts, 9059 in all, are:
+= -- 752
+> -- 495
+< -- 17
++ -- 195
+- -- 169
+* -- 975
+:= -- 1218
+add.period$ -- 47
+call.type$ -- 26
 change.case$ -- 4
 chr.to.int$ -- 2
-cite$ -- 24
-duplicate$ -- 470
-empty$ -- 600
-format.name$ -- 195
-if$ -- 1676
+cite$ -- 26
+duplicate$ -- 500
+empty$ -- 642
+format.name$ -- 209
+if$ -- 1775
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 160
-num.names$ -- 69
-pop$ -- 41
+newline$ -- 172
+num.names$ -- 75
+pop$ -- 43
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 25
+skip$ -- 27
 stack$ -- 0
 substring$ -- 524
-swap$ -- 481
-text.length$ -- 48
+swap$ -- 506
+text.length$ -- 52
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 162
+type$ -- 173
 warning$ -- 0
-while$ -- 88
+while$ -- 92
 width$ -- 0
-write$ -- 317
-(There was 1 error message)
+write$ -- 340

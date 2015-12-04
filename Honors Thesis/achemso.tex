@@ -41,11 +41,11 @@ manuscript=article]{achemso}
 
 \newcommand*{\mycommand}[1]{\texttt{\emph{#1}}}
 
-\author{Trerayapiwat K.}
+\author{Kasidet Trerayapiwat}
 \email{ktreraya@bowdoin.edu}
 \affiliation[Bowdoin College]
 {Department of Chemistry, Bowdoin College, Brunswick, ME}
-\author{Eustis S.}
+\author{Soren Eustis}
 \email{seustis@bowdoin.edu}
 \affiliation[Bowdoin College]
 {Department of Chemistry, Bowdoin College, Brunswick, ME}
@@ -58,7 +58,7 @@ manuscript=article]{achemso}
 
 
 \begin{abstract}
-Understanding of the changes in molecular electronic structure following the absorption of light is a fundamental challenge for the goal of predicting photochemical rates and mechanisms. Excitation energies and oscillator strengths were calculated using different theories and methods. A new approach was selected to model the photon absorption: Molecular Dynamics–Time Dependent Density Functional Theory (MD-TD-DFT). An aniline molecule equilibrates in the presence of a number of water molecules at room temperature using 6-311++G** basis set. Excitation energy and oscillator strength of aniline geometries in equilibrium are then calculated using TD-DFT with CAMB3LYP, or M06-2X functional. The computed physical properties from MD-TD-DFT then compared with data from experimental absorption spectra to evaluate the accuracy of the two methods. Absorption spectra’s underlying modified Gaussian functions were decomposed and integrated to calculate experimental oscillator strength at a certain excitation energy using an R code written by Peter Cohen.
+Understanding of the changes in molecular electronic structure following the absorption of light is a fundamental challenge for the goal of predicting photochemical rates and mechanisms. Excitation energies and oscillator strengths were calculated using different theories and methods. A new approach was selected to model the photon absorption: Molecular Dynamics–Time Dependent Density Functional Theory (MD-TD-DFT). An aniline molecule equilibrates in the presence of a number of water molecules at room temperature using 6-311++G** basis set. Excitation energy and oscillator strength of aniline geometries in equilibrium are then calculated using TD-DFT with CAMB3LYP, or M06-2X functional. The computed physical properties from MD-TD-DFT then compared with data from experimental absorption spectra to evaluate the accuracy of the methods. Absorption spectra’s underlying modified Gaussian functions were decomposed and integrated to calculate experimental oscillator strength at a certain excitation energy using an R code written by Peter Cohen.
 \end{abstract}
 
 
@@ -66,15 +66,15 @@ Understanding of the changes in molecular electronic structure following the abs
 
 \subsection{Environmental Photochemistry And Micropollutants}
 
-During the past century, more and more synthetic chemicals has been created for commercial pharmaceuticals and personal care products. Each year, about 300 million tons of organic chemicals are being added into water systems.\cite{Schwarzenbach2006} These chemicals has been detected in ng/L to μg/L in the aquatic systems worldwide.\cite{Monteiro2010} The scale of chemicals being introduced into the water reaffirms the need for close studies in order to understand the consequences of these compounds on the environmental system, and eventually to living beings. While major toxic chemicals, such as \ce{CCl4}, DDT etc., has been constantly regulated or banned by governments for its effects on agriculture and the environment, many more compounds have not received the attention they deserve. Even though some are approved as safe for daily usage in household products, their impacts after being disposed into water remain largely unknown due to exhaustive amount of effort to study all the compounds. These low-concentration chemicals are collectively called mictopollutants. However, small concentration, large number of different types, difficulty separating or concentrating for analysis contribute retard the effort to understand their effects on in water systems. Nevertheless, detectable decrease in concentration of micropollutants in downstream of rivers close discharge areas compared to upstream has been identified to be mainly from photolysis under UV-C.\cite{Conley2008,Daneshvar2010,Bonvin2011,Carlson2015} Some photodegrade into more toxic species. Triclosan, which been used as an anti-bacterial agent in household soap and health care products decomposes under sunlight to Dioxins and PCBs, well-known carcinogens.\cite{Bedoux2012} Previously, computational studies of Triclosan in the excited states were carried out by Soren N. Eustis.\cite{Kliegman2013} Within Eustis lab, Nathan Ricke worked on applying computational model to estimate quantum yields of photoexcited small organic molecules.\cite{Ricke2014} 
+During the past century, more and more synthetic chemicals has been created for commercial pharmaceuticals and personal care products. Each year, about 300 million tons of organic chemicals are being added into water systems.\cite{Schwarzenbach2006} These chemicals has been detected in ng/L to μg/L in the aquatic systems worldwide.\cite{Monteiro2010} The scale of chemicals being introduced into the water reaffirms the need for close studies in order to understand the consequences of these compounds on the environmental system, and eventually to living beings. While major toxic chemicals, such as \ce{CCl4}, DDT etc., has been constantly regulated or banned by governments for its effects on agriculture and the environment, many more compounds have not received the attention they deserve. Even though some are approved as safe for daily usage in household products, their impacts after being disposed into water remain largely unknown due to exhaustive amount of effort to study all the compounds. These low-concentration chemicals are collectively called micropollutants. However, small concentration, large number of different types, difficulty separating or concentrating for analysis contribute retard the effort to understand their effects on in water systems. Nevertheless, detectable decrease in concentration of micropollutants in downstream of rivers close discharge areas compared to upstream has been identified to be mainly from photolysis under UV-C.\cite{Conley2008,Daneshvar2010,Bonvin2011,Carlson2015} Some photo-degrade into more toxic species. Triclosan, which been used as an anti-bacterial agent in household soap and health care products decomposes under sunlight to Dioxins and PCBs, well-known carcinogens.\cite{Bedoux2012} Previously, computational studies of triclosan in the excited states were carried out by Soren N. Eustis.\cite{Kliegman2013} Within Eustis lab, Nathan Ricke '14 worked on applying computational model to estimate quantum yields of photo-excited small organic molecules.\cite{Ricke2014} 
 
 \subsection{Computational approach, Photoexcitation, and UV-VIS Spectrum}
-In the recent years, computer has become more and more accessible to researchers.\cite{Dykstra2011} The power of High Performance Computer (HPC) expands the universe of rigorous computational calculations to analytically unsolvable quantum problems. Moving away from semi-empirical models, computational chemists can now implement Ab Initio methods using fundamental equations, which decades before, was prohibited by the high computational time and resources. In studying photodegradation in micropollutants, computational approach allows for a priori prediction of photoproducts and their impact on the environment instead of posteriori study of damage done, not to mention the complexity and limitations of experimental designs in order to study individual species of micropollutants. In natural water, many species of micropollutants interfere with each other putting limits on how much experimental approach can be used to study the natural system. 
+In the recent years, computer has become more and more accessible to researchers.\cite{Dykstra2011} The power of High Performance Computer (HPC) expands the universe of rigorous computational calculations to analytically unsolvable quantum problems. Moving away from semi-empirical models, computational chemists can now implement Ab Initio methods using fundamental equations, which decades before, was prohibited by the high computational time and resources. In studying photo-degradation in micropollutants, computational approach allows for a priori prediction of photo-products and their impact on the environment instead of posteriori study of damage done, not to mention the complexity and limitations of experimental designs in order to study individual species of micropollutants. In natural water, many species of micropollutants interfere with each other putting limits on how much experimental approach can be used to study the natural system. 
 
 \begin{figure}[htb]
 	\centering		
 	\includegraphics[width=1\textwidth]{jablonski.png}
-	\caption{Jablonski diagram. A possible pathway of photoexcitation starts at ground state to singlet excited state, then triplet excited states.}
+	\caption{Jablonsky diagram. A possible pathway of photo-excitation starts at ground state to singlet excited state, then triplet excited states.}
 	\label{fig:jablonski}
 \end{figure}
 \begin{figure}[htb]
@@ -83,12 +83,12 @@ In the recent years, computer has become more and more accessible to researchers
 	\caption{Absorption spectrum of aniline in water with underlying Gaussian printed out. Program Fityk is used to fit these four Gaussian manually.}
 	\label{fig:UVFromFityk}
 \end{figure}
-A molecule in its ground state can absorb a photon, transform to its first singlet excited state (S1), then its first triplet excited state (T1) as illutrated in figure \ref{fig:jablonski}. Triclosan at triplet states goes through photodegradation and decompose. Understanding transition from singlet to triplet state was studied previously in Eustis lab.\cite{Ricke2014} While reactions in excited state are important to understanding photochemical reaction, excitation from ground states by photons to exited states is equally important to understand complete reaction mechanism. Most familiarly, studying absorption of photons in chemical compounds are done through UV-VIS absorption spectra. A molar absorptivity vs wavenumber plot reveals excitation energies of electronic transitions in a particular species of chemical compound. In vapor, simulation of UV-VIS spectrum can be done more easily due to lack of solvent broadening.\cite{Hirayama2010} However, in linking UV-VIS spectrum with theory, a more fundamental value called oscillator strength should be used. Oscillator strength tells the degree of allowness of transition between two electronic states. Mathamatically, oscilator strength can be calculated from integrating molar absorptivity over a range of wavenumber within an electronic transition - see equation \ref{eq:oscillatorStrength}.
+A molecule in its ground state can absorb a photon, transform to its first singlet excited state (S1), then its first triplet excited state (T1) as illustrated in figure \ref{fig:jablonski}. Triclosan at triplet states goes through photo-degradation and decompose. Understanding transition from singlet to triplet state was studied previously in Eustis lab.\cite{Ricke2014} While reactions in excited state are important to understanding photochemical reaction, excitation from ground states by photons to exited states is equally important to understand complete reaction mechanism. Most familiarly, studying absorption of photons in chemical compounds are done through UV-VIS absorption spectra. A molar absorptivity vs wavenumber plot reveals excitation energies of electronic transitions in a particular species of chemical compound. In vapor, simulation of UV-VIS spectrum can be done more easily due to lack of solvent broadening.\cite{Hirayama2010} However, in linking UV-VIS spectrum with theory, a more fundamental value called oscillator strength should be used. Oscillator strength tells the degree of allowness of transition between two electronic states. Mathematically, oscillator strength can be calculated from integrating molar absorptivity over a range of wavenumber within an electronic transition - see equation \ref{eq:oscillatorStrength}.\cite{Klan2009}
 \begin{equation}
 \label{eq:oscillatorStrength}
 f = 4.39\times 10^{-9}\int_{\widetilde{\nu}_{a}}^{\widetilde{\nu}_{b}}\varepsilon(\widetilde{\nu}) d\widetilde{\nu}
 \end{equation}
-After calculation of excited state energies and the oscillator strength, computational results will be compared with experimental UV-VIS spectrum to evaluate accuracy of the models used. One another complication of the problem is the solvent broadening of absorbance peaks. As peaks are broadened, each individual peak combines together into a continuous experimental spectrum as in figure \ref{fig:UVFromFityk}. Integration cannot be done without deconvoluting the underlying Gaussians. Currently, matlab code utilizing Bayesian probability as a statistical technique to properly find the Gaussian plots are developed by professor Soren Eustis from previous work in R with Peter Cohen '18.
+After calculation of excited state energies and the oscillator strength, computational results will be compared with experimental UV-VIS spectrum to evaluate accuracy of the models used. One another complication of the problem is the solvent broadening of absorbance peaks. As peaks are broadened, each individual peak combines together into a continuous experimental spectrum as in figure \ref{fig:UVFromFityk}. Integration cannot be done without deconvoluting the underlying Gaussians. Currently, Matlab code utilizing Bayesian probability as a statistical technique to properly find the Gaussian plots are developed by professor Soren Eustis from previous work in R with Peter Cohen '18.
 
  There are currently no studies on quantitative calculation of excited state energies of organic molecule in water. This allows room for a systematic approach to develop an appropriate computational model that would allow for further understanding of aquatic pollutants.
 
@@ -102,12 +102,37 @@ Among all current theories, Time-Dependent Density Functional Theory (TD-DFT) is
 
 According to previous basis set studies, wile having roughly the same computational cost, an average-sized basis set 6-311++G(2d,p) performs better than aug-cc-pVDZ (ACCD).\cite{Wiberg2004,Barnes2014} For example, transition energies calculated of CN molecule as calculated by ACCD deviates 1117-1669 cm\textsuperscript{-1} from experimental value while those by 6-311++G(2d,p) only deviate 220-470 cm\textsuperscript{-1}. In previous study, CAMB3LYP, M06-2X are reported to be one of the most reliable functionals in calculating vertical excitation energy (average root mean square deviation of 2272 cm\textsuperscript{-1}  and 2187 cm\textsuperscript{-1}  respectively compared to 3114 cm\textsuperscript{-1} for M06 and 18196 cm\textsuperscript{-1} for CIS).\cite{Barnes2014} 
 
-\subsection{fd}
+\subsection{Solvent Boundary Potential}
+According previous computational results, solvent boundary condition (ssbp) is required to model solvent effect outside of explicit model. Especially for the equilibrium, solvent molecule can evaporate off the water cluster. Figure \ref{fig:aniline4b))} shows two evaporated water molecule at 1500 fs. During the evaporation, the potential energy of the system increases momentarily, before slowly decreases as the system equilibrated. A method of using potential boundary is proposed to simulate force field around target molecule. When a solvent fragment crosses a empirically-assigned radius, potential wall will exert slight force to push the molecule back toward the center.\cite{Beglov1994} As noted in the paper, ssbp radius is set empirically from trial and error (see Appendix for prepareMD2.py for estimating ssbp radius). Also in GAMESS, the potential is static and does not move as the solute molecule translates. The potential boundary should not influence the structure of the system, but rather should serve as a preventive measure against evaporation. Solvent boundary condition is implemented, albeit incompletely, in GAMESS with command SSBP=.T (see Appendix). The function for potential boundary is \(V=0.5\times SFORCE\times (ssbp\ radius)^{2}\).
+
+\begin{figure}[!tbp]
+	\centering
+	\label{fig:aniline4}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{wB97XD/aniline4_0fs.png}
+		\caption{}
+		\label{fig:aniline4a))}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{wB97XD/aniline4_1500fs.png}
+		\caption{}
+		\label{fig:aniline4b)}
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{wB97XD/output4_log_EnergyPlot.png}
+		\caption{}
+		\label{fig:aniline4c)}
+	\end{subfigure}
+	\caption{Molecular dynamics of aniline with 4 water without solvent boundary condition. Notice  a) Initial aniline and water geometry b) System after 1500 fs. c) the potential energy of the system}
+\end{figure}
+\clearpage
 
 \section{Method}
-
 \subsection{Overview}
-Approach to develop a model for 
+Systematic approach to developing computational model illustrated in figure \ref{fig:flowchart}. Python scripts are used to facilitate some of the steps (see Appendix). Starting molecule geometries can be obtain from optimizing molecular geometry of solute and solvent molecules yielding solute.xyz and solvent.xyz. These two files are then inputed into Packmol program with empirical starting outer radius and number of water molecules to create starting  geometry of solvated solute. After equilibrium has been reached, a 10 ps of equilibrated geometries are used in calculating excited state energies using TD-DFT in GAMESS. After comparison among all equilibrated systems, number of water will be decided before moving on to other functionals. Once a functional is decided, the model can be applied to other molecules. 
+
 \begin{figure}[!htb]
 	\centering		
 	\includegraphics[width=0.9\textwidth]{flowchart.pdf}
@@ -149,48 +174,58 @@ The EFP model of water molecules is chosen to implement an explicit solvent mode
 \end{figure}
 	
 Aniline has been chosen as our initial test solute due to its hydrogen bonding capability, its small size, and extensive studies on aniline within Eustis lab. Successful model on aniline is likely to be applicable even to larger molecule with similar properties. After a model for aniline is decided, para-methoxyacetophenone and benzoquinone will be studied for their similarity in functionals to triclosan. Finally, the model will be applied to more known aquatic pollutants such as triclosan.
+\clearpage
 
 \section{Preliminary Results and Discussions}
 
 Only aniline with 32 water with CAMB3LYP has excited state energy tabulated. Time was spent trying to fix bugs in GAMESS on Bowdoin HPC and ssbp problem. However, once everything is fixed, the process should run relatively smoothly for other functionals. Experimental absorption spectrum of aniline in water was collected by Alex and Holly over the summer of 2015. 
 
-\section{Python Scripts}
+\subsection{Python Scripts}
 Much of time was also spent on writing python scripts (see Appendix). In order to automatically generate input files and cultivate output data from output files, many python scripts are written from scratch. Since scripts are specific to each GAMESS run, there is a limited number of scripts available on the internet (virtually none for this project). Log files obtained from GAMESS contains both valuable experimental data and useless text strings. Python scripts play an important role in both data collection and smoothing up the process between each computational steps.  For example, even though WEBMO can generate sets of latest geometry in MD run, but retrieving geometry from each MD step requires one to manually open the log file and copy-paste the geometry into input files of the next step one by one. The python script postMDDataPull2.py is designed to pull thousands of geometries and generate GAMESS input files for TD-DFT energy calculation within seconds. Generating these python scripts will also allow unified program to be developed in order to automate the whole project without any manual input.
 
 \subsection{Determining the equilibrium}
-Determination of equilibrium was determined by eyeballing a plot of the solvent solute system's potential energy over time for a stable period as shown in the figure \ref{fig:MDEnergyAniline32d)}. The consistently low fluctuation indicates the start of equilibrium at 15000 fs. 1000 frames or 10000 fs of MD geometries were used to calculate the excitation energies in TD-DFT run.
-
-\subsection{Determining the optimum solvent environment}
-TD-DFT calculation for aniline with 32, 64, 128, 256, 512 surrounding water molecules were performed with CAMB3LYP basis set. Firstly, for 32 water molecules, the equilibrium were chosen to start from 15 ps and the stopping point of calculation was 25 ps; 1000 jobs for every 10 fs.  Geometry of the system though challenge the accuracy of 32-water model. Aniline molecule surrounded in 32 water molecules is unfortunately most stable not being fully solvated. Aniline can be seen outside of the water cluster at the time of equilibrium. This is in contrast to expected 32 water as the first solvation shell for aniline. \cite{Plugatyr2009} 
+Determination of equilibrium was determined by eyeballing a plot of the solvent solute system's potential energy over time for a stable period as shown in the figure \ref{fig:MDEnergyAniline32d)}. The consistently low fluctuation indicates the start of equilibrium at 15010 fs. 1000 frames or 10000 fs of MD geometries were used to calculate the excitation energies in TD-DFT run. Linear regression fit results in \(2.18\times 10^{-4} kcal\cdot mol^{-1}fs^{-1} \). \(2.18\times 10^{-4}\) will be used as a threshold for future calculation. Slope of linear fit for each 10 ps interval starting at time on x-axis is displayed on figure \ref{fig:aniline32SlopePlot}. Fortunately, the fitted slopes do cross over 0 meaning the system do reach equilibrium, not approaching it.
 
 \begin{figure}[htb]
 	\centering
 	\label{fig:MDEnergyAniline32}
-		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_0fs.png}
-		 	\caption{}
-		 	\label{fig:MDEnergyAniline32a)}
-		 \end{subfigure}
-		 \hfill
-		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_15000fs.png}
-		 	\caption{}
-		 	\label{fig:MDEnergyAniline32b)}
-		 \end{subfigure}
-		 \hfill
-		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_25000fs.png}
-		 	\caption{}
-		 	\label{fig:MDEnergyAniline32c)}
-		 \end{subfigure}
-		 \hfill
-		 \begin{subfigure}[b]{0.4\textwidth}
-		 	\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_EnergyPlot.png}
-		 	\caption{}
-		 	\label{fig:MDEnergyAniline32d)}
-\end{subfigure}
-\caption{Molecular Dynamics run of aniline in 32 explicit solvating water molecules. Notice that at equilibrium, aniline molecule comes outside of the water sphere. Albeit hydrogen bond being clearly established, lack of total submersion in water means 32-water does not fully solvate the aniline molecule and suggests that 64-water will give more accurate results. (a) starting geometry of MD run created by packmol. (b) geometry after 15000 fs. Notice the hydrogen bond between the amino group and water cluster. (c) geometry after 25000 fs. The amino group is pointing in the water sphere, as it continues to through out the whole MD run. (d) A plot of potential Energy of the system vs time. At 15000 fs, equilibrium starts as evident by decrease in energy fluctuation.}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_0fs.png}
+		\caption{}
+		\label{fig:MDEnergyAniline32a)}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_15000fs.png}
+		\caption{}
+		\label{fig:MDEnergyAniline32b)}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_25000fs.png}
+		\caption{}
+		\label{fig:MDEnergyAniline32c)}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1\textwidth]{CAMB3LYP/aniline32_EnergyPlot.png}
+		\caption{}
+		\label{fig:MDEnergyAniline32d)}
+	\end{subfigure}
+	\caption{Molecular Dynamics run of aniline in 32 explicit solvating water molecules. Notice that at equilibrium, aniline molecule comes outside of the water sphere. Albeit hydrogen bond being clearly established, lack of total submersion in water means 32-water does not fully solvate the aniline molecule and suggests that 64-water will give more accurate results. (a) starting geometry of MD run created by Packmol. (b) geometry after 15000 fs. Notice the hydrogen bond between the amino group and water cluster. (c) geometry after 25000 fs. The amino group is pointing in the water sphere, as it continues to through out the whole MD run. (d) A plot of potential Energy of the system vs time. At 15000 fs, equilibrium starts as evident by decrease in energy fluctuation.}
 \end{figure}
+
+\begin{figure}[!htb]
+	\centering		
+	\includegraphics[width=0.5\textwidth]{CAMB3LYP/aniline32_log_SlopePlot.pdf}
+	\caption{Plot of linear fitted slope of aniline with 32 waters vs time. The slope almost reaches 0 at 15010 to 25000 fs. There are slope value that reaches \(2\times 10^{-7} kcal\cdot mol^{-1}fs^{-1}\) at 20200 fs to 30100 fs.}
+	\label{fig:aniline32SlopePlot}
+\end{figure}
+
+
+\subsection{Determining the optimum solvent environment}
+TD-DFT calculation for aniline with 32, 64, 128, 256, 512 surrounding water molecules were performed with CAMB3LYP basis set. Firstly, for 32 water molecules, the equilibrium were chosen to start from 15 ps and the stopping point of calculation was 25 ps; 1000 jobs for every 10 fs.  Geometry of the system though challenge the accuracy of 32-water model. Aniline molecule surrounded in 32 water molecules is unfortunately most stable not being fully solvated. Aniline can be seen outside of the water cluster at the time of equilibrium. This is in contrast to expected 32 water as the first solvation shell for aniline. \cite{Plugatyr2009} 
+
 
 %for refing page number
 %function grows near 0. Also, in the page \pageref{fig:mesh1}
@@ -211,19 +246,19 @@ TD-DFT calculation for aniline with 32, 64, 128, 256, 512 surrounding water mole
 	\end{tabular}
 \end{table}
 
-The excited state energies and its oscillator strength from MD-TD-DFT calculation of aniline with 32 waters are tabulated in table \ref{table:aniline32TD-DFTTable}. Wavelength and oscillator strength from spectral data are tabulated in table \ref{table:anilineUVTable}. When compared with aniline's UVVIS spectra, as in figure \ref{fig:UVFromFityk}, there are several problems. Firstly, the calculated value at 246 nm does not accurately capture the peak at 230 nm and there is no calculated excitation energy at 280 nm, where the experimental peak is. The problem is probably due to aniline not being fully solvated. Nevertheless, two calculated wavelengths, 214.30 nm and 246.26 nm, identified with the experimental peak observed at 225 nm and 279 nm with comparable oscillator strength value.
+The excited state energies and its oscillator strength from MD-TD-DFT calculation of aniline with 32 waters are tabulated in table \ref{table:aniline32TD-DFTTable}. Wavelength and oscillator strength from spectral data are tabulated in table \ref{table:anilineUVTable}. When compared with aniline's UV-VIS spectra, as in figure \ref{fig:UVFromFityk}, there are several problems. Firstly, the calculated value at 246 nm does not accurately capture the peak at 230 nm and there is no calculated excitation energy at 280 nm, where the experimental peak is. The problem is probably due to aniline not being fully solvated. Nevertheless, two calculated wavelengths, 214.30 nm and 246.26 nm, identified with the experimental peak observed at 225 nm and 279 nm with comparable oscillator strength value.
 
-Even though MD calculations for CAMB3LYP aniline64 through 512 have completed, no TD-DFT energies has been calculated as of now. 
+Even though MD calculations for CAMB3LYP aniline with 64 through 512 waters have completed, no TD-DFT energies has been calculated as of now. 
 
 \begin{table}[ht]
-	\caption{Wavelength and Oscillator Strength calculated from experimental UV-VIS spectrum using Fityk, figure \ref{fig:UVFromFityk}. Notice the first peak does not have a maximum, this is due to the lower limit of the spectral data.}
+	\caption{Wavelength and oscillator strength calculated from experimental UV-VIS spectrum using Fityk, figure \ref{fig:UVFromFityk}. Notice the first peak does not have a maximum, this is due to the lower limit of the spectral data.}
 	\label{table:anilineUVTable}
 	\centering
 	\begin{tabular}{c c}
 		Wavelength (nm) & Oscillator Strength\\ [1ex] % inserts table %heading
 		\hline\hline
 		\\[-0.5ex]
-		<200&>0.1298\\ 
+		$<$200&$>$0.1298\\ 
 		225&0.1699\\
 		232&0.0570\\
 		279&0.0274\\ 
@@ -232,7 +267,7 @@ Even though MD calculations for CAMB3LYP aniline64 through 512 have completed, n
 
 \subsection{Next steps}
 Once energies and oscillator strengths of each solvent models are computed, data as a function of number of water can be evaluated. Aniline with 512 waters is the most time consuming system. If there is no significant improvement in comparison with 256 waters, this model will be discarded. 
-In the future R code will be used instead of Fityk since Fityk requires manual insertion of underlying Gaussian plots. Elimination of this process will results in less manual input and more statistical approach to a statistical problem. Calulation using other functionals can be done relatively faster once the optimum number of water framework has been establish.
+In the future R code will be used instead of Fityk since Fityk requires manual insertion of underlying Gaussian plots. Elimination of this process will results in less manual input and more statistical approach to a statistical problem. Calculation using other functionals can be done relatively faster once the optimum number of water framework has been establish.
 
 \clearpage
 \appendix 
@@ -241,24 +276,23 @@ In the future R code will be used instead of Fityk since Fityk requires manual i
 \renewcommand{\thesubsection}{\Alph{sub}}
 	\subsection{Python Scripts}
 		\subsubsection{Preparing MD Input Files}
-			This script does two things. First (line 35-84), it calculates appropriate radius for solvent boundary potential. Some time and effort were spent on figuring out what the radius should be without emperically guess it. A simple model is proposed: At most solute will rotate around its outmost solute atom. This radius, in the code, is called solute radius. The other radius is solvent radius, its the distance between the outmost solvent atom to the solute's CG. These two radius plus an extra 2-3 Angstrom gives ssbp radius for MD input file. Second (line 87-155), the script parses xyz file's geometry data into MD input file. Slight format change is required for GAMESS input files, so this python code automate that change. The output file is MD file which can be run on GAMESS. Output of this script can be seen below in MD Input File section.
-			\vfill
+			This script does two things. First (line 35-84), it calculates appropriate radius for solvent boundary potential without empirically fitting it. A simple model is proposed: at most solute will rotate around its outmost solute atom. In the code, the distance between the outmost solute atom to the solute's CG is called solute radius. The distance between the outmost solvent atom to the solute's CG is solvent radius. These two radius plus an extra 2-3 Angstrom gives ssbp radius for MD input file. Second (line 87-155), the script parses xyz file's geometry data into MD input file. Slight format change from xyz file type is required for GAMESS input files, but this python code automate that change. The output file is MD file which can be run on GAMESS. Output of this script can be seen below in MD Input File section.
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/prepareMD2.py}
 		
 		\subsubsection{MD Geometries extraction}
-			One of the reasons, an MD run might fail is if solute molecule is pushed out of the water sphere. 3dExtract4.py allows geometries to be extracted into a xyz-movie file. xyz files, capable of containing more than one frame of geometries, allows one to follow MD through a combination of screenshot (each frame is 10 femtosecond - in the current MD input file - see MD Input File section). 
+			One of the reasons, an MD run might fail is if solute molecule is pushed out of the water sphere. 3dExtract4.py allows geometries of the system at different time to be extracted from a large size log file into a xyz-movie file. xyz files, capable of containing more than one frame of geometries, allows one to follow MD through a combination of screenshot (each frame is 10 femtosecond - in the current MD input file - see MD Input File section). 
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/3dExtract4.py}
 			
 		\subsubsection{Plot Potential Energy of MD run}
-			plotEnergyMD6.py script is used to extract potential energy and temperature of each MD frame to determine the if the system has equilibrated. This and 3dExtract are very essential to the first stage of the project: they determine whether MD has failed or reached equilibrium based on the geometry and potential energy of the system. Many versions of this code has been developed and this is the most refined piece of code for its purpose. Future work can be done on plotting the plot on Matlab instead of obviously inferior python counterpart - matplotlib. 
+			plotEnergyMD6.py script extracts potential energy and temperature of each MD frame to determine the if the system is close to equilibration. This script and 3dExtract are very essential to the first stage of the project: they determine whether MD has failed or reached equilibrium based on the geometry and potential energy of the system. Like 3dExtract, many versions of this code has been developed and modified and they are the most refined pieces of code for their purpose. In the future when the codes are unified, improvement can be made on plotting the plot on Matlab instead of matplotlib. 
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/plotEnergyMD6.py} 	
 		
 		\subsubsection{Find The Most Equilibrated Period}
-			There are currently no consensus as to when MD has reached the equilibrium. In the past, plotEnergyMD (previous script) was used to indicate whether the potential energy of the system(solute and solvent) has stabilized. Arbitrariness in deciding whether the equilibrium is reached falls in the hands of users. findEquilibrium.py is designed to solve this subjectivity. With a list of potential energies at different time from plotEnergyMD, linear fit can be done in a fix interval to evaluate the rise or fall in energy. Currently, the limit value is taken, still empirically, from 15000 to 25000 fs interval in CAMB3LYP aniline32.log. Further improvement can be done to find the bottom slope limit as a variable with molecule input.
+			There are currently no consensus as to how to determine if a system has reached the equilibrium in molecular dynamics. In previous works, plotEnergyMD (previous script) was used to indicate whether the potential energy of the system (solute and solvent) has stabilized. Arbitrariness in determining the equilibrium falls in the hands of users. findEquilibrium.py is designed to solve this subjectivity. With a list of potential energies at different time from plotEnergyMD, linear fit can be done in a fix interval to evaluate the rise or fall in energy. Currently, the limit value is taken, still empirically, from 15000 to 25000 fs interval in CAMB3LYP aniline32.log. Further improvement can be done to find the bottom slope limit as a variable with molecule input.
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/findEquilibrium.py} 
 		
 		\subsubsection{Prepare TD-DFT input}
-			After equilibrium is determined, fincut2.py can be used to create TD-DFT input files from xyz-movie file. a Text file containing gmssub commands especially for Bowdoin hpc grid is created. The script was created by Nathan Ricke for this work, but many improvement has been made. The new script works faster and more efficient, even though it still has outdated syntax and methods.
+			After equilibrium is determined, fincut2.py can be used to create TD-DFT input files from xyz-movie file. a Text file containing gmssub commands especially for Bowdoin HPC grid is created. The script was created by Nathan Ricke '14 for this work, but many improvement has been made. The new script works faster and more efficient, even though it still has outdated syntax and methods.
 			\inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{python}{../pythonScripts/fincut2.py} 
 		
 		\subsubsection{Pull Excited State Energies from TD-DFT Log Files}
@@ -267,7 +301,7 @@ In the future R code will be used instead of Fityk since Fityk requires manual i
 		
 	\subsection{GAMESS inputs}
 		\subsubsection{MD Input File}
-			 MD run is core to modeling explicit solvent. The MD run is simulated every femtosecond but only record every 10 femtoseconds. The bath temperature is 25 $\pm$ 25 degree Celsius. Solvent boundary potential is also actiavetd using default Sforce value, but with estimate ssbp radius. \#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD in case the calculation abruptly ends (see next section). In this version, dispersion correction is not turned on. Basis set = 6-31+G(2d,p)
+			 MD run is core to modeling explicit solvent. The MD run is simulated every femtosecond but only record every 10 femtoseconds. The bath temperature is 25 $\pm$ 25 degree Celsius. Solvent boundary potential is also activated using default Sforce value (\(1.0 kcal\cdot mol^{-1}\cdot A^{-2}\)), but with estimate ssbp radius. \#\#\#\#\#\#\#\#\#n\#\#\#\#\#\#\#\#\# are for restarting MD in case the calculation abruptly ends (see next section). In this version, dispersion correction is not turned on. Basis set = 6-31+G(2d,p)
 			 \inputminted[linenos, breaklines, baselinestretch=1, fontsize=\small]{Perl}{../GAMESSinpSample/MD_aniline32.inp}
 			 
 		\subsubsection{MD Restart}
