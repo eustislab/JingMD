@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{18}
+\begin{mcitethebibliography}{24}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -38,6 +38,45 @@ Monteiro,~S.; Boxall,~A. \emph{Reviews of Environmental Contamination and
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Conley \latin{et~al.}(2008)Conley, Symes, Schorr, and
+  Richards]{Conley2008}
+Conley,~J.~M.; Symes,~S.~J.; Schorr,~M.~S.; Richards,~S.~M. {Spatial and
+  temporal analysis of pharmaceutical concentrations in the upper Tennessee
+  River basin.} \emph{Chemosphere} \textbf{2008}, \emph{73}, 1178--1187\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Daneshvar \latin{et~al.}(2010)Daneshvar, Svanfelt, Kronberg, and
+  Weyhenmeyer]{Daneshvar2010}
+Daneshvar,~A.; Svanfelt,~J.; Kronberg,~L.; Weyhenmeyer,~G.~A. {Winter
+  accumulation of acidic pharmaceuticals in a Swedish river.}
+  \emph{Environmental Science and Pollution Research} \textbf{2010}, \emph{17},
+  908--916\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bonvin \latin{et~al.}(2011)Bonvin, Rutler, Chavre, Halder, and
+  Kohn]{Bonvin2011}
+Bonvin,~F.; Rutler,~R.; Chavre,~N.; Halder,~J.; Kohn,~T. {Spatial and temporal
+  presence of a wastewater-derived micropollutant plume in Lake Geneva}.
+  \emph{Environmental Science and Technology} \textbf{2011}, \emph{45},
+  4702--4709\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Carlson \latin{et~al.}(2015)Carlson, Stefan, Parnis, and
+  Metcalfe]{Carlson2015}
+Carlson,~J.~C.; Stefan,~M.~I.; Parnis,~J.~M.; Metcalfe,~C.~D. {Direct UV
+  photolysis of selected pharmaceuticals, personal care products and endocrine
+  disruptors in aqueous solution}. \emph{Water Research} \textbf{2015},
+  \emph{84}, 350--361\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Bedoux \latin{et~al.}(2012)Bedoux, Roig, Thomas, Dupont, and {Le
   Bot}]{Bedoux2012}
 Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. {Occurrence and
@@ -62,6 +101,20 @@ Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. {Experimental and
 Ricke,~N.~D. {Application of the Landau-Zener Model and Fermi ' s Golden Rule
   to Estimate Triplet Quantum Yield for Organic Molecules}. Ph.D.\ thesis,
   Bowdoin College, 2014\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Dykstra \latin{et~al.}(2011)Dykstra, Frenking, and Kim]{Dykstra2011}
+Dykstra,~C.~E.; Frenking,~G.; Kim,~K.~S. \emph{Elsevier}; 2011\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hirayama and Steer(2010)Hirayama, and Steer]{Hirayama2010}
+Hirayama,~S.; Steer,~R.~P. {Understanding the Theory and Practice of Molecular
+  Spectroscopy: The Effects of Spectral Bandwith}. \emph{Journal of Chemical
+  Education} \textbf{2010}, \emph{87}, 1344--1347\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -138,8 +191,8 @@ Magyar,~R.~J.; Tretiak,~S. {Dependence of spurious charge-transfer excited
 \bibitem[Defusco \latin{et~al.}(2011)Defusco, Minezawa, Slipchenko, Zahariev,
   and Gordon]{Defusco2011}
 Defusco,~A.; Minezawa,~N.; Slipchenko,~L.~V.; Zahariev,~F.; Gordon,~M.~S.
-  {Modeling Solvent Effects on Electronic Excited States}. \emph{J. Phys. Chem.
-  Lett} \textbf{2011}, \emph{2}, 2184--2192\relax
+  {Modeling Solvent Effects on Electronic Excited States}. \emph{Journal of
+  Physical Chemistry Letters} \textbf{2011}, \emph{2}, 2184--2192\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
