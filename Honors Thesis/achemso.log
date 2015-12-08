@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 DEC 2015 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 DEC 2015 15:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -68,10 +68,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks16
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen111
 \captionmargin@=\dimen112
@@ -442,59 +442,59 @@ Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
 \l__xparse_processor_int=\count194
 \l__xparse_v_nesting_int=\count195
 )
-Package: chemgreek 2015/11/10 v1.0b interfaceforuprightgreeklettersforuseinchem
-istry (CN)
+Package: chemgreek 2015/04/09 v1.0 interface for upright greek letters for use 
+in chemistry (CN)
 \l__chemgreek_tmpa_int=\count196
 \g__chemgreek_tmpa_int=\count197
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newchemgreekmapping with sig. 'O{}mm' on line 330.
+. Defining command \newchemgreekmapping with sig. 'O{}mm' on line 326.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \renewchemgreekmapping with sig. 'O{}mm' on line 333.
+. Defining command \renewchemgreekmapping with sig. 'O{}mm' on line 329.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \declarechemgreekmapping with sig. 'O{}mm' on line 336.
+. Defining command \declarechemgreekmapping with sig. 'O{}mm' on line 332.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newchemgreekmappingalias with sig. 'mm' on line 341.
+. Defining command \newchemgreekmappingalias with sig. 'mm' on line 337.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \renewchemgreekmappingalias with sig. 'mm' on line 344.
+. Defining command \renewchemgreekmappingalias with sig. 'mm' on line 340.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \declarechemgreekmappingalias with sig. 'mm' on line 347.
+. Defining command \declarechemgreekmappingalias with sig. 'mm' on line 343.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \changechemgreeksymbol with sig. 'mmmm' on line 377.
+. Defining command \changechemgreeksymbol with sig. 'mmmm' on line 373.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \chemgreekmappingsymbol with sig. 'mm' on line 471.
+. Defining command \chemgreekmappingsymbol with sig. 'mm' on line 467.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \activatechemgreekmapping with sig. 'sm' on line 480.
+. Defining command \activatechemgreekmapping with sig. 'sm' on line 476.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \selectchemgreekmapping with sig. 'm' on line 485.
+. Defining command \selectchemgreekmapping with sig. 'm' on line 481.
 .................................................
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
@@ -520,7 +520,7 @@ Variant \str_if_eq:VnTF already defined; not changing it on line 57
 \mhchem@option@minustextsidebearingright=\dimen167
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count200
 \c@subtable=\count201
 )
@@ -579,7 +579,7 @@ runsystem(rm -- "achemso.w18")...executed.
 
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count205
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.sty
@@ -754,13 +754,13 @@ Missing character: There is no ¼ in font cmr12!
 <jablonski.png, id=18, 906.38625pt x 652.4375pt>
 File: jablonski.png Graphic file (type png)
  <use jablonski.png>
-Package pdftex.def Info: jablonski.png used on input line 76.
+Package pdftex.def Info: jablonski.png used on input line 77.
 (pdftex.def)             Requested size: 469.75539pt x 338.13454pt.
 
 <UVFromFityk.png, id=20, 578.16pt x 434.1018pt>
 File: UVFromFityk.png Graphic file (type png)
  <use UVFromFityk.png>
-Package pdftex.def Info: UVFromFityk.png used on input line 82.
+Package pdftex.def Info: UVFromFityk.png used on input line 83.
 (pdftex.def)             Requested size: 469.75539pt x 352.70685pt.
  [3]
 [4 <./jablonski.png>] [5 <./UVFromFityk.png (PNG copy)>]
@@ -770,20 +770,20 @@ Missing character: There is no “ in font cmr12!
  [6]
 
 LaTeX Warning: Reference `fig:aniline4b))' on page 7 undefined on input line 10
-6.
+7.
 
 [7] <wB97XD/aniline4_0fs.png, id=44, 642.4pt x 481.8pt>
 File: wB97XD/aniline4_0fs.png Graphic file (type png)
 
 <use wB97XD/aniline4_0fs.png>
-Package pdftex.def Info: wB97XD/aniline4_0fs.png used on input line 112.
+Package pdftex.def Info: wB97XD/aniline4_0fs.png used on input line 113.
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
 
 <wB97XD/aniline4_1500fs.png, id=45, 642.4pt x 481.8pt>
 File: wB97XD/aniline4_1500fs.png Graphic file (type png)
 
 <use wB97XD/aniline4_1500fs.png>
-Package pdftex.def Info: wB97XD/aniline4_1500fs.png used on input line 118.
+Package pdftex.def Info: wB97XD/aniline4_1500fs.png used on input line 119.
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
 
 <wB97XD/output4_log_EnergyPlot.png, id=46, 578.16pt x 433.62pt>
@@ -791,21 +791,21 @@ File: wB97XD/output4_log_EnergyPlot.png Graphic file (type png)
 
 <use wB97XD/output4_log_EnergyPlot.png>
 Package pdftex.def Info: wB97XD/output4_log_EnergyPlot.png used on input line 1
-24.
+25.
 (pdftex.def)             Requested size: 187.89928pt x 140.92482pt.
  [8 <./wB97XD/aniline4_0fs.png> <./wB97XD/aniline4_1500fs.png> <./wB97XD/output
 4_log_EnergyPlot.png>]
 <flowchart.pdf, id=53, 558.78665pt x 740.40138pt>
 File: flowchart.pdf Graphic file (type pdf)
  <use flowchart.pdf>
-Package pdftex.def Info: flowchart.pdf used on input line 138.
+Package pdftex.def Info: flowchart.pdf used on input line 139.
 (pdftex.def)             Requested size: 422.77698pt x 560.18024pt.
 
 <startingGeometry/aniline64.png, id=54, 642.4pt x 481.8pt>
 File: startingGeometry/aniline64.png Graphic file (type png)
 
 <use startingGeometry/aniline64.png>
-Package pdftex.def Info: startingGeometry/aniline64.png used on input line 151.
+Package pdftex.def Info: startingGeometry/aniline64.png used on input line 152.
 
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
 
@@ -813,7 +813,7 @@ Package pdftex.def Info: startingGeometry/aniline64.png used on input line 151.
 File: startingGeometry/aniline128.png Graphic file (type png)
 
 <use startingGeometry/aniline128.png>
-Package pdftex.def Info: startingGeometry/aniline128.png used on input line 157
+Package pdftex.def Info: startingGeometry/aniline128.png used on input line 158
 .
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
 
@@ -821,7 +821,7 @@ Package pdftex.def Info: startingGeometry/aniline128.png used on input line 157
 File: startingGeometry/aniline256.png Graphic file (type png)
 
 <use startingGeometry/aniline256.png>
-Package pdftex.def Info: startingGeometry/aniline256.png used on input line 163
+Package pdftex.def Info: startingGeometry/aniline256.png used on input line 164
 .
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
 
@@ -829,7 +829,7 @@ Package pdftex.def Info: startingGeometry/aniline256.png used on input line 163
 File: startingGeometry/aniline512.png Graphic file (type png)
 
 <use startingGeometry/aniline512.png>
-Package pdftex.def Info: startingGeometry/aniline512.png used on input line 169
+Package pdftex.def Info: startingGeometry/aniline512.png used on input line 170
 .
 (pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
  [9
@@ -847,14 +847,14 @@ ine512.png>] [12] [13
 File: CAMB3LYP/aniline32_0fs.png Graphic file (type png)
 
 <use CAMB3LYP/aniline32_0fs.png>
-Package pdftex.def Info: CAMB3LYP/aniline32_0fs.png used on input line 193.
+Package pdftex.def Info: CAMB3LYP/aniline32_0fs.png used on input line 194.
 (pdftex.def)             Requested size: 187.89928pt x 140.92648pt.
 
 <CAMB3LYP/aniline32_15000fs.png, id=144, 435.6pt x 326.7pt>
 File: CAMB3LYP/aniline32_15000fs.png Graphic file (type png)
 
 <use CAMB3LYP/aniline32_15000fs.png>
-Package pdftex.def Info: CAMB3LYP/aniline32_15000fs.png used on input line 199.
+Package pdftex.def Info: CAMB3LYP/aniline32_15000fs.png used on input line 200.
 
 (pdftex.def)             Requested size: 187.89928pt x 140.92192pt.
 
@@ -862,7 +862,7 @@ Package pdftex.def Info: CAMB3LYP/aniline32_15000fs.png used on input line 199.
 File: CAMB3LYP/aniline32_25000fs.png Graphic file (type png)
 
 <use CAMB3LYP/aniline32_25000fs.png>
-Package pdftex.def Info: CAMB3LYP/aniline32_25000fs.png used on input line 205.
+Package pdftex.def Info: CAMB3LYP/aniline32_25000fs.png used on input line 206.
 
 (pdftex.def)             Requested size: 187.89928pt x 140.8172pt.
 
@@ -871,7 +871,7 @@ File: CAMB3LYP/aniline32_EnergyPlot.png Graphic file (type png)
 
 <use CAMB3LYP/aniline32_EnergyPlot.png>
 Package pdftex.def Info: CAMB3LYP/aniline32_EnergyPlot.png used on input line 2
-11.
+12.
 (pdftex.def)             Requested size: 187.89928pt x 140.92482pt.
 
 <CAMB3LYP/aniline32_log_SlopePlot.pdf, id=147, 578.16pt x 433.62pt>
@@ -879,33 +879,39 @@ File: CAMB3LYP/aniline32_log_SlopePlot.pdf Graphic file (type pdf)
 
 <use CAMB3LYP/aniline32_log_SlopePlot.pdf>
 Package pdftex.def Info: CAMB3LYP/aniline32_log_SlopePlot.pdf used on input lin
-e 220.
+e 221.
 (pdftex.def)             Requested size: 234.87769pt x 176.15768pt.
  [14 <./CAMB3LYP/aniline32_0fs.png> <./CAMB3LYP/aniline32_15000fs.png> <./CAMB3
-LYP/aniline32_25000fs.png> <./CAMB3LYP/aniline32_EnergyPlot.png>] [15 <./CAMB3L
-YP/aniline32_log_SlopePlot.pdf>]
-[16]
+LYP/aniline32_25000fs.png> <./CAMB3LYP/aniline32_EnergyPlot.png>]
+<CAMB3LYP/aniline32SPlot.png, id=155, 578.16pt x 434.1018pt>
+File: CAMB3LYP/aniline32SPlot.png Graphic file (type png)
+
+<use CAMB3LYP/aniline32SPlot.png>
+Package pdftex.def Info: CAMB3LYP/aniline32SPlot.png used on input line 232.
+(pdftex.def)             Requested size: 234.87769pt x 176.35342pt.
+ [15 <./CAMB3LYP/aniline32_log_SlopePlot.pdf>] [16 <./CAMB3LYP/aniline32SPlot.p
+ng (PNG copy)>] [17]
 (./_minted-achemso/AFD19C8403FC0F725909B3C2B9555D384BA292F58FFE030601BD2292FC15
 8C50.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
- [17
+ [18
 
-] [18] [19] [20])
+] [19] [20] [21])
 (./_minted-achemso/ED0F929A8FABCBD9A1A78C10849AE45DC923BD6AD1D0DDBCE963442E6410
-664A.pygtex [21]
+664A.pygtex [22]
 Overfull \hbox (87.86732pt too wide) in paragraph at lines 39--39
 | | | |\OT1/cmtt/m/n/10.95 numberOfLinesToBecollected[]=[]numberofSoluteAtoms[]
 +[][]1[][]+[]numberOfSolventMolecules[]*[](numberofSoventAtoms[]+[][]1[])|  
  []
 
-[22] [23] [24] [25])
+[23] [24] [25] [26])
 (./_minted-achemso/C9F71CE95582E1151BCAE5F1DD6B4B8435D21CE4FB789DCD978901D7A0BF
-953A.pygtex [26] [27] [28] [29])
+953A.pygtex [27] [28] [29] [30])
 (./_minted-achemso/2DB22778E3F0A5504F05C3AEEB26435E680A945E1C8BF32135767D20AEED
-AB09.pygtex [30] [31] [32])
+AB09.pygtex [31] [32] [33])
 (./_minted-achemso/412F26E0CCD822D18AFA04A5CA053F38B79710DC9E09D266534F47AEE716
-F3F4.pygtex [33] [34]
+F3F4.pygtex [34] [35]
 Overfull \hbox (158.55684pt too wide) in paragraph at lines 73--73
 \OT1/cmtt/m/n/10.95 lineSplit[[]0[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]1[]][
 ]+[][]'[][]\t[][]'[][]+[]lineSplit[[]2[]][]+[][]'[][]\t[][]'[][]+[]lineSplit[[]
@@ -919,51 +925,53 @@ Overfull \hbox (55.08046pt too wide) in paragraph at lines 78--78
 3[]][]+[][]'[][]\n[][]'[]|  
  []
 
-[35] [36]
+[36] [37]
 Overfull \hbox (43.58308pt too wide) in paragraph at lines 158--158
 \OT1/cmtt/m/n/10.95 fragmentsNumber[]=[]numberOfLineWithInSolvents[]/[]numberOf
 SolventAtoms[]+[][]1[]|  
  []
 
-[37])
+[38])
 (./_minted-achemso/B61F06ADB3DF3981A50BAFB9E5F7705E1B9AA28CA10DB9821BFB3768FE22
-DFDD.pygtex [38] [39])
+DFDD.pygtex [39] [40])
 (./_minted-achemso/A4178E2F833B3D0A33FE40221C18AFC885EC47986F12B7534A8E247F57EF
-4768.pygtex [40] [41])
+4768.pygtex [41] [42])
 (./_minted-achemso/8F3533C46DCD66157CE1549F03F25CAA513EF848B1AF6CECE14F72F516C0
 9776.pygtex
-Overfull \hbox (43.01799pt too wide) in paragraph at lines 308--1
+Overfull \hbox (43.01799pt too wide) in paragraph at lines 314--1
 \OT1/cmr/m/n/12 run's trj file. #########1######### from trj goes to #########1
 #########
  []
 
-[42] [43])
+[43] [44])
 (./_minted-achemso/F63DDEF75A2EF959D336C029E0CAFD1E4BA784FE600F2CF3BAE6020A5DB3
-687F.pygtex [44]) [45] (./achemso.bbl
+687F.pygtex [45]) [46] (./achemso.bbl
 Missing character: There is no Ì in font cmr12!
- [46]
+ [47
+
+]
 Underfull \hbox (badness 1735) in paragraph at lines 154--163
 []\OT1/cmr/m/n/12 Li, J.; Cramer, C. J.; Truh-lar, D. G. Two-Response-Time Mode
 l Based on
  []
 
-[47]
+[48]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [48]) [49] (./achemso.aux)
+) [49] (./achemso.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15756 strings out of 493089
- 296163 string characters out of 6134842
- 440771 words of memory out of 5000000
- 19014 multiletter control sequences out of 15000+600000
+ 15744 strings out of 493089
+ 295930 string characters out of 6134842
+ 436465 words of memory out of 5000000
+ 19001 multiletter control sequences out of 15000+600000
  12996 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,94p,13591b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,94p,13591b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -982,12 +990,11 @@ exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on achemso.pdf (49 pages, 1117433 bytes).
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on achemso.pdf (49 pages, 1129862 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
+ 378 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
