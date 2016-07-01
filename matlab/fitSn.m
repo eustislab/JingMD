@@ -1,1 +1,0 @@
-[pdS1,pdS2,pdS3,pdS4,pdS5] = createFit(S1(:,1),S2(:,1),S3(:,1),S4(:,1),S5(:,1))

@@ -1,1 +1,0 @@
-[pdf1,pdf2,pdf3,pdf4,pdf5] = createFit2(S1(:,2),S2(:,2),S3(:,2),S4(:,2),S5(:,2))
