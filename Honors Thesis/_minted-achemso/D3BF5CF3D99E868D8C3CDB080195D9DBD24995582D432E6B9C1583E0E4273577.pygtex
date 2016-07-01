@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} aniline solvated by 16 waters}
+\PYGdefault{c+c1}{\PYGdefaultZsh{}}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} define minimum distance between atoms to 2.5 Angstrom}
+\PYGdefault{n}{tolerance} \PYGdefault{l+m+mf}{2.5}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} number of loops for fitting}
+\PYGdefault{n}{nloop} \PYGdefault{l+m+mi}{10000}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} number of trial per loop}
+\PYGdefault{n}{maxiter} \PYGdefault{l+m+mi}{100}
+
+\PYGdefault{n}{filetype} \PYGdefault{n}{xyz}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} specify the solute }
+\PYGdefault{n}{structure} \PYGdefault{n}{aniline}\PYGdefault{o}{.}\PYGdefault{n}{xyz}
+  \PYGdefault{n}{number} \PYGdefault{l+m+mi}{1} 
+  \PYGdefault{c+c1}{\PYGdefaultZsh{} set center of mass at (0,0,0) without any rotation}
+  \PYGdefault{n}{fixed} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.}   
+  \PYGdefault{n}{centerofmass}
+\PYGdefault{n}{end} \PYGdefault{n}{structure}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} specify the solute }
+\PYGdefault{n}{structure} \PYGdefault{n}{h2o}\PYGdefault{o}{.}\PYGdefault{n}{xyz}
+  \PYGdefault{n}{number} \PYGdefault{l+m+mi}{16}
+  \PYGdefault{c+c1}{\PYGdefaultZsh{} set center of solvent sphere at (0,0,0) with 5 Angstrom radius}
+  \PYGdefault{n}{inside} \PYGdefault{n}{sphere} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{0}\PYGdefault{o}{.} \PYGdefault{l+m+mi}{5}\PYGdefault{o}{.}
+\PYGdefault{n}{end} \PYGdefault{n}{structure}
+
+\PYGdefault{n}{output} \PYGdefault{n}{aniline16}\PYGdefault{o}{.}\PYGdefault{n}{xyz}
+\end{Verbatim}

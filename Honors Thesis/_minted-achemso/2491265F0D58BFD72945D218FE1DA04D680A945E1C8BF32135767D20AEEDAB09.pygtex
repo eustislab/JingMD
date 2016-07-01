@@ -1,0 +1,97 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} This is used to determined the equilibrium using    \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} linear regression and an upper limit for the slope	\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib}
+\PYGdefault{n}{matplotlib}\PYGdefault{o}{.}\PYGdefault{n}{use}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Agg\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib.pyplot} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{plt}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{csv}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{sys}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{numpy} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{np}
+
+\PYGdefault{c}{\PYGdefaultZsh{}for asking what the input in terminal should be}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+    \PYGdefault{k}{if} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}\PYGdefault{o}{==}\PYGdefault{l+s}{\PYGdefaultZsq{}?\PYGdefaultZsq{}}\PYGdefault{p}{:}
+        \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{Call function as: findEquilibrium.py input.log   }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+        \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{n+nb}{input}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: findEquilibrium.py input.log }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{n}{output}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZus{}energies.csv\PYGdefaultZsq{}}
+\PYGdefault{c}{\PYGdefaultZsh{}This portion is the same as in plotEnergyMD6}
+\PYGdefault{c}{\PYGdefaultZsh{}pull out CSV}
+\PYGdefault{n}{f} \PYGdefault{o}{=} \PYGdefault{n}{csv}\PYGdefault{o}{.}\PYGdefault{n}{reader}\PYGdefault{p}{(}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{))}
+\PYGdefault{c}{\PYGdefaultZsh{}convert column to array using zip (a built in function)}
+\PYGdefault{n}{Time}\PYGdefault{p}{,} \PYGdefault{n}{Energy}\PYGdefault{p}{,} \PYGdefault{n}{Temp} \PYGdefault{o}{=} \PYGdefault{n+nb}{zip}\PYGdefault{p}{(}\PYGdefault{o}{*}\PYGdefault{n}{f}\PYGdefault{p}{)}
+\PYGdefault{c}{\PYGdefaultZsh{}convert string to float}
+\PYGdefault{n}{Time} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Time}\PYGdefault{p}{)} 
+\PYGdefault{n}{Energy} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Energy}\PYGdefault{p}{)} 
+\PYGdefault{n}{Temp} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Temp}\PYGdefault{p}{)} 
+
+\PYGdefault{c}{\PYGdefaultZsh{}find Equilibrium using linear regression}
+\PYGdefault{c}{\PYGdefaultZsh{}this number control the range of time to be used in energy fluctuation calculation}
+\PYGdefault{n}{minNumberOfStep}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1000}
+\PYGdefault{c}{\PYGdefaultZsh{}This is the limit above which the script will report no equilibrium is found }
+\PYGdefault{c}{\PYGdefaultZsh{}this is from aniline32.log \PYGdefaultZhy{} 15000 to 25000}
+\PYGdefault{n}{maxSlope}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1e\PYGdefaultZhy{}4}
+\PYGdefault{c}{\PYGdefaultZsh{}for plotting}
+\PYGdefault{n}{slope}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}Finding equilibrium using minimum number of steps = \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{minNumberOfStep}\PYGdefault{p}{)} \PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} and top limit of acceptable slope = \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{maxSlope}\PYGdefault{p}{)}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+	\PYGdefault{c}{\PYGdefaultZsh{}for looping}
+    \PYGdefault{n}{size}\PYGdefault{o}{=}\PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{)}
+    \PYGdefault{n}{x}\PYGdefault{o}{=}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}\PYGdefault{n}{minNumberOfStep}\PYGdefault{p}{]}
+    \PYGdefault{n}{y}\PYGdefault{o}{=}\PYGdefault{n}{Energy}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}\PYGdefault{n}{minNumberOfStep}\PYGdefault{p}{]}
+    \PYGdefault{c}{\PYGdefaultZsh{}for using in loop}
+    \PYGdefault{c}{\PYGdefaultZsh{}set thio a high value \PYGdefaultZhy{} it can be any number bc we will replace it with the lowest slope value found in loop}
+    \PYGdefault{n}{lowestSlopeValue}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1e5}
+    \PYGdefault{c}{\PYGdefaultZsh{}Same \PYGdefaultZhy{} this will be replaced}
+    \PYGdefault{n}{indexOfLowestSlope}\PYGdefault{o}{=\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}
+    \PYGdefault{k}{for} \PYGdefault{n}{i} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{range}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{,}\PYGdefault{n}{size}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{minNumberOfStep}\PYGdefault{p}{):}
+        \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}Finding equilibrium from t= \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{])}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} to \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{o}{+}\PYGdefault{n}{minNumberOfStep}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}
+        \PYGdefault{c}{\PYGdefaultZsh{}poly fit is basically a linear fit \PYGdefaultZhy{} m=slope, b=y\PYGdefaultZus{}intersect}
+        \PYGdefault{n}{m}\PYGdefault{p}{,}\PYGdefault{n}{b} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{polyfit}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{p}{,} \PYGdefault{n}{y}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+        \PYGdefault{c}{\PYGdefaultZsh{}for plotting \PYGdefaultZhy{} append to array of existing slope values}
+        \PYGdefault{n}{slope}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{p}{)}
+        \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}slope = \PYGdefaultZsq{}} \PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{p}{)}
+        \PYGdefault{c}{\PYGdefaultZsh{}take absolute value and see which interval does not fluctuate the least}
+        \PYGdefault{k}{if} \PYGdefault{n+nb}{abs}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n+nb}{abs}\PYGdefault{p}{(}\PYGdefault{n}{lowestSlopeValue}\PYGdefault{p}{):}
+            \PYGdefault{n}{lowestSlopeValue}\PYGdefault{o}{=}\PYGdefault{n+nb}{float}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{p}{)}
+            \PYGdefault{n}{indexOfLowestSlope}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{i}\PYGdefault{p}{)}
+        \PYGdefault{c}{\PYGdefaultZsh{}this is similar to queue structure \PYGdefaultZhy{} room for improvement is to make x and y arrays into actual queues}
+        \PYGdefault{c}{\PYGdefaultZsh{}else remove the head and add next tail}
+        \PYGdefault{k}{del} \PYGdefault{n}{x}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}
+        \PYGdefault{n}{x}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{n}{minNumberOfStep}\PYGdefault{o}{+}\PYGdefault{n}{i}\PYGdefault{p}{])}
+        \PYGdefault{k}{del} \PYGdefault{n}{y}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}
+        \PYGdefault{n}{y}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{Energy}\PYGdefault{p}{[}\PYGdefault{n}{minNumberOfStep}\PYGdefault{o}{+}\PYGdefault{n}{i}\PYGdefault{p}{])}
+\PYGdefault{c}{\PYGdefaultZsh{}if x or y does not have enough element (minNumberOfStep) then report error}
+\PYGdefault{c}{\PYGdefaultZsh{}room for improvement \PYGdefaultZhy{} move this up top instead of having a long try}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+        \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}There is not enough data to determine the equilibrium\PYGdefaultZsq{}}
+\PYGdefault{c}{\PYGdefaultZsh{}if lowestSlopeValue pass the top limit then report}
+\PYGdefault{k}{if} \PYGdefault{n+nb}{abs}\PYGdefault{p}{(}\PYGdefault{n}{lowestSlopeValue}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n+nb}{abs}\PYGdefault{p}{(}\PYGdefault{n}{maxSlope}\PYGdefault{p}{):}
+	\PYGdefault{n}{report}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Found best equilibrium starting from \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{n}{indexOfLowestSlope}\PYGdefault{p}{])}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} to \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{n}{indexOfLowestSlope}\PYGdefault{o}{+}\PYGdefault{n}{minNumberOfStep}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} with slope = \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lowestSlopeValue}\PYGdefault{p}{))}
+	\PYGdefault{k}{print} \PYGdefault{n}{report}
+\PYGdefault{c}{\PYGdefaultZsh{}if not then say so}
+\PYGdefault{k}{else}\PYGdefault{p}{:}
+	\PYGdefault{n}{report} \PYGdefault{o}{=} \PYGdefault{l+s}{\PYGdefaultZsq{}Equilibrium is not yet reach\PYGdefaultZsq{}}
+	\PYGdefault{k}{print} \PYGdefault{n}{report}
+	\PYGdefault{k}{print} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}The current limit is at \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{maxSlope}\PYGdefault{p}{)} \PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} kcal/mol/fs and the lowest value of slope = \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lowestSlopeValue}\PYGdefault{p}{))}
+	
+\PYGdefault{c}{\PYGdefaultZsh{}plot slope vs time}
+\PYGdefault{n}{x}\PYGdefault{o}{=}\PYGdefault{n}{slope}
+\PYGdefault{c}{\PYGdefaultZsh{}align time with slope}
+\PYGdefault{n}{y}\PYGdefault{o}{=}\PYGdefault{n}{Time}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}\PYGdefault{n}{size}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{minNumberOfStep}\PYGdefault{p}{]}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{y}\PYGdefault{p}{,}\PYGdefault{n}{x}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{gca}\PYGdefault{p}{()}\PYGdefault{o}{.}\PYGdefault{n}{set\PYGdefaultZus{}position}\PYGdefault{p}{((}\PYGdefault{o}{.}\PYGdefault{l+m+mi}{125}\PYGdefault{p}{,} \PYGdefault{o}{.}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,} \PYGdefault{o}{.}\PYGdefault{l+m+mi}{8}\PYGdefault{p}{,} \PYGdefault{o}{.}\PYGdefault{l+m+mi}{7}\PYGdefault{p}{))}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{xlabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Starting Time (fs)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Slope (KCal/mol/fs)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ticklabel\PYGdefaultZus{}format}\PYGdefault{p}{(}\PYGdefault{n}{axis}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}y\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{style}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}sci\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{scilimits}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{),} \PYGdefault{n}{useOffset}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Slope vs Time for the MD File: \PYGdefaultZsq{}} \PYGdefault{o}{+} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{))}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{figtext}\PYGdefault{p}{(}\PYGdefault{o}{.}\PYGdefault{l+m+mo}{01}\PYGdefault{p}{,} \PYGdefault{o}{.}\PYGdefault{l+m+mo}{05}\PYGdefault{p}{,}\PYGdefault{n}{report}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZus{}SlopePlot.pdf\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{format}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}pdf\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\end{Verbatim}

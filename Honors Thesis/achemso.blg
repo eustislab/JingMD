@@ -4,46 +4,46 @@ The top-level auxiliary file: achemso.aux
 The style file: achemso.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acs-achemso.bib
-Database file #2: citation.bib.bib
+Database file #2: citation.bib
 achemso 2015/04/07 v3.10
-You've used 26 entries,
+You've used 91 entries,
             2514 wiz_defined-function locations,
-            960 strings with 12591 characters,
-and the built_in function-call counts, 9059 in all, are:
-= -- 752
-> -- 495
-< -- 17
-+ -- 195
-- -- 169
-* -- 975
-:= -- 1218
-add.period$ -- 47
-call.type$ -- 26
-change.case$ -- 4
-chr.to.int$ -- 2
-cite$ -- 26
-duplicate$ -- 500
-empty$ -- 642
-format.name$ -- 209
-if$ -- 1775
+            1401 strings with 25782 characters,
+and the built_in function-call counts, 28456 in all, are:
+= -- 2431
+> -- 1409
+< -- 61
++ -- 552
+- -- 467
+* -- 2966
+:= -- 3804
+add.period$ -- 161
+call.type$ -- 91
+change.case$ -- 7
+chr.to.int$ -- 8
+cite$ -- 97
+duplicate$ -- 1549
+empty$ -- 2184
+format.name$ -- 594
+if$ -- 5681
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 172
-num.names$ -- 75
-pop$ -- 43
+newline$ -- 562
+num.names$ -- 252
+pop$ -- 164
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 27
+skip$ -- 81
 stack$ -- 0
-substring$ -- 524
-swap$ -- 506
-text.length$ -- 52
+substring$ -- 1676
+swap$ -- 1445
+text.length$ -- 182
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 173
+type$ -- 598
 warning$ -- 0
-while$ -- 92
+while$ -- 301
 width$ -- 0
-write$ -- 340
+write$ -- 1130

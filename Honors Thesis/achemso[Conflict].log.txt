@@ -1,0 +1,1423 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 APR 2016 07:10
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**achemso.tex
+(./achemso.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/achemso/achemso.cls
+Document Class: achemso 2015/04/07 v3.10 Submission to ACS journals
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count87
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\acs@bib@file=\write3
+\c@bibnote=\count88
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen111
+\captionmargin@=\dimen112
+\captionwidth=\dimen113
+\caption@tempdima=\dimen114
+\caption@indent=\dimen115
+\caption@parindent=\dimen116
+\caption@hangindent=\dimen117
+)
+\c@ContinuedFloat=\count92
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count94
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\acs@author@cnt=\count95
+\acs@affil@cnt=\count96
+\acs@affil@alt@cnt=\count97
+\acs@footnote@cnt=\count98
+\acs@affil@marker@cnt=\count99
+\acs@space@pre@title=\skip43
+\acs@space@post@title=\skip44
+\acs@space@post@author=\skip45
+\acs@space@post@address=\skip46
+\acs@space@post@email=\skip47
+\acs@maketitle@width=\skip48
+\@float@every@scheme=\toks19
+\c@scheme=\count100
+\@float@every@chart=\toks20
+\c@chart=\count101
+\@float@every@graph=\toks21
+\c@graph=\count102
+\@float@every@table=\toks22
+\acs@collect@toks=\toks23
+\acs@collect@empty@toks=\toks24
+\acs@tocentry@height=\skip49
+\acs@tocentry@width=\skip50
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/achemso/config/jpcbfk.cfg
+File: jpcbfk.cfg 2015/04/07 v3.10 achemso configuration: J. Phys. Chem. B
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip51
+\bibsep=\skip52
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count103
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/achemso/natmove.sty
+Package: natmove 2010/01/15 v1.1a Automatic citation moving with natbib
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mciteplus/mciteplus.sty
+Package: mciteplus 2013/09/13 v1.2 enhanced mcite
+\@mcitetmptoksA=\toks25
+\@mcitetmpdima=\dimen120
+\@mcitetmpdimb=\dimen121
+\@mcitetmpcnta=\count104
+\@mcitetmpcntb=\count105
+\c@mcitebibitemcount=\count106
+\c@mcitesubitemcount=\count107
+
+** mciteplus: Detected natbib.sty. Invoking hooks.
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2015/04/23 v4.01 for typesetting chemical formulae
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2015/03/01 v5547 L3 programming layer (loader) 
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2015/03/01 v5547 L3 programming layer (code) 
+L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
+L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
+L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
+L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
+L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
+L3 Module: l3str 2015/03/01 v5545 L3 Strings
+L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
+L3 Module: l3int 2015/02/21 v5529 L3 Integers
+\c_max_int=\count108
+\l_tmpa_int=\count109
+\l_tmpb_int=\count110
+\g_tmpa_int=\count111
+\g_tmpb_int=\count112
+L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
+L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
+\g__prg_map_int=\count113
+L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
+L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
+L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
+L3 Module: l3msg 2015/02/26 v5537 L3 Messages
+L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
+\l_iow_line_count_int=\count114
+\l__iow_target_count_int=\count115
+\l__iow_current_line_int=\count116
+\l__iow_current_word_int=\count117
+\l__iow_current_indentation_int=\count118
+L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
+\c_zero_dim=\dimen122
+\c_max_dim=\dimen123
+\l_tmpa_dim=\dimen124
+\l_tmpb_dim=\dimen125
+\g_tmpa_dim=\dimen126
+\g_tmpb_dim=\dimen127
+\c_zero_skip=\skip53
+\c_max_skip=\skip54
+\l_tmpa_skip=\skip55
+\l_tmpb_skip=\skip56
+\g_tmpa_skip=\skip57
+\g_tmpb_skip=\skip58
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
+\g__keyval_level_int=\count119
+\l_keys_choice_int=\count120
+L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
+\c__fp_leading_shift_int=\count121
+\c__fp_middle_shift_int=\count122
+\c__fp_trailing_shift_int=\count123
+\c__fp_big_leading_shift_int=\count124
+\c__fp_big_middle_shift_int=\count125
+\c__fp_big_trailing_shift_int=\count126
+\c__fp_Bigg_leading_shift_int=\count127
+\c__fp_Bigg_middle_shift_int=\count128
+\c__fp_Bigg_trailing_shift_int=\count129
+L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
+\c_empty_box=\box28
+\l_tmpa_box=\box29
+\l_tmpb_box=\box30
+\g_tmpa_box=\box31
+\g_tmpb_box=\box32
+L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen128
+\l__coffin_offset_x_dim=\dimen129
+\l__coffin_offset_y_dim=\dimen130
+\l__coffin_x_dim=\dimen131
+\l__coffin_y_dim=\dimen132
+\l__coffin_x_prime_dim=\dimen133
+\l__coffin_y_prime_dim=\dimen134
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\l__coffin_display_coffin=\box39
+\l__coffin_display_coord_coffin=\box40
+\l__coffin_display_pole_coffin=\box41
+\l__coffin_display_offset_dim=\dimen135
+\l__coffin_display_x_dim=\dimen136
+\l__coffin_display_y_dim=\dimen137
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen138
+\l__box_bottom_dim=\dimen139
+\l__box_left_dim=\dimen140
+\l__box_right_dim=\dimen141
+\l__box_top_new_dim=\dimen142
+\l__box_bottom_new_dim=\dimen143
+\l__box_left_new_dim=\dimen144
+\l__box_right_new_dim=\dimen145
+\l__box_internal_box=\box42
+\l__coffin_bounding_shift_dim=\dimen146
+\l__coffin_left_corner_dim=\dimen147
+\l__coffin_right_corner_dim=\dimen148
+\l__coffin_bottom_corner_dim=\dimen149
+\l__coffin_top_corner_dim=\dimen150
+\l__coffin_scaled_total_height_dim=\dimen151
+\l__coffin_scaled_width_dim=\dimen152
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
+File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2015/03/01 v5544 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count130
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3regex.st
+y
+Package: l3regex 2014/11/25 v5471 L3 Experimental regular expressions
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3tl-build.s
+ty
+Package: l3tl-build 2014/08/25 v5378 L3 Experimental token list construction
+\l__tl_build_start_index_int=\count131
+\l__tl_build_index_int=\count132
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3tl-analysi
+s.sty
+Package: l3tl-analysis 2014/05/06 v4745 L3 Experimental token lists analysis
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3str.sty
+Package: l3str 2014/11/25 v5471 L3 Experimental strings
+)
+\l__tl_analysis_normal_int=\count133
+\l__tl_analysis_index_int=\count134
+\l__tl_analysis_nesting_int=\count135
+\l__tl_analysis_type_int=\count136
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3flag.sty
+Package: l3flag 2014/11/25 v5471 L3 Experimental flags
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3experimental/l3str/l3str-conver
+t.sty
+Package: l3str-convert 2014/06/03 v5028 L3 Experimental string encoding convers
+ions
+\l__str_internal_int=\count137
+\c__str_replacement_char_int=\count138
+)
+\l__regex_internal_a_int=\count139
+\l__regex_internal_b_int=\count140
+\l__regex_internal_c_int=\count141
+\l__regex_balance_int=\count142
+\l__regex_group_level_int=\count143
+\l__regex_mode_int=\count144
+\l__regex_catcodes_int=\count145
+\l__regex_default_catcodes_int=\count146
+\c__regex_catcode_D_int=\count147
+\c__regex_catcode_S_int=\count148
+\c__regex_catcode_L_int=\count149
+\c__regex_catcode_O_int=\count150
+\c__regex_catcode_A_int=\count151
+\c__regex_all_catcodes_int=\count152
+\l__regex_show_lines_int=\count153
+\l__regex_min_state_int=\count154
+\l__regex_max_state_int=\count155
+\l__regex_left_state_int=\count156
+\l__regex_right_state_int=\count157
+\l__regex_capturing_group_int=\count158
+\l__regex_min_pos_int=\count159
+\l__regex_max_pos_int=\count160
+\l__regex_current_pos_int=\count161
+\l__regex_start_pos_int=\count162
+\l__regex_success_pos_int=\count163
+\l__regex_current_char_int=\count164
+\l__regex_current_catcode_int=\count165
+\l__regex_last_char_int=\count166
+\l__regex_case_changed_char_int=\count167
+\l__regex_current_state_int=\count168
+\l__regex_step_int=\count169
+\l__regex_min_active_int=\count170
+\l__regex_max_active_int=\count171
+\l__regex_replacement_csnames_int=\count172
+\l__regex_match_count_int=\count173
+\l__regex_submatch_int=\count174
+\l__regex_zeroth_submatch_int=\count175
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count176
+\calc@Bcount=\count177
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count178
+\calc@Cskip=\skip61
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip62
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks26
+\ex@=\dimen155
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen156
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count179
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count180
+\leftroot@=\count181
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count182
+\DOTSCASE@=\count183
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box43
+\strutbox@=\box44
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count184
+\c@MaxMatrixCols=\count185
+\dotsspace@=\muskip17
+\c@parentequation=\count186
+\dspbrk@lvl=\count187
+\tag@help=\toks27
+\row@=\count188
+\column@=\count189
+\maxfields@=\count190
+\andhelp@=\toks28
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks29
+\multlinegap=\skip63
+\multlinetaggap=\skip64
+\mathdisplay@stack=\toks30
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count191
+\l__xparse_m_args_int=\count192
+\l__xparse_mandatory_args_int=\count193
+\l__xparse_processor_int=\count194
+\l__xparse_v_nesting_int=\count195
+)
+Package: chemgreek 2015/04/09 v1.0 interface for upright greek letters for use 
+in chemistry (CN)
+\l__chemgreek_tmpa_int=\count196
+\g__chemgreek_tmpa_int=\count197
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newchemgreekmapping with sig. 'O{}mm' on line 326.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \renewchemgreekmapping with sig. 'O{}mm' on line 329.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \declarechemgreekmapping with sig. 'O{}mm' on line 332.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newchemgreekmappingalias with sig. 'mm' on line 337.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \renewchemgreekmappingalias with sig. 'mm' on line 340.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \declarechemgreekmappingalias with sig. 'mm' on line 343.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \changechemgreeksymbol with sig. 'mmmm' on line 373.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \chemgreekmappingsymbol with sig. 'mm' on line 467.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \activatechemgreekmapping with sig. 'sm' on line 476.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \selectchemgreekmapping with sig. 'm' on line 481.
+.................................................
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+Variant \str_if_eq:VnTF already defined; not changing it on line 57
+\l__mhchem_ce_distanceFromLastComma_int=\count198
+\mhchem@arrow@params=\toks31
+\mhchem@arrowlength@pgf=\skip65
+\mhchem@bondwidth=\skip66
+\mhchem@bondheight=\skip67
+\mhchem@smallbondwidth@tmpA=\skip68
+\mhchem@smallbondwidth@tmpB=\skip69
+\mhchem@smallbondwidth=\skip70
+\mhchem@bondtmp@minussidebearingleft=\skip71
+\mhchem@bondtmp@minussidebearingright=\skip72
+\mhchem@minispace@tmp=\skip73
+\mhchem@minibackspace@tmp=\skip74
+\l__mhchem_option_version_int=\count199
+\mhchem@option@minusmathsidebearingleft=\dimen164
+\mhchem@option@minusmathsidebearingright=\dimen165
+\mhchem@option@minustextsidebearingleft=\dimen166
+\mhchem@option@minustextsidebearingright=\dimen167
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count200
+\c@subtable=\count201
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2015/01/31 v2.0 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count202
+\FV@InFile=\read1
+\FV@TabBox=\box45
+\c@FancyVerbLine=\count203
+\FV@StepNumber=\count204
+\FV@OutFile=\write4
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "achemso.w18")...executed.
+
+
+(./achemso.w18)
+runsystem(rm -- "achemso.w18")...executed.
+
+
+Runaway argument?
+! Paragraph ended before \zap@space was complete.
+<to be read again> 
+                   \par 
+l.95 ...\edef\@tempa{\expandafter\zap@space\@tempa
+                                                  \@empty}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+! Paragraph ended before \ip@only@six was complete.
+<to be read again> 
+                   \par 
+l.105 ...ef\@tempc{\expandafter\ip@only@six\@tempa
+                                                  ------\@nil}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Undefined control sequence.
+l.105 ...expandafter\ip@only@six\@tempa------\@nil
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count205
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count206
+\decimalpart=\count207
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count208
+\output=\toks32
+\linenoprevgraf=\count209
+\linenumbersep=\dimen168
+\linenumberwidth=\dimen169
+\c@linenumber=\count210
+\c@pagewiselinenumber=\count211
+\c@LN@truepage=\count212
+\c@internallinenumber=\count213
+\c@internallinenumbers=\count214
+\quotelinenumbersep=\dimen170
+\bframerule=\dimen171
+\bframesep=\dimen172
+\bframebox=\box46
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\minted@appexistsfile=\read2
+\FV@BreakIndent=\dimen173
+\FV@BreakSymbolSepLeft=\dimen174
+\FV@BreakSymbolSepRight=\dimen175
+\FV@BreakSymbolIndentLeft=\dimen176
+\FV@BreakSymbolIndentRight=\dimen177
+\c@FancyVerbLineBreakLast=\count215
+\FV@LineBox=\box47
+\FV@LineIndentBox=\box48
+\minted@bgbox=\box49
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count216
+\@float@every@listing=\toks33
+\c@listing=\count217
+)
+runsystem(mkdir -p "_minted-achemso")...executed.
+
+runsystem(which "pygmentize" && touch "achemso.aex")...executed.
+
+
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \usepackage
+                {notes2bib}
+Refer to the installation instructions in the minted documentation for more inf
+ormation.
+
+(./_minted-achemso/default.pygstyle) (./achemso.aux)
+\openout1 = `achemso.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+\openout3 = `acs-achemso.bib'.
+
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.2698pt, 469.75539pt, 72.2698pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75539pt
+* \textheight=650.43037pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count218
+\scratchdimen=\dimen178
+\scratchbox=\box50
+\nofMPsegments=\count219
+\nofMParguments=\count220
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count221
+\MPscratchDim=\dimen179
+\MPnumerator=\count222
+\makeMPintoPDFobject=\count223
+\everyMPtoPDFconversion=\toks35
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+.................................................
+. chemgreek info: "mapping-activated"
+. 
+. Activating mapping `default' on line 58.
+.................................................
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no Œ in font cmr12!
+Missing character: There is no º in font cmr12!
+ [2]
+Missing character: There is no Œ in font cmr12!
+Missing character: There is no µ in font cmr12!
+Missing character: There is no Œ in font cmr12!
+Missing character: There is no ª in font cmr12!
+ [3]
+<jablonski.png, id=21, 906.38625pt x 652.4375pt>
+File: jablonski.png Graphic file (type png)
+ <use jablonski.png>
+Package pdftex.def Info: jablonski.png used on input line 81.
+(pdftex.def)             Requested size: 469.75539pt x 338.13454pt.
+
+<UVFromFityk.png, id=23, 578.16pt x 434.1018pt>
+File: UVFromFityk.png Graphic file (type png)
+ <use UVFromFityk.png>
+Package pdftex.def Info: UVFromFityk.png used on input line 87.
+(pdftex.def)             Requested size: 469.75539pt x 352.70685pt.
+ [4 <./jablonski.png>] [5 <./UVFromFityk.png (PNG copy)>]
+
+Package natbib Warning: Citation `Rohrdanz2008' on page 6 undefined on input li
+ne 99.
+
+[6] [7]
+
+Package natbib Warning: Citation `He√üelmann2015' on page 8 undefined on input 
+line 124.
+
+
+Package natbib Warning: Citation `Hirao2011' on page 8 undefined on input line 
+124.
+
+
+Package natbib Warning: Citation `Parac2002' on page 8 undefined on input line 
+124.
+
+
+Package natbib Warning: Citation `Jacquemin2009' on page 8 undefined on input l
+ine 124.
+
+! Undefined control sequence.
+l.124 ...acquemin2009} or excited state energy\cit
+                                                  {Caricato2010, Barnes2014}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package natbib Warning: Citation `Iikura2001' on page 8 undefined on input line
+ 124.
+
+
+Package natbib Warning: Citation `Lee1988' on page 8 undefined on input line 12
+4.
+
+[8]
+
+Package natbib Warning: Citation `Mennucci2010' on page 9 undefined on input li
+ne 127.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+[9]
+
+pdfTeX warning: /usr/local/texlive/2015/bin/x86_64-darwin/pdflatex (file ./imag
+es/energyOscillatorStrengthPlot2.pdf): PDF inclusion: found PDF version <1.6>, 
+but at most version <1.5> allowed
+<images/energyOscillatorStrengthPlot2.pdf, id=49, 672.34286pt x 525.24362pt>
+File: images/energyOscillatorStrengthPlot2.pdf Graphic file (type pdf)
+
+<use images/energyOscillatorStrengthPlot2.pdf>
+Package pdftex.def Info: images/energyOscillatorStrengthPlot2.pdf used on input
+ line 133.
+(pdftex.def)             Requested size: 469.75539pt x 366.9948pt.
+ [10]
+<wB97XD/aniline4_0fs.png, id=53, 642.4pt x 481.8pt>
+File: wB97XD/aniline4_0fs.png Graphic file (type png)
+
+<use wB97XD/aniline4_0fs.png>
+Package pdftex.def Info: wB97XD/aniline4_0fs.png used on input line 146.
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+
+<wB97XD/aniline4_1500fs.png, id=54, 642.4pt x 481.8pt>
+File: wB97XD/aniline4_1500fs.png Graphic file (type png)
+
+<use wB97XD/aniline4_1500fs.png>
+Package pdftex.def Info: wB97XD/aniline4_1500fs.png used on input line 152.
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+
+<wB97XD/output4_log_EnergyPlot.png, id=55, 578.16pt x 433.62pt>
+File: wB97XD/output4_log_EnergyPlot.png Graphic file (type png)
+
+<use wB97XD/output4_log_EnergyPlot.png>
+Package pdftex.def Info: wB97XD/output4_log_EnergyPlot.png used on input line 1
+58.
+(pdftex.def)             Requested size: 187.89928pt x 140.92482pt.
+
+
+Package natbib Warning: Citation `Hilborn1982' on page 11 undefined on input li
+ne 166.
+
+[11 <./images/energyOscillatorStrengthPlot2.pdf>] [12 <./wB97XD/aniline4_0fs.pn
+g> <./wB97XD/aniline4_1500fs.png> <./wB97XD/output4_log_EnergyPlot.png>]
+<images/quantum_to_bulk.pdf, id=67, 780.58324pt x 525.21219pt>
+File: images/quantum_to_bulk.pdf Graphic file (type pdf)
+
+<use images/quantum_to_bulk.pdf>
+Package pdftex.def Info: images/quantum_to_bulk.pdf used on input line 174.
+(pdftex.def)             Requested size: 469.75539pt x 316.07541pt.
+
+
+pdfTeX warning: /usr/local/texlive/2015/bin/x86_64-darwin/pdflatex (file ./imag
+es/differentGaussians2.pdf): PDF inclusion: found PDF version <1.6>, but at mos
+t version <1.5> allowed
+<images/differentGaussians2.pdf, id=68, 657.55844pt x 337.43065pt>
+File: images/differentGaussians2.pdf Graphic file (type pdf)
+
+<use images/differentGaussians2.pdf>
+Package pdftex.def Info: images/differentGaussians2.pdf used on input line 183.
+
+(pdftex.def)             Requested size: 469.75539pt x 241.06541pt.
+ [13] [14 <./images/quantum_to_bulk.pdf>]
+[15 <./images/differentGaussians2.pdf>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+<images/flowchart.pdf, id=137, 475.06485pt x 321.40826pt>
+File: images/flowchart.pdf Graphic file (type pdf)
+
+<use images/flowchart.pdf>
+Package pdftex.def Info: images/flowchart.pdf used on input line 197.
+(pdftex.def)             Requested size: 475.06369pt x 321.40746pt.
+
+Overfull \hbox (5.3083pt too wide) in paragraph at lines 197--198
+ [][] 
+ []
+
+[16
+
+]
+
+Package natbib Warning: Citation `Note-4' on page 17 undefined on input line 20
+6.
+
+[17 <./images/flowchart.pdf>]
+
+Package natbib Warning: Citation `Chodera2015' on page 18 undefined on input li
+ne 209.
+
+<CAMB3LYP/aniline32_log_SlopePlot.pdf, id=204, 578.16pt x 433.62pt>
+File: CAMB3LYP/aniline32_log_SlopePlot.pdf Graphic file (type pdf)
+
+<use CAMB3LYP/aniline32_log_SlopePlot.pdf>
+Package pdftex.def Info: CAMB3LYP/aniline32_log_SlopePlot.pdf used on input lin
+e 213.
+(pdftex.def)             Requested size: 234.87769pt x 176.15768pt.
+
+<startingGeometry/aniline64.png, id=205, 642.4pt x 481.8pt>
+File: startingGeometry/aniline64.png Graphic file (type png)
+
+<use startingGeometry/aniline64.png>
+Package pdftex.def Info: startingGeometry/aniline64.png used on input line 226.
+
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+
+<startingGeometry/aniline128.png, id=206, 642.4pt x 481.8pt>
+File: startingGeometry/aniline128.png Graphic file (type png)
+
+<use startingGeometry/aniline128.png>
+Package pdftex.def Info: startingGeometry/aniline128.png used on input line 232
+.
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+
+<startingGeometry/aniline256.png, id=207, 642.4pt x 481.8pt>
+File: startingGeometry/aniline256.png Graphic file (type png)
+
+<use startingGeometry/aniline256.png>
+Package pdftex.def Info: startingGeometry/aniline256.png used on input line 238
+.
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+
+<startingGeometry/aniline512.png, id=208, 642.4pt x 481.8pt>
+File: startingGeometry/aniline512.png Graphic file (type png)
+
+<use startingGeometry/aniline512.png>
+Package pdftex.def Info: startingGeometry/aniline512.png used on input line 244
+.
+(pdftex.def)             Requested size: 187.89928pt x 140.92409pt.
+ [18] [19 <./CAMB3LYP/aniline32_log_SlopePlot.pdf>]
+
+Package natbib Warning: Citation `Eustis2016' on page 20 undefined on input lin
+e 254.
+
+[20 <./startingGeometry/aniline64.png> <./startingGeometry/aniline128.png> <./s
+tartingGeometry/aniline256.png> <./startingGeometry/aniline512.png>]
+
+pdfTeX warning: /usr/local/texlive/2015/bin/x86_64-darwin/pdflatex (file ./imag
+es/abs_added.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
+<1.5> allowed
+<images/abs_added.pdf, id=266, 684.58801pt x 583.28915pt>
+File: images/abs_added.pdf Graphic file (type pdf)
+
+<use images/abs_added.pdf>
+Package pdftex.def Info: images/abs_added.pdf used on input line 258.
+(pdftex.def)             Requested size: 684.58633pt x 583.28773pt.
+
+Overfull \hbox (214.83095pt too wide) in paragraph at lines 258--259
+ [][] 
+ []
+
+[21]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+[22 <./images/abs_added.pdf>]
+
+pdfTeX warning: /usr/local/texlive/2015/bin/x86_64-darwin/pdflatex (file ./imag
+es/dotPlotByNumberOfWater.pdf): PDF inclusion: found PDF version <1.6>, but at 
+most version <1.5> allowed
+<images/dotPlotByNumberOfWater.pdf, id=307, 794.97pt x 614.295pt>
+File: images/dotPlotByNumberOfWater.pdf Graphic file (type pdf)
+
+<use images/dotPlotByNumberOfWater.pdf>
+Package pdftex.def Info: images/dotPlotByNumberOfWater.pdf used on input line 3
+02.
+(pdftex.def)             Requested size: 234.87769pt x 181.49664pt.
+Missing character: There is no Œ in font cmr12!
+Missing character: There is no ª in font cmr12!
+ [23
+
+]
+<CAMB3LYP/aniline32_0fs.png, id=311, 433.62pt x 325.215pt>
+File: CAMB3LYP/aniline32_0fs.png Graphic file (type png)
+
+<use CAMB3LYP/aniline32_0fs.png>
+Package pdftex.def Info: CAMB3LYP/aniline32_0fs.png used on input line 313.
+(pdftex.def)             Requested size: 187.89928pt x 140.92648pt.
+
+<CAMB3LYP/aniline32_15000fs.png, id=312, 435.6pt x 326.7pt>
+File: CAMB3LYP/aniline32_15000fs.png Graphic file (type png)
+
+<use CAMB3LYP/aniline32_15000fs.png>
+Package pdftex.def Info: CAMB3LYP/aniline32_15000fs.png used on input line 319.
+
+(pdftex.def)             Requested size: 187.89928pt x 140.92192pt.
+
+<CAMB3LYP/aniline32_25000fs.png, id=313, 434.5836pt x 325.6968pt>
+File: CAMB3LYP/aniline32_25000fs.png Graphic file (type png)
+
+<use CAMB3LYP/aniline32_25000fs.png>
+Package pdftex.def Info: CAMB3LYP/aniline32_25000fs.png used on input line 325.
+
+(pdftex.def)             Requested size: 187.89928pt x 140.8172pt.
+
+<CAMB3LYP/aniline32_EnergyPlot.png, id=314, 578.16pt x 433.62pt>
+File: CAMB3LYP/aniline32_EnergyPlot.png Graphic file (type png)
+
+<use CAMB3LYP/aniline32_EnergyPlot.png>
+Package pdftex.def Info: CAMB3LYP/aniline32_EnergyPlot.png used on input line 3
+31.
+(pdftex.def)             Requested size: 187.89928pt x 140.92482pt.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.350 	    \multicolumn{10}{l}{\textit{128-water}}
+                                                   \\
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+LaTeX Warning: File `images/aniline128ByTime.pdf' not found on input line 402.
+
+
+! Package pdftex.def Error: File `images/aniline128ByTime.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 ...1\textwidth]{images/aniline128ByTime.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `images/aniline256ByTime.pdf' not found on input line 407.
+
+
+! Package pdftex.def Error: File `images/aniline256ByTime.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.407 ...1\textwidth]{images/aniline256ByTime.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `images/aniline512ByTime.pdf' not found on input line 412.
+
+
+! Package pdftex.def Error: File `images/aniline512ByTime.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 ...1\textwidth]{images/aniline512ByTime.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `fig:aniline256ByTime)' on page 24 undefined on input 
+line 419.
+
+[24 <./images/dotPlotByNumberOfWater.pdf>]
+
+LaTeX Warning: Reference `fig:TDDFTbyFunctionals' on page 25 undefined on input
+ line 422.
+
+<images/aniline_zoom.pdf, id=331, 794.97pt x 614.295pt>
+File: images/aniline_zoom.pdf Graphic file (type pdf)
+
+<use images/aniline_zoom.pdf>
+Package pdftex.def Info: images/aniline_zoom.pdf used on input line 427.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/3F_zoom.pdf, id=332, 794.97pt x 614.295pt>
+File: images/3F_zoom.pdf Graphic file (type pdf)
+ <use images/3F_zoom.pdf>
+Package pdftex.def Info: images/3F_zoom.pdf used on input line 432.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/4F_zoom.pdf, id=333, 794.97pt x 614.295pt>
+File: images/4F_zoom.pdf Graphic file (type pdf)
+ <use images/4F_zoom.pdf>
+Package pdftex.def Info: images/4F_zoom.pdf used on input line 437.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/3Cl_zoom.pdf, id=334, 794.97pt x 614.295pt>
+File: images/3Cl_zoom.pdf Graphic file (type pdf)
+ <use images/3Cl_zoom.pdf>
+Package pdftex.def Info: images/3Cl_zoom.pdf used on input line 442.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/4MeOacetophenone_zoom.pdf, id=335, 794.97pt x 614.295pt>
+File: images/4MeOacetophenone_zoom.pdf Graphic file (type pdf)
+
+<use images/4MeOacetophenone_zoom.pdf>
+Package pdftex.def Info: images/4MeOacetophenone_zoom.pdf used on input line 44
+7.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/1_3_zoom.pdf, id=336, 794.97pt x 614.295pt>
+File: images/1_3_zoom.pdf Graphic file (type pdf)
+ <use images/1_3_zoom.pdf>
+Package pdftex.def Info: images/1_3_zoom.pdf used on input line 452.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+
+Package natbib Warning: Citation `Gordon2001' on page 25 undefined on input lin
+e 458.
+
+
+Package natbib Warning: Citation `Guidez2015' on page 25 undefined on input lin
+e 458.
+
+
+Package natbib Warning: Citation `Perdew1996' on page 25 undefined on input lin
+e 458.
+
+
+Package natbib Warning: Citation `Lee1988' on page 25 undefined on input line 4
+58.
+
+[25] <images/aniline_full.pdf, id=342, 794.97pt x 614.295pt>
+File: images/aniline_full.pdf Graphic file (type pdf)
+
+<use images/aniline_full.pdf>
+Package pdftex.def Info: images/aniline_full.pdf used on input line 464.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/3F_full.pdf, id=343, 794.97pt x 614.295pt>
+File: images/3F_full.pdf Graphic file (type pdf)
+ <use images/3F_full.pdf>
+Package pdftex.def Info: images/3F_full.pdf used on input line 469.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/4F_full.pdf, id=344, 794.97pt x 614.295pt>
+File: images/4F_full.pdf Graphic file (type pdf)
+ <use images/4F_full.pdf>
+Package pdftex.def Info: images/4F_full.pdf used on input line 474.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/aniline128_waters_compared.pdf, id=345, 794.97pt x 614.295pt>
+File: images/aniline128_waters_compared.pdf Graphic file (type pdf)
+
+<use images/aniline128_waters_compared.pdf>
+Package pdftex.def Info: images/aniline128_waters_compared.pdf used on input li
+ne 479.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/4MeOacetophenone_full.pdf, id=346, 794.97pt x 614.295pt>
+File: images/4MeOacetophenone_full.pdf Graphic file (type pdf)
+
+<use images/4MeOacetophenone_full.pdf>
+Package pdftex.def Info: images/4MeOacetophenone_full.pdf used on input line 48
+4.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+
+<images/1_3_full.pdf, id=347, 794.97pt x 614.295pt>
+File: images/1_3_full.pdf Graphic file (type pdf)
+ <use images/1_3_full.pdf>
+Package pdftex.def Info: images/1_3_full.pdf used on input line 489.
+(pdftex.def)             Requested size: 140.92804pt x 108.89986pt.
+runsystem(pygmentize -l python -f latex -F tokenmerge -P style=default -P comma
+ndprefix=PYGdefault -o "_minted-achemso/9E81DE5BDF1B1D64C1C3C6A0F42A289A4BA292F
+58FFE030601BD2292FC158C50.pygtex" "../pythonScripts/prepareMD2.py" )...executed
+.
+
+
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.503 ...]{python}{../pythonScripts/prepareMD2.py}
+                                                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect.
+
+
+(./_minted-achemso/35AC2DE6D8FAB6761B93B40911A6F33B9B1E2D5CC23C17207BFC9EA04EA1
+62C5.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 7.
+
+Overfull \hbox (87.86732pt too wide) in paragraph at lines 46--46
+| | | |\OT1/cmtt/m/n/10.95 numberOfLinesToBecollected[]=[]numberofSoluteAtoms[]
++[][]1[][]+[]numberOfSolventMolecules[]*[](numberofSoventAtoms[]+[][]1[])|  
+ []
+
+
+Overfull \hbox (112.56734pt too wide) in paragraph at lines 182--182
+\OT1/cmtt/m/n/10.95 grandString[]=[]grandString[]+[][]str[](atomCount)[]+[][]'[
+][]\n[][]'[][]+[][]str[](timeCount)[]+[][]'[][]\t[][]fs[][]\t[][]'[][]+[][]str[
+](energy)[]+[][]' 
+ []
+
+
+Overfull \hbox (83.8239pt too wide) in paragraph at lines 254--254
+\OT1/cmtt/m/n/10.95 grandString[]=[]grandString[]+[][]str[](atomCount)[]+[][]'[
+][]\n[][]'[][]+[][]str[](time)[]+[][]'[][]\t[][]fs[][]\t[][]'[][]+[][]str[](ene
+rgy)[]+[][]' 
+ []
+
+
+Overfull \hbox (20.58833pt too wide) in paragraph at lines 273--273
+\OT1/cmtt/m/n/10.95 shouldStartCollectGeometry(line,lineBwTimeAndGeometry,lineC
+ountFromTime):|  
+ []
+
+)
+(./_minted-achemso/1A4B9552475CB2C41EE33F821110804635D21CE4FB789DCD978901D7A0BF
+953A.pygtex)
+runsystem(pygmentize -l python -f latex -F tokenmerge -P style=default -P comma
+ndprefix=PYGdefault -o "_minted-achemso/680A945E1C8BF32135767D20AEEDAB09.pygtex
+" "../pythonScripts/findEquilibrium.py" )...executed.
+
+
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 ...hon}{../pythonScripts/findEquilibrium.py}
+                                                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge -P style=default -P comma
+ndprefix=PYGdefault -o "_minted-achemso/B79710DC9E09D266534F47AEE716F3F4.pygtex
+" "../pythonScripts/fincut2.py" )...executed.
+
+
+! Package minted Error: Missing Pygments output; \inputminted was
+probably given a file that does not exist--otherwise, you may need 
+the outputdir package option, or may be using an incompatible build tool.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.519 ...all]{python}{../pythonScripts/fincut2.py}
+                                                  
+This could be caused by using -output-directory or -aux-directory 
+without setting minted's outputdir, or by using a build tool that 
+changes paths in ways minted cannot detect.
+
+
+(./_minted-achemso/CE1AA7D2BB07EC030996EA7764F68DF51B9AA28CA10DB9821BFB3768FE22
+DFDD.pygtex)
+(./_minted-achemso/A4178E2F833B3D0A33FE40221C18AFC885EC47986F12B7534A8E247F57EF
+4768.pygtex)
+(./_minted-achemso/8F3533C46DCD66157CE1549F03F25CAA513EF848B1AF6CECE14F72F516C0
+9776.pygtex)
+(./_minted-achemso/F63DDEF75A2EF959D336C029E0CAFD1E4BA784FE600F2CF3BAE6020A5DB3
+687F.pygtex)
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ (./achemso.bbl
+Missing character: There is no Ã in font cmr12!
+
+Underfull \hbox (badness 1735) in paragraph at lines 154--163
+[]\OT1/cmr/m/n/12 Li, J.; Cramer, C. J.; Truh-lar, D. G. Two-Response-Time Mode
+l Based on
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+
+! Package mciteplus Error: Entry Status for cite key `Zhao2007' under tracking 
+ID `main' is undefined, treating it as a head entry.
+
+See the mciteplus package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.239 ...Truhlar(2007)Zhao, and Truhlar]{Zhao2007}
+                                                  
+I don't have a record of the head/tail status of this citation. Possible reason
+s include the use of a cite command that is not mciteplus aware, the use of `\n
+ocite{*}', or a problem with the tracking ID and/or aux file handles. `\mciteEr
+rorOnUnknownfalse' can be used to disable this error message.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+
+! LaTeX Error: \begin{figure} on input line 460 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.544 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./achemso.aux)
+
+LaTeX Warning: There were undefined references.
+
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cumenthook \deadcycles \z@ \@@end 
+                                                  
+l.544 \end{document}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{figure} on input line 460 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.544 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.544 \end{document}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> achemso.tex
+               
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 15902 strings out of 493089
+ 299096 string characters out of 6134842
+ 644208 words of memory out of 5000000
+ 19143 multiletter control sequences out of 15000+600000
+ 13657 words of font info for 50 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,13n,94p,10370b,650s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

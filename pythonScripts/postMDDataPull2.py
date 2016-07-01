@@ -21,7 +21,7 @@ except IndexError:
 #Call as fincut.py input.log numberOfSoluteAtoms numberofSolventAtoms numberOfSolventMolecules startTime stopTime timePerFrame
 try:
     input=str(sys.argv[1])
-	numberOfExcitedStates=int(sys.argv[2])
+    numberOfExcitedStates=int(sys.argv[2])
 except IndexError:
     print '\n!!!Input command Error. Call function as: postMDDataPull2.py inputDirectory NumberOfExcitedStateEnergies\n' 
     sys.exit()

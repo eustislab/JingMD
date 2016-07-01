@@ -34,6 +34,7 @@ foundPE=False
 foundTemp=False
 firstTime=True
 grandString=''
+time='0'
 
 ###############################
 #functions
@@ -117,8 +118,13 @@ for line in f1:
             #append time (split) to string
             #split line using space - sample(*** AT T=         10.00 FSEC, THIS RUN'S STEP NO.=      10)
             #this will be split to ['***', 'AT', 'T=', '10.00'...] -time = element 4
-            grandString=grandString+str(lineComponents[3]);
-            foundTime=True;
+            newTime=str(lineComponents[3])[:-3]
+            if int(time)>=int(newTime):
+            	print 'there is a duplication at '+time+' and '+newTime +' ignoring new values'
+            else:
+				time=str(newTime)
+				grandString=grandString+time;
+				foundTime=True;
     elif not foundPE:
         if shouldCollectPE(line,lineBwTimeAndEnergy,lineCountFromTime):
             #append time (split) to string
@@ -169,23 +175,37 @@ Time = map(float, Time)
 Energy = map(float, Energy) 
 Temp = map(float, Temp) 
 
+minEnergy=min(Energy)
+relativeEnergy=[]
+for eachEnergy in Energy:
+	relativeEnergy.append(eachEnergy-minEnergy) 
 
 #plot
 x = Time
 y1 = Energy
 y2 = Temp
 
-fig, ax1 = plt.subplots()
+plt.subplot(2, 1, 1)
+plt.plot(x, y1, 'g-')
+plt.title('MD PE and T plot of: ' + str(input))
+plt.ylabel('Potential Energy (KCal/mol)')
 
-ax2 = ax1.twinx()
-ax1.plot(x, y1, 'g-')
-ax2.plot(x, y2, 'b-')
-
-ax1.set_xlabel('Time (fs)')
-ax1.set_ylabel('Potential Energy (KCal/mol)', color='g')
-ax1.ticklabel_format(axis='y', style='sci', scilimits=(-2,2), useOffset=False)
-ax2.set_ylabel('System Temperature (K)', color='b')
-plt.title(r'       Potential Energy vs Time for the MD File: ' + str(input))
-#Saving to pdf gives better resolution - picture is saved to vector
-#there is a room for improvement especially these energy plots which look very mediocre 
+plt.subplot(2, 1, 2)
+plt.plot(x, y2, 'b-')
+plt.xlabel('time (fs)')
+plt.ylabel('System Temperature (K)')
 plt.savefig(str(input) + '_EnergyPlot.pdf', format='pdf')
+
+plt.gcf().clear()
+y1 = relativeEnergy
+
+plt.subplot(2, 1, 1)
+plt.plot(x, y1, 'g-')
+plt.title('MD relative PE and T plot of: ' + str(input))
+plt.ylabel('Relative Potential Energy (KCal/mol)')
+
+plt.subplot(2, 1, 2)
+plt.plot(x, y2, 'b-')
+plt.xlabel('time (fs)')
+plt.ylabel('System Temperature (K)')
+plt.savefig(str(input) + '_EnergyPlot_2.pdf', format='pdf')

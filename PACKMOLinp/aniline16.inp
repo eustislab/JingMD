@@ -1,0 +1,28 @@
+#
+# aniline solvated by 16 waters
+#
+
+# define minimum distance between atoms to 2.5 Angstrom
+tolerance 2.5
+# number of loops for fitting
+nloop 10000
+# number of trial per loop
+maxiter 100
+
+filetype xyz
+# specify the solute 
+structure aniline.xyz
+  number 1 
+  # set center of mass at (0,0,0) without any rotation
+  fixed 0. 0. 0. 0. 0. 0.   
+  centerofmass
+end structure
+
+# specify the solute 
+structure h2o.xyz
+  number 16
+  # set center of solvent sphere at (0,0,0) with 5 Angstrom radius
+  inside sphere 0. 0. 0. 5.
+end structure
+
+output aniline16.xyz

@@ -1,0 +1,213 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} Use this to plot energy vs time to see if MD has    \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} run its course. Generates: csv of PE and            \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{} temperature vs time, pdf of the plot                \PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib}
+\PYGdefault{n}{matplotlib}\PYGdefault{o}{.}\PYGdefault{n}{use}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Agg\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib.pyplot} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{plt}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{csv}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{sys}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{string}
+
+\PYGdefault{c}{\PYGdefaultZsh{}call as plotEnergyMD3.py inputfile}
+\PYGdefault{c}{\PYGdefaultZsh{}for asking what the input in terminal should be}
+\PYGdefault{k}{try}\PYGdefault{p}{:}
+	\PYGdefault{k}{if} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}\PYGdefault{o}{==}\PYGdefault{l+s}{\PYGdefaultZsq{}?\PYGdefaultZsq{}}\PYGdefault{p}{:}
+		\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{Call function as: plotEnergyMD.py input.log   }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+		\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+	\PYGdefault{k}{else}\PYGdefault{p}{:}
+		\PYGdefault{n+nb}{input}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{argv}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{])}
+\PYGdefault{k}{except} \PYGdefault{n+ne}{IndexError}\PYGdefault{p}{:}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{!!!Input command Error. Call function as: plotEnergyMD.py input.log }\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}} 
+    \PYGdefault{n}{sys}\PYGdefault{o}{.}\PYGdefault{n}{exit}\PYGdefault{p}{()}
+\PYGdefault{n}{output}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZus{}energies.csv\PYGdefaultZsq{}}
+
+\PYGdefault{c}{\PYGdefaultZsh{}initiate variables}
+\PYGdefault{n}{lineBwTimeAndEnergy}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+\PYGdefault{n}{lineBwTimeAndTemp}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+\PYGdefault{n}{lineCountFromTime}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+\PYGdefault{n}{collectionStarted}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+\PYGdefault{n}{foundTime}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+\PYGdefault{n}{foundPE}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+\PYGdefault{n}{foundTemp}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+\PYGdefault{n}{firstTime}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+\PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+\PYGdefault{n}{time}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}0\PYGdefaultZsq{}}
+
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}functions}
+
+\PYGdefault{c}{\PYGdefaultZsh{}check if time is in line}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldCollectTime}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{):}
+    \PYGdefault{c}{\PYGdefaultZsh{}only check if collection is in progress}
+    \PYGdefault{k}{if} \PYGdefault{l+s}{\PYGdefaultZsq{} *** AT T=\PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+
+\PYGdefault{c}{\PYGdefaultZsh{} for printing time so one can keep track of the progress}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{printTime} \PYGdefault{p}{(}\PYGdefault{n}{thisLine}\PYGdefault{p}{):}
+    \PYGdefault{n}{lineComponents}\PYGdefault{o}{=}\PYGdefault{n}{thisLine}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{();}
+    \PYGdefault{n}{timeString}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lineComponents}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{]);}
+    \PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZdq{}Analyzing t = \PYGdefaultZdq{}}\PYGdefault{o}{+}\PYGdefault{n}{timeString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZdq{} fsec}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZdq{}}
+
+\PYGdefault{c}{\PYGdefaultZsh{}Are we currently looking potential energy?}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldCollectPE}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{,}\PYGdefault{n}{reference}\PYGdefault{p}{,}\PYGdefault{n}{currentLine}\PYGdefault{p}{):}
+    \PYGdefault{c}{\PYGdefaultZsh{}check if line bw time and energy is known \PYGdefaultZhy{} this is written as reference}
+    \PYGdefault{k}{if} \PYGdefault{n}{reference}\PYGdefault{o}{\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{n}{currentLine}\PYGdefault{o}{==}\PYGdefault{n}{reference}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}
+    \PYGdefault{c}{\PYGdefaultZsh{}if reference is not known, then it needs to be found by finding string POT EN...}
+    \PYGdefault{k}{elif} \PYGdefault{n}{reference}\PYGdefault{o}{==}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{l+s}{\PYGdefaultZsq{}     POT  ENERGY\PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+            \PYGdefault{n}{reference}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{currentLine}\PYGdefault{p}{)}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+\PYGdefault{c}{\PYGdefaultZsh{}Are we currently looking Temp?}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldCollectTemp}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{,}\PYGdefault{n}{reference}\PYGdefault{p}{,}\PYGdefault{n}{currentLine}\PYGdefault{p}{):}
+    \PYGdefault{c}{\PYGdefaultZsh{}check if line bw time and energy is known \PYGdefaultZhy{} reference}
+    \PYGdefault{k}{if} \PYGdefault{n}{reference}\PYGdefault{o}{\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{n}{currentLine}\PYGdefault{o}{==}\PYGdefault{n}{reference}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}
+    \PYGdefault{c}{\PYGdefaultZsh{}if not then it needs to be found by searching for the string TEMPER...}
+    \PYGdefault{k}{elif} \PYGdefault{n}{reference}\PYGdefault{o}{==}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{l+s}{\PYGdefaultZsq{}     TEMPER\PYGdefaultZsq{}} \PYGdefault{o+ow}{in} \PYGdefault{n}{line}\PYGdefault{p}{:}
+            \PYGdefault{n}{reference}\PYGdefault{o}{=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{currentLine}\PYGdefault{p}{)}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+
+\PYGdefault{c}{\PYGdefaultZsh{}once everything is found, we should write down before moving on to the next snapshot}
+\PYGdefault{k}{def} \PYGdefault{n+nf}{shouldWrite}\PYGdefault{p}{():}
+    \PYGdefault{c}{\PYGdefaultZsh{}only check if collection is in progress}
+    \PYGdefault{k}{if} \PYGdefault{n}{foundTime}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{n}{foundPE}\PYGdefault{p}{:}
+            \PYGdefault{k}{if} \PYGdefault{n}{foundTemp}\PYGdefault{p}{:}
+                \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+            \PYGdefault{k}{else}\PYGdefault{p}{:}
+                \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}
+        \PYGdefault{k}{else}\PYGdefault{p}{:}
+            \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+    \PYGdefault{k}{else}\PYGdefault{p}{:}
+        \PYGdefault{k}{return} \PYGdefault{n+nb+bp}{False}\PYGdefault{p}{;}
+
+\PYGdefault{c}{\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}\PYGdefaultZsh{}}
+\PYGdefault{c}{\PYGdefaultZsh{}open csv and prepare for writing}
+\PYGdefault{n}{f} \PYGdefault{o}{=} \PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}w\PYGdefaultZsq{}}\PYGdefault{p}{);}
+\PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+
+\PYGdefault{c}{\PYGdefaultZsh{}open input}
+\PYGdefault{n}{f1}\PYGdefault{o}{=}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)}
+\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}finding patterns...\PYGdefaultZsq{}}
+\PYGdefault{c}{\PYGdefaultZsh{}avoid using readlines() so there\PYGdefaultZsq{}ll be no problem with large files}
+\PYGdefault{k}{for} \PYGdefault{n}{line} \PYGdefault{o+ow}{in} \PYGdefault{n}{f1}\PYGdefault{p}{:}
+    \PYGdefault{c}{\PYGdefaultZsh{}time keyword is before PE, PE is before Temp so the search should be in this order in order to be most efficient}
+    \PYGdefault{c}{\PYGdefaultZsh{}find out if collection is needed            }
+    \PYGdefault{k}{if} \PYGdefault{o+ow}{not} \PYGdefault{n}{foundTime}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{n}{shouldCollectTime}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{):}
+            \PYGdefault{n}{printTime}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{)}
+            \PYGdefault{c}{\PYGdefaultZsh{}split line}
+            \PYGdefault{n}{lineComponents}\PYGdefault{o}{=}\PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{();}
+            \PYGdefault{c}{\PYGdefaultZsh{}append time (split) to string}
+            \PYGdefault{c}{\PYGdefaultZsh{}split line using space \PYGdefaultZhy{} sample(*** AT T=         10.00 FSEC, THIS RUN\PYGdefaultZsq{}S STEP NO.=      10)}
+            \PYGdefault{c}{\PYGdefaultZsh{}this will be split to [\PYGdefaultZsq{}***\PYGdefaultZsq{}, \PYGdefaultZsq{}AT\PYGdefaultZsq{}, \PYGdefaultZsq{}T=\PYGdefaultZsq{}, \PYGdefaultZsq{}10.00\PYGdefaultZsq{}...] \PYGdefaultZhy{}time = element 4}
+            \PYGdefault{n}{newTime}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lineComponents}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{])[:}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{]}
+            \PYGdefault{k}{if} \PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{time}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZgt{}=}\PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{newTime}\PYGdefault{p}{):}
+            	\PYGdefault{k}{print} \PYGdefault{l+s}{\PYGdefaultZsq{}there is a duplication at \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{time}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} and \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n}{newTime} \PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{} ignoring new values\PYGdefaultZsq{}}
+            \PYGdefault{k}{else}\PYGdefault{p}{:}
+				\PYGdefault{n}{time}\PYGdefault{o}{=}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{newTime}\PYGdefault{p}{)}
+				\PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{n}{time}\PYGdefault{p}{;}
+				\PYGdefault{n}{foundTime}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}\PYGdefault{p}{;}
+    \PYGdefault{k}{elif} \PYGdefault{o+ow}{not} \PYGdefault{n}{foundPE}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{n}{shouldCollectPE}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{,}\PYGdefault{n}{lineBwTimeAndEnergy}\PYGdefault{p}{,}\PYGdefault{n}{lineCountFromTime}\PYGdefault{p}{):}
+            \PYGdefault{c}{\PYGdefaultZsh{}append time (split) to string}
+            \PYGdefault{c}{\PYGdefaultZsh{}split line using space \PYGdefaultZhy{} sample(     POT  ENERGY      =     \PYGdefaultZhy{}1.804578585E+05 KCAL/MOL)}
+            \PYGdefault{c}{\PYGdefaultZsh{}this will be split to [..., \PYGdefaultZsq{}=\PYGdefaultZsq{}, \PYGdefaultZsq{}\PYGdefaultZhy{}1.804578585E+05\PYGdefaultZsq{}...] \PYGdefaultZhy{}time = element 4}
+            \PYGdefault{n}{lineComponents}\PYGdefault{o}{=}\PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{();}
+            \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lineComponents}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{3}\PYGdefault{p}{])}
+            \PYGdefault{n}{foundPE}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+    \PYGdefault{k}{elif} \PYGdefault{o+ow}{not} \PYGdefault{n}{foundTemp}\PYGdefault{p}{:}
+        \PYGdefault{k}{if} \PYGdefault{o+ow}{not} \PYGdefault{n}{firstTime}\PYGdefault{p}{:}
+            \PYGdefault{k}{if} \PYGdefault{n}{shouldCollectTemp}\PYGdefault{p}{(}\PYGdefault{n}{line}\PYGdefault{p}{,}\PYGdefault{n}{lineBwTimeAndTemp}\PYGdefault{p}{,}\PYGdefault{n}{lineCountFromTime}\PYGdefault{p}{):}
+                \PYGdefault{c}{\PYGdefaultZsh{}append time (split) to string}
+                \PYGdefault{c}{\PYGdefaultZsh{}split line using space \PYGdefaultZhy{} sample(     TEMPERATURE      =         349.98666547 K)}
+                \PYGdefault{c}{\PYGdefaultZsh{}this will be split to [..., \PYGdefaultZsq{}=\PYGdefaultZsq{}, \PYGdefaultZsq{}\PYGdefaultZhy{}349.98666547\PYGdefaultZsq{}...] \PYGdefaultZhy{}time = element 3}
+                \PYGdefault{n}{lineComponents}\PYGdefault{o}{=}\PYGdefault{n}{line}\PYGdefault{o}{.}\PYGdefault{n}{split}\PYGdefault{p}{();}
+                \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}, \PYGdefaultZsq{}}\PYGdefault{o}{+}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n}{lineComponents}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{])}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{p}{;}
+                \PYGdefault{n}{foundTemp}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+        \PYGdefault{c}{\PYGdefaultZsh{}problem with this is \PYGdefaultZhy{} the first snapshot\PYGdefaultZsq{}s temperature is not given in the log file}
+        \PYGdefault{c}{\PYGdefaultZsh{}set Temp to 0 to indicate the beginning}
+        \PYGdefault{k}{if} \PYGdefault{n}{firstTime}\PYGdefault{p}{:}
+            \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{n}{grandString}\PYGdefault{o}{+}\PYGdefault{l+s}{\PYGdefaultZsq{},0}\PYGdefault{l+s+se}{\PYGdefaultZbs{}n}\PYGdefault{l+s}{\PYGdefaultZsq{}}\PYGdefault{p}{;}
+            \PYGdefault{c}{\PYGdefaultZsh{}once append, turn off the boolean}
+            \PYGdefault{n}{firstTime}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+            \PYGdefault{n}{foundTemp}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{True}
+    \PYGdefault{c}{\PYGdefaultZsh{}write after all data is collected for one snapshot}
+    \PYGdefault{k}{if} \PYGdefault{n}{shouldWrite}\PYGdefault{p}{():}
+        \PYGdefault{k}{with} \PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}a\PYGdefaultZsq{}}\PYGdefault{p}{)} \PYGdefault{k}{as} \PYGdefault{n}{f}\PYGdefault{p}{:}
+            \PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{write}\PYGdefault{p}{(}\PYGdefault{n}{grandString}\PYGdefault{p}{)}
+        \PYGdefault{c}{\PYGdefaultZsh{}reset the variables}
+        \PYGdefault{n}{lineCountFromTime}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{n}{collectionStarted}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+        \PYGdefault{n}{foundTime}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+        \PYGdefault{n}{foundPE}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+        \PYGdefault{n}{foundTemp}\PYGdefault{o}{=}\PYGdefault{n+nb+bp}{False}
+        \PYGdefault{n}{grandString}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZsq{}}
+    \PYGdefault{n}{lineCountFromTime}\PYGdefault{o}{+=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+\PYGdefault{c}{\PYGdefaultZsh{}finish writing csv}
+\PYGdefault{n}{f}\PYGdefault{o}{.}\PYGdefault{n}{close}\PYGdefault{p}{()}
+
+\PYGdefault{c}{\PYGdefaultZsh{}plot}
+\PYGdefault{c}{\PYGdefaultZsh{}pull out CSV}
+\PYGdefault{c}{\PYGdefaultZsh{}use csv.reader bc csv has \PYGdefaultZsq{},\PYGdefaultZsq{} and this automate the formatting}
+\PYGdefault{n}{f} \PYGdefault{o}{=} \PYGdefault{n}{csv}\PYGdefault{o}{.}\PYGdefault{n}{reader}\PYGdefault{p}{(}\PYGdefault{n+nb}{open}\PYGdefault{p}{(}\PYGdefault{n}{output}\PYGdefault{p}{))}
+\PYGdefault{c}{\PYGdefaultZsh{}convert column to array using zip (a built in function)}
+\PYGdefault{n}{Time}\PYGdefault{p}{,} \PYGdefault{n}{Energy}\PYGdefault{p}{,} \PYGdefault{n}{Temp} \PYGdefault{o}{=} \PYGdefault{n+nb}{zip}\PYGdefault{p}{(}\PYGdefault{o}{*}\PYGdefault{n}{f}\PYGdefault{p}{)}
+\PYGdefault{c}{\PYGdefaultZsh{}convert string to float}
+\PYGdefault{n}{Time} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Time}\PYGdefault{p}{)} 
+\PYGdefault{n}{Energy} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Energy}\PYGdefault{p}{)} 
+\PYGdefault{n}{Temp} \PYGdefault{o}{=} \PYGdefault{n+nb}{map}\PYGdefault{p}{(}\PYGdefault{n+nb}{float}\PYGdefault{p}{,} \PYGdefault{n}{Temp}\PYGdefault{p}{)} 
+
+\PYGdefault{n}{minEnergy}\PYGdefault{o}{=}\PYGdefault{n+nb}{min}\PYGdefault{p}{(}\PYGdefault{n}{Energy}\PYGdefault{p}{)}
+\PYGdefault{n}{relativeEnergy}\PYGdefault{o}{=}\PYGdefault{p}{[]}
+\PYGdefault{k}{for} \PYGdefault{n}{eachEnergy} \PYGdefault{o+ow}{in} \PYGdefault{n}{Energy}\PYGdefault{p}{:}
+	\PYGdefault{n}{relativeEnergy}\PYGdefault{o}{.}\PYGdefault{n}{append}\PYGdefault{p}{(}\PYGdefault{n}{eachEnergy}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{minEnergy}\PYGdefault{p}{)} 
+
+\PYGdefault{c}{\PYGdefaultZsh{}plot}
+\PYGdefault{n}{x} \PYGdefault{o}{=} \PYGdefault{n}{Time}
+\PYGdefault{n}{y1} \PYGdefault{o}{=} \PYGdefault{n}{Energy}
+\PYGdefault{n}{y2} \PYGdefault{o}{=} \PYGdefault{n}{Temp}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{subplot}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{p}{,} \PYGdefault{n}{y1}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}g\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}MD PE and T plot of: \PYGdefaultZsq{}} \PYGdefault{o}{+} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{))}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Potential Energy (KCal/mol)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{subplot}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{2}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{p}{,} \PYGdefault{n}{y2}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}b\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{xlabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}time (fs)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}System Temperature (K)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZus{}EnergyPlot.pdf\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{format}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}pdf\PYGdefaultZsq{}}\PYGdefault{p}{)}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{gcf}\PYGdefault{p}{()}\PYGdefault{o}{.}\PYGdefault{n}{clear}\PYGdefault{p}{()}
+\PYGdefault{n}{y1} \PYGdefault{o}{=} \PYGdefault{n}{relativeEnergy}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{subplot}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{p}{,} \PYGdefault{n}{y1}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}g\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}MD relative PE and T plot of: \PYGdefaultZsq{}} \PYGdefault{o}{+} \PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{))}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}Relative Potential Energy (KCal/mol)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{subplot}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{2}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{p}{,} \PYGdefault{n}{y2}\PYGdefault{p}{,} \PYGdefault{l+s}{\PYGdefaultZsq{}b\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{xlabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}time (fs)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s}{\PYGdefaultZsq{}System Temperature (K)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{n+nb}{str}\PYGdefault{p}{(}\PYGdefault{n+nb}{input}\PYGdefault{p}{)} \PYGdefault{o}{+} \PYGdefault{l+s}{\PYGdefaultZsq{}\PYGdefaultZus{}EnergyPlot\PYGdefaultZus{}2.pdf\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{format}\PYGdefault{o}{=}\PYGdefault{l+s}{\PYGdefaultZsq{}pdf\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\end{Verbatim}

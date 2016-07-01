@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{26}
+\begin{mcitethebibliography}{91}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -37,6 +37,22 @@ Monteiro,~S.; Boxall,~A. \emph{Reviews of Environmental Contamination and
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Harada(1995)]{Harada1995}
+Harada,~M. {Minamata disease: methylmercury poisoning in Japan caused by
+  environmental pollution}. \emph{Critical reviews in toxicology}
+  \textbf{1995}, \emph{25}, 1--24\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[noo()]{noodledoodle}
+{Original image copyright belongs to noodledoodle and zhaolifang from
+  vecteezy.com: non-exclusive right to use Eezy files to create new,
+  derivative, unique works.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Conley \latin{et~al.}(2008)Conley, Symes, Schorr, and
   Richards]{Conley2008}
@@ -77,16 +93,6 @@ Carlson,~J.~C.; Stefan,~M.~I.; Parnis,~J.~M.; Metcalfe,~C.~D. {Direct UV
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Bedoux \latin{et~al.}(2012)Bedoux, Roig, Thomas, Dupont, and {Le
-  Bot}]{Bedoux2012}
-Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. {Occurrence and
-  toxicity of antimicrobial triclosan and by-products in the environment}.
-  \emph{Environmental Science and Pollution Research} \textbf{2012}, \emph{19},
-  1044--1065\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Kliegman \latin{et~al.}(2013)Kliegman, Eustis, Arnold, and
   McNeill]{Kliegman2013}
 Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. {Experimental and
@@ -97,16 +103,25 @@ Kliegman,~S.; Eustis,~S.~N.; Arnold,~W.~a.; McNeill,~K. {Experimental and
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Ricke(2014)]{Ricke2014}
-Ricke,~N.~D. {Application of the Landau-Zener Model and Fermi ' s Golden Rule
-  to Estimate Triplet Quantum Yield for Organic Molecules}. Ph.D.\ thesis,
-  Bowdoin College, 2014\relax
+\bibitem[Bedoux \latin{et~al.}(2012)Bedoux, Roig, Thomas, Dupont, and {Le
+  Bot}]{Bedoux2012}
+Bedoux,~G.; Roig,~B.; Thomas,~O.; Dupont,~V.; {Le Bot},~B. {Occurrence and
+  toxicity of antimicrobial triclosan and by-products in the environment}.
+  \emph{Environmental Science and Pollution Research} \textbf{2012}, \emph{19},
+  1044--1065\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Dykstra \latin{et~al.}(2011)Dykstra, Frenking, and Kim]{Dykstra2011}
-Dykstra,~C.~E.; Frenking,~G.; Kim,~K.~S. \emph{Elsevier}; 2011\relax
+\bibitem[Morss(2014)]{Morss2014}
+Morss,~P.~C. {The Photodegradation of Endocrine Disrupting Compounds in Aqueous
+  Solutions}. Ph.D.\ thesis, Bowdoin College, 2014\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Salvato-Vallverdu(2009)]{Salvato-Vallverdu2009}
+Salvato-Vallverdu,~G. {The Perrin - Jablonski diagram}. 2009\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -119,9 +134,422 @@ Hirayama,~S.; Steer,~R.~P. {Understanding the Theory and Practice of Molecular
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Kl{\'{a}}n and Wirz(2009)Kl{\'{a}}n, and Wirz]{Klan2009}
-Kl{\'{a}}n,~P.; Wirz,~J. \emph{{Photochemistry of organic compounds: From
-  concepts to practice}}; John Wiley {\&} Sons, 2009\relax
+\bibitem[Reichardt and Welton(2011)Reichardt, and Welton]{Reichardt2011}
+Reichardt,~C.; Welton,~T. \emph{{Solvents and Solvent Effects in Organic
+  Chemistry}}; Wiley, 2011\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Turro \latin{et~al.}(2010)Turro, Ramamurthy, and Scaiano]{Turro2010}
+Turro,~N.~J.; Ramamurthy,~V.; Scaiano,~J.~C. \emph{{Modern Molecular
+  Photochemistry of Organic Molecules}}; University Science Books, 2010\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Clemens \latin{et~al.}(2008)Clemens, Basters, Wild, Wilbrand,
+  Reichert, Bauer, Springborg, and Jung]{Clemens2008}
+Clemens,~O.; Basters,~M.; Wild,~M.; Wilbrand,~S.; Reichert,~C.; Bauer,~M.;
+  Springborg,~M.; Jung,~G. {Solvent effects on the absorption/emission spectra
+  of an organic chromophore: A theoretical study}. \emph{Journal of Molecular
+  Structure: THEOCHEM} \textbf{2008}, \emph{866}, 15--20\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Suendo and Viridi(2012)Suendo, and Viridi]{Suendo2012}
+Suendo,~V.; Viridi,~S. {Ab initio calculation of UV-Vis absorption spectra of a
+  single chlorophyll a molecule: comparison study between RHF/CIS, TDDFT, and
+  semi-empirical methods.} \emph{ITB Journal of Science} \textbf{2012},
+  \emph{44A}, 93--112\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kakitani and Mataga(1987)Kakitani, and Mataga]{Kakitani1987}
+Kakitani,~T.; Mataga,~N. {Comprehensive study on the role of coordinated
+  solvent mode played in electron-transfer reactions in polar solutions}.
+  \emph{The Journal of Physical Chemistry} \textbf{1987}, \emph{91},
+  6277--6285\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Marcus(1989)]{Marcus1989}
+Marcus,~R.~A. {Relation between Charge Transfer Absorption and Fluorescence
+  Spectra and the Inverted Region}. \emph{The Journal of Physical Chemistry}
+  \textbf{1989}, \emph{93}, 3078--3086\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Matyushov(2004)]{Matyushov2004}
+Matyushov,~D.~V. {Solvent reorganization energy of electron-transfer reactions
+  in polar solvents}. \emph{Journal of Chemical Physics} \textbf{2004},
+  \emph{120}, 7532--7556\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Barthel \latin{et~al.}(2001)Barthel, Martini, and
+  Schwartz]{Barthel2001}
+Barthel,~E.~R.; Martini,~I.~B.; Schwartz,~B.~J. {How does the solvent control
+  electron transfer? Experimental and theoretical studies of the simplest
+  charge transfer reaction}. \emph{Journal of Physical Chemistry B}
+  \textbf{2001}, \emph{105}, 12230--12241\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Eilmes(2014)]{Eilmes2014}
+Eilmes,~A. {Solvatochromic probe in molecular solvents: implicit versus
+  explicit solvent model}. \emph{Theoretical Chemistry Accounts} \textbf{2014},
+  \emph{133}, 1--13\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Ricke(2014)]{Ricke2014}
+Ricke,~N.~D. {Application of the Landau-Zener Model and Fermi's Golden Rule to
+  Estimate Triplet Quantum Yield for Organic Molecules}. Ph.D.\ thesis, Bowdoin
+  College, 2014\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Leifer(1988)]{Leifer1988}
+Leifer,~A. \emph{{The Kinetics of Environmental Aquatic Photochemistry: Theory
+  and Practice}}; ACS professional reference book; American Chemical Society,
+  1988\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schwarzenbach \latin{et~al.}(2005)Schwarzenbach, Gschwend, and
+  Imboden]{Schwarzenbach2005}
+Schwarzenbach,~R.~P.; Gschwend,~P.~M.; Imboden,~D.~M. \emph{{Environmental
+  Organic Chemistry}}; Wiley, 2005\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[ast()]{astm}
+{ASTM G173-03(2012), Standard Tables for Reference Solar Spectral Irradiances:
+  Direct Normal and Hemispherical on 37° Tilted Surface, ASTM International,
+  West Conshohocken, PA, 2012, www.astm.org}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Dykstra \latin{et~al.}(2011)Dykstra, Frenking, Kim, and
+  Scuseria]{Dykstra2011}
+Dykstra,~C.~E.; Frenking,~G.; Kim,~K.~S.; Scuseria,~G.~E. \emph{{Theory and
+  Applications of Computational Chemistry: The First Forty Years}}; Elsevier,
+  2011\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bartlett and Purvis(1978)Bartlett, and Purvis]{Bartlett1978}
+Bartlett,~R.~J.; Purvis,~G.~D. {Many-body perturbation theory, coupled-pair
+  many-electron theory, and the importance of quadruple excitations for the
+  correlation problem}. \emph{International Journal of Quantum Chemistry}
+  \textbf{1978}, \emph{14}, 561--581\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Pople \latin{et~al.}(1978)Pople, Krishnan, Schlegel, and
+  Binkley]{Pople1978}
+Pople,~J.; Krishnan,~R.; Schlegel,~H.~B.; Binkley,~J.~S. {Electron correlation
+  theories and their application to the study of simple reaction potential
+  surfaces}. \emph{International Journal of Quantum Chemistry} \textbf{1978},
+  \emph{XIV}, 545\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[gau()]{gaussian}
+{Frisch, M. J., et al. (2009). Gaussian 09. Wallingford, CT, USA, Gaussian,
+  Inc.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Eisberg and Resnick(1985)Eisberg, and Resnick]{Eisberg1985}
+Eisberg,~R.; Resnick,~R. \emph{{Quantum physics of atoms, molecules, solids,
+  nuclei, and particles}}, 2nd ed.; John Wiley {\&} Sons: New York, 1985\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Griffiths(2005)]{Griffiths2005}
+Griffiths,~D.~J. \emph{{Introduction to Quantum Mechanics}}; Pearson Education
+  India, 2005\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[M{\o}ller and Plesset(1934)M{\o}ller, and Plesset]{Møller1934}
+M{\o}ller,~C.; Plesset,~M.~S. {Note on an approximation treatment for
+  many-electron systems}. \emph{Physical Review} \textbf{1934}, \emph{46},
+  618--622\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hehre \latin{et~al.}(1986)Hehre, Radom, Schleyer, and
+  Pople]{Hehre1986}
+Hehre,~W.~J.; Radom,~L.; Schleyer,~P. v.~R.; Pople,~J. \emph{{AB INITIO
+  Molecular Orbital Theory}}; A Wiley-Interscience publication; Wiley,
+  1986\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Magalh{\~{a}}es(2014)]{Magalhaes2014}
+Magalh{\~{a}}es,~A.~L. {Gaussian-type orbitals versus slater-type orbitals: A
+  comparison}. \emph{Journal of Chemical Education} \textbf{2014}, \emph{91},
+  2124--2127\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hehre \latin{et~al.}(1970)Hehre, Stewart, and Pople]{Hehre1970}
+Hehre,~W.~J.; Stewart,~R.~F.; Pople,~J.~A. {Self‐Consistent
+  Molecular‐Orbital Methods. I. Use of Gaussian Expansions of Slater‐Type
+  Atomic Orbitals}. \emph{The Journal of Chemical Physics} \textbf{1970},
+  \emph{52}, 2769\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Cramer(2005)]{Cramer2005}
+Cramer,~C.~J. \emph{{Essentials of Computational Chemistry: Theories and
+  Models}}, 2nd ed.; Wiley, 2005\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rohrdanz and Herbert(2008)Rohrdanz, and Herbert]{Rohrdanz2008}
+Rohrdanz,~M.~A.; Herbert,~J.~M. {Simultaneous benchmarking of ground- and
+  excited-state properties with long-range-corrected density functional
+  theory}. \emph{Journal of Chemical Physics} \textbf{2008}, \emph{129},
+  1--9\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Barnes \latin{et~al.}(2014)Barnes, Abdul-Al, and Allouche]{Barnes2014}
+Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. {TDDFT Assessment of Functionals for
+  Optical 0–0 Transitions in Small Radicals}. \emph{The Journal of Physical
+  Chemistry A} \textbf{2014}, \emph{118}, 11033--11046\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Wiberg(2004)]{Wiberg2004}
+Wiberg,~K.~B. {Basis set effects on calculated geometries: 6-311++G** vs.
+  aug-cc-pVDZ}. \emph{Journal of Computational Chemistry} \textbf{2004},
+  \emph{25}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Feller(1996)]{Feller1996}
+Feller,~D. {The Role of Databases in Support of Computational Chemistry
+  Calculations}. \emph{Journal of Computational Chemistry} \textbf{1996},
+  \emph{17}, 1571--1586\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Baerends and Gritsenko(1997)Baerends, and Gritsenko]{Baerends1997}
+Baerends,~E.~J.; Gritsenko,~O.~V. {A quantum chemical view of density
+  functional theory}. \emph{Journal of Physical Chemistry A} \textbf{1997},
+  \emph{101}, 5383--5403\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Sousa \latin{et~al.}(2007)Sousa, Fernandes, and Ramos]{Sousa2007}
+Sousa,~S.~F.; Fernandes,~P.~A.; Ramos,~M.~J. {General performance of density
+  functionals}. \emph{Journal of Physical Chemistry A} \textbf{2007},
+  \emph{111}, 10439--10452\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hohenberg and Kohn(1964)Hohenberg, and Kohn]{Hohenberg1964}
+Hohenberg,~P.; Kohn,~W. {Inhomogeneous Electron Gas}. \emph{Physical Review}
+  \textbf{1964}, \emph{136}, B864--B871\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kohn and Sham(1965)Kohn, and Sham]{Kohn1965}
+Kohn,~W.; Sham,~L.~J. {Self-Consistent Equations Including Exchange and
+  Correlation Effects}. \emph{Physical Review} \textbf{1965}, \emph{140},
+  A1133--A1138\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[He{\ss}elmann(2015)]{Heßelmann2015}
+He{\ss}elmann,~A. {Molecular excitation energies from time-dependent density
+  functional theory employing random-phase approximation Hessians with exact
+  exchange}. \emph{Journal of Chemical Theory and Computation} \textbf{2015},
+  \emph{11}, 1607--1620\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hirao(2011)]{Hirao2011}
+Hirao,~H. {Which DFT functional performs well in the calculation of
+  methylcobalamin? Comparison of the B3LYP and BP86 functionals and evaluation
+  of the impact of empirical dispersion correction}. \emph{Journal of Physical
+  Chemistry A} \textbf{2011}, \emph{115}, 9308--9313\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Parac and Grimme(2002)Parac, and Grimme]{Parac2002}
+Parac,~M.; Grimme,~S. {Comparison of multireference M{\o}ller-Plesset theory
+  and time-dependent methods for the calculation of vertical excitation
+  energies of molecules}. \emph{Journal of Physical Chemistry A} \textbf{2002},
+  \emph{106}, 6844--6850\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Jacquemin \latin{et~al.}(2009)Jacquemin, Wathelet, Perp{\`{e}}te, and
+  Adamo]{Jacquemin2009}
+Jacquemin,~D.; Wathelet,~V.; Perp{\`{e}}te,~E.~a.; Adamo,~C. {Extensive TD-DFT
+  benchmark: Singlet-excited states of organic molecules}. \emph{Journal of
+  Chemical Theory and Computation} \textbf{2009}, \emph{5}, 2420--2435\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Caricato \latin{et~al.}(2010)Caricato, Trucks, Frisch, and
+  Wiberg]{Caricato2010}
+Caricato,~M.; Trucks,~G.~W.; Frisch,~M.~J.; Wiberg,~K.~B. {Electronic
+  transition energies: A study of the performance of a large range of single
+  reference density functional and wave function methods on valence and rydberg
+  states compared to experiment}. \emph{Journal of Chemical Theory and
+  Computation} \textbf{2010}, \emph{6}, 370--383\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Bersier \latin{et~al.}()Bersier, Proetto, Sanna, Cangi, and
+  Mirhosseini]{Bersier}
+Bersier,~C.; Proetto,~C.; Sanna,~A.; Cangi,~A.; Mirhosseini,~S.~H. {Basic rules
+  for functional construction at finite temperature}. Ph.D.\ thesis, Max Planck
+  Institute of Microstructure Physics\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Yanai \latin{et~al.}(2004)Yanai, Tew, and Handy]{Yanai2004}
+Yanai,~T.; Tew,~D.~P.; Handy,~N.~C. {A new hybrid exchange – correlation
+  functional using the Coulomb-attenuating method (CAM-B3LYP)}. \emph{Chemical
+  Physics Letters} \textbf{2004}, \emph{393}, 51--57\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Zhao and Truhlar(2007)Zhao, and Truhlar]{Zhao2007}
+Zhao,~Y.; Truhlar,~D.~G. {The M06 suite of density functionals for main group
+  thermochemistry , thermochemical kinetics , noncovalent interactions ,
+  excited states , and transition elements : two new functionals and systematic
+  testing of four M06-class functionals and 12 other fun}. \emph{Theoretical
+  Chemistry Accounts} \textbf{2007}, \emph{120}, 215--241\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Adamo and Barone(1999)Adamo, and Barone]{Adamo1999}
+Adamo,~C.; Barone,~V. {Toward reliable density functional methods without
+  adjustable parameters: The PBE0 model}. \emph{The Journal of Chemical
+  Physics} \textbf{1999}, \emph{110}, 6158\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Magyar and Tretiak(2007)Magyar, and Tretiak]{Magyar2007}
+Magyar,~R.~J.; Tretiak,~S. {Dependence of spurious charge-transfer excited
+  states on orbital exchange in TDDFT: Large molecules and clusters}.
+  \emph{Journal of Chemical Theory and Computation} \textbf{2007}, \emph{3},
+  976--987\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Runge and Gross(1984)Runge, and Gross]{Runge1984}
+Runge,~E.; Gross,~E. K.~U. {Density-functional theory for time-dependent
+  systems}. \emph{Physical Review Letters} \textbf{1984}, \emph{52},
+  997--1000\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Caricato \latin{et~al.}(2004)Caricato, Mennucci, and
+  Tomasi]{Caricato2004}
+Caricato,~M.; Mennucci,~B.; Tomasi,~J. {Solvent Effects on the Electronic
+  Spectra: An Extension of the Polarizable Continuum Model to the ZINDO
+  Method}. \emph{The Journal of Physical Chemistry A} \textbf{2004},
+  \emph{108}, 6248--6256\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Fabian(2001)]{Fabian2001}
+Fabian,~J. {Electronic excitation of sulfur-organic compounds - Performance of
+  time-dependent density functional theory}. \emph{Theoretical Chemistry
+  Accounts} \textbf{2001}, \emph{106}, 199--217\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Barone and Polimeno(2007)Barone, and Polimeno]{Barone2007a}
+Barone,~V.; Polimeno,~A. {Integrated computational strategies for UV/vis
+  spectra of large molecules in solution}. \emph{Chemical Society Reviews}
+  \textbf{2007}, \emph{36}, 1724\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Becke(1988)]{Becke1988}
+Becke,~A.~D. {Density-functional exchange-energy approximation with correct
+  asymptotic behavior}. \emph{Physical Review A} \textbf{1988}, \emph{38},
+  3098--3100\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Perdew(1986)]{Perdew1986}
+Perdew,~J.~P. {Density-functional approximation for the correlation energy of
+  the inhomogeneous electron gas}. \emph{Physical Review B} \textbf{1986},
+  \emph{33}, 8822--8824\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Iikura \latin{et~al.}(2001)Iikura, Tsuneda, Yanai, and
+  Hirao]{Iikura2001}
+Iikura,~H.; Tsuneda,~T.; Yanai,~T.; Hirao,~K. {A long-range correction scheme
+  for generalized-gradient-approximation exchange functionals}. \emph{Journal
+  of Chemical Physics} \textbf{2001}, \emph{115}, 3540--3544\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lee \latin{et~al.}(1988)Lee, Yang, and Parr]{Lee1988}
+Lee,~C.; Yang,~W.; Parr,~R.~G. {Development of the Colle-Salvetti
+  correlation-energy formula into a functional of the electron density}.
+  \emph{Physical Review B} \textbf{1988}, \emph{37}, 785--789\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -142,10 +570,17 @@ Cossi,~M.; Barone,~V. {Solvent effect on vertical electronic transitions by the
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Barone and Polimeno(2007)Barone, and Polimeno]{Barone2007}
-Barone,~V.; Polimeno,~A. {Integrated computational strategies for UV/vis
-  spectra of large molecules in solution}. \emph{Chem. Soc. Rev.}
-  \textbf{2007}, \emph{36}, 1724--1731\relax
+\bibitem[Mennucci(2010)]{Mennucci2010}
+Mennucci,~B. {Continuum solvation models: What else can we learn from them?}
+  \emph{Journal of Physical Chemistry Letters} \textbf{2010}, \emph{1},
+  1666--1674\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Tomasi \latin{et~al.}(2005)Tomasi, Mennucci, and Cammi]{Tomasi2005}
+Tomasi,~J.; Mennucci,~B.; Cammi,~R. {Quantum mechanical continuum solvation
+  models}. \emph{Chemical Reviews} \textbf{2005}, \emph{105}, 2999--3093\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -156,13 +591,6 @@ Li,~J.; Cramer,~C.~J.; Truhlar,~D.~G. {Two-Response-Time Model Based on
   Component of Solvatochromic Shifts on Vertical Excitation Energies}.
   \emph{International Journal of Quantum Chemistry} \textbf{1999}, \emph{77},
   264--280\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Tomasi \latin{et~al.}(2005)Tomasi, Mennucci, and Cammi]{Tomasi2005}
-Tomasi,~J.; Mennucci,~B.; Cammi,~R. {Quantum mechanical continuum solvation
-  models}. \emph{Chemical Reviews} \textbf{2005}, \emph{105}, 2999--3093\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -186,15 +614,6 @@ Yoo,~S.; Zahariev,~F.; Sok,~S.; Gordon,~M.~S. {Solvent effects on optical
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Magyar and Tretiak(2007)Magyar, and Tretiak]{Magyar2007}
-Magyar,~R.~J.; Tretiak,~S. {Dependence of spurious charge-transfer excited
-  states on orbital exchange in TDDFT: Large molecules and clusters}.
-  \emph{Journal of Chemical Theory and Computation} \textbf{2007}, \emph{3},
-  976--987\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Defusco \latin{et~al.}(2011)Defusco, Minezawa, Slipchenko, Zahariev,
   and Gordon]{Defusco2011}
 Defusco,~A.; Minezawa,~N.; Slipchenko,~L.~V.; Zahariev,~F.; Gordon,~M.~S.
@@ -204,18 +623,104 @@ Defusco,~A.; Minezawa,~N.; Slipchenko,~L.~V.; Zahariev,~F.; Gordon,~M.~S.
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Wiberg(2004)]{Wiberg2004}
-Wiberg,~K.~B. {Basis set effects on calculated geometries: 6-311++G** vs.
-  aug-cc-pVDZ}. \emph{Journal of Computational Chemistry} \textbf{2004},
-  \emph{25}\relax
+\bibitem[Schmidt \latin{et~al.}(1993)Schmidt, Baldridge, Boatz, Elbert, Gordon,
+  Jensen, Koseki, Matsunaga, Nguyen, Shyjun, Dupuis, and
+  Montgomery]{Schmidt1993}
+Schmidt,~M.~W.; Baldridge,~K.~K.; Boatz,~J.~A.; Elbert,~S.~T.; Gordon,~M.~S.;
+  Jensen,~J.~H.; Koseki,~S.; Matsunaga,~N.; Nguyen,~K.~A.; Shyjun,~S.~U.
+  \latin{et~al.}  {General Atomic and Molecular Electronic Structure System}.
+  \emph{Journal of Computational Chemistry} \textbf{1993}, \emph{14},
+  1347--1363\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Barnes \latin{et~al.}(2014)Barnes, Abdul-Al, and Allouche]{Barnes2014}
-Barnes,~L.; Abdul-Al,~S.; Allouche,~A.-R. {TDDFT Assessment of Functionals for
-  Optical 0–0 Transitions in Small Radicals}. \emph{The Journal of Physical
-  Chemistry A} \textbf{2014}, \emph{118}, 11033--11046\relax
+\bibitem[Chodera(2015)]{Chodera2015}
+Chodera,~J.~D. {A simple method for automated equilibration detection in
+  molecular simulations}. \emph{Journal of Chemical Theory and Computation}
+  \textbf{2015}, 021659\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hilborn(1982)]{Hilborn1982}
+Hilborn,~R.~C. {Einstein coefficients, cross sections, f values, dipole
+  moments, and all that}. \emph{American Journal of Physics} \textbf{1982},
+  \emph{50}, 982--986\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kl{\'{a}}n and Wirz(2009)Kl{\'{a}}n, and Wirz]{Klan2009}
+Kl{\'{a}}n,~P.; Wirz,~J. \emph{{Photochemistry of organic compounds: From
+  concepts to practice}}; John Wiley {\&} Sons, 2009\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[pyt()]{python}
+{Python Software Foundation. Python Language Reference, version 2.7.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Mart{\'{\i}}nez \latin{et~al.}(2009)Mart{\'{\i}}nez, Andrade, Birgin,
+  and Mart{\'{\i}}nez]{Martinez2009}
+Mart{\'{\i}}nez,~L.; Andrade,~R.; Birgin,~E.~G.; Mart{\'{\i}}nez,~J.~M.
+  {Software News and Update Packmol : A Package for Building Initial
+  Configurations}. \emph{Journal of Computational Chemistry} \textbf{2009},
+  \emph{30}, 2157--2164\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[mat()]{matlab}
+{Matlab version 7.14.0.739. Natick, Massachusetts, The MathWorks Inc.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[web()]{webmo}
+{Schmidt, J.R.; Polik, W.F. WebMO Enterprise, version 13.0; WebMO LLC: Holland,
+  MI, USA, 2013; http://www.webmo.net (accessed March, 2013).}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Wojdyr(2010)]{Wojdyr2010}
+Wojdyr,~M. {Fityk: A general-purpose peak fitting program}. \emph{Journal of
+  Applied Crystallography} \textbf{2010}, \emph{43}, 1126--1128\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Eustis \latin{et~al.}(2016)Eustis, Trerayapiwat, Ricke, Cohen,
+  Poblete, and Rudel]{Eustis2016}
+Eustis,~S.~N.; Trerayapiwat,~K.; Ricke,~N.; Cohen,~P.; Poblete,~A.; Rudel,~H.
+  {Computational Environmental Photochemistry: A Roadmap for Applied
+  Quantitative Calculations}. \emph{Royal Chemical Society} \textbf{2016},
+  \relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Armarego and Chai(2013)Armarego, and Chai]{Armarego2013}
+Armarego,~W. L.~F.; Chai,~C. L.~L. \emph{{Purification of laboratory
+  chemicals}}, 7th ed.; Butterworth-Heinemann, 2013\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Yalkowsky \latin{et~al.}(2016)Yalkowsky, He, and Jain]{Yalkowsky2016}
+Yalkowsky,~S.~H.; He,~Y.; Jain,~P. \emph{{Handbook of Aqueous Solubility Data,
+  Second Edition}}; CRC Press, 2016\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[{R Development Core Team}(2008)]{RDevelopmentCoreTeam2008}
+{R Development Core Team}, {R: A Language and Environment for Statistical
+  Computing}. 2008\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -228,10 +733,44 @@ Beglov,~D.; Roux,~B. {Finite representation of an infinite bulk system: Solvent
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Makov and Payne(1995)Makov, and Payne]{Makov1995}
+Makov,~G.; Payne,~M. {Periodic boundary conditions in ab initio calculations}.
+  \emph{Physical Review B} \textbf{1995}, \emph{51}, 4014--4022\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Plugatyr and Svishchev(2009)Plugatyr, and Svishchev]{Plugatyr2009}
 Plugatyr,~A.; Svishchev,~I.~M. {The hydration of aniline: Analysis of spatial
   distribution functions.} \emph{The Journal of chemical physics}
   \textbf{2009}, \emph{130}, 114509\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Gordon \latin{et~al.}(2001)Gordon, Freitag, Bandyopadhyay, Jensen,
+  Kairys, and Stevens]{Gordon2001}
+Gordon,~M.~S.; Freitag,~M.~a.; Bandyopadhyay,~P.; Jensen,~J.~H.; Kairys,~V.;
+  Stevens,~W.~J. {The Effective Fragment Potential Method : A QM-Based MM
+  Approach to Modeling}. \emph{Journal of Physical Chemistry A} \textbf{2001},
+  \emph{105}, 293--307\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Guidez and Gordon(2015)Guidez, and Gordon]{Guidez2015}
+Guidez,~E.~B.; Gordon,~M.~S. {Dispersion Correction Derived from First
+  Principles for Density Functional Theory and Hartree−Fock Theory}.
+  \emph{The Journal of chemical physics} \textbf{2015}, \emph{119},
+  2161−2168\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Perdew \latin{et~al.}(1996)Perdew, Burke, and Ernzerhof]{Perdew1996}
+Perdew,~J.~P.; Burke,~K.; Ernzerhof,~M. {Generalized Gradient Approximation
+  Made Simple}. \emph{Physical Review Letters} \textbf{1996}, \emph{77},
+  3865--3868\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

@@ -1,3 +1,7 @@
+###########################################################
+### create sh files to run inp files on comet           ###
+###########################################################
+
 import os
 import sys
 
@@ -25,7 +29,7 @@ inputPath=path+'/'+input
 allspark = os.listdir(inputPath)
 
 
-f = open('megalo_'+input+'.txt','w')
+f = open('megaio_'+input+'.txt','w')
 for item in allspark:
 	if not item.startswith('.') and os.path.isfile(os.path.join(inputPath, item)):
 		outputName=str(item)[:-4]+'.sh'
@@ -41,7 +45,9 @@ for item in allspark:
 
 module load gamess
 
-rungms '''+outputName[:-3]+'''.inp 00 24 >& ~/out/'''+outputName[:-3]+'''.out'''
+export GAMESS_SCR=/scratch/$USER/$SLURM_JOBID
+
+rungms '''+outputName[:-3]+'.inp 00 24 >& ~/'+input+'/'+input+'_out/'+outputName[:-3]+'.log'
 		f1.write(grandString)
 		f1.close()
 		f.write('sbatch '+outputName+'\n')

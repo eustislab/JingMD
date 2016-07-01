@@ -1,5 +1,7 @@
 ###########################################################
-###Create inp for MD run from xyz file from packmol     ###
+### Create inp for MD run from xyz file from packmol    ###
+### ssbp radius is also calculated roughly from         ###
+### starting geometry                                   ###
 ###########################################################
 
 import sys
@@ -96,7 +98,7 @@ atomicNumber={'LV': 116.0, 'BE': 4.0, 'FR': 87.0, 'BA': 56.0, 'BH': 107.0, 'BI':
 #functional = M06-2X - DFTTYP=M06-2X
 f = open(output, 'w');
 f.write(''' $CONTRL SCFTYP=RHF RUNTYP=MD COORD=UNIQUE
-    DFTTYP=M06-2X MAXIT=200 ICHARG=0 MULT=1 $END
+    DFTTYP=CAMB3LYP MAXIT=200 ICHARG=0 MULT=1 $END
  $MD KEVERY=10 PROD=.T. NVTNH=2 MBT=.T. MBR=.T. 
     BATHT=298 RSTEMP=.T. DTEMP=25 NSTEPS=50000
     SSBP=.T. SFORCE=1.0 DROFF='''+str(ssbpRadius)+''' $END
@@ -104,7 +106,7 @@ f.write(''' $CONTRL SCFTYP=RHF RUNTYP=MD COORD=UNIQUE
  $SYSTEM MWORDS=1000 MEMDDI=1000 $END
  $SCF DIRSCF=.T. $END
  $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=2 NPFUNC=1 
-    DIFFS=.TRUE. POLAR=POPN311 $END
+    DIFFS=.TRUE. POLAR=POPN31 $END
  $DATA\n'''+ 'MD INPUT for' +input+'\nC1 1\n''')
 
 #geometry
